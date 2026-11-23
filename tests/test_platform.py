@@ -3,7 +3,7 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import select, func
-from backend import db, main, evaluation
+from backend import db, main, evaluation, traceability
 from backend.models import DATA, LocalAdapter
 
 @pytest.fixture
@@ -15,6 +15,7 @@ def client(monkeypatch):
     session = db.sessionmaker(engine, expire_on_commit=False)
     monkeypatch.setattr(main, 'Session', session)
     monkeypatch.setattr(evaluation, 'Session', session)
+    monkeypatch.setattr(traceability, 'Session', session)
     monkeypatch.setattr(main, 'dispatch', lambda _: None)
     with TestClient(main.app) as c:
         yield c, session

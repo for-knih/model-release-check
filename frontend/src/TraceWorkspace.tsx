@@ -1,0 +1,62 @@
+import {useEffect,useState} from 'react';
+
+type Requirement={id:number;identifier:string;version:number;title:string;verification_condition:string;owner:string;status:string;mandatory:boolean;policy:{identifier:string;version:number;config:{refund_min_recall:number;refund_max_drop:number}}};
+type Verdict={status:string;status_label:string;reasons?:string[];observed?:{candidate_refund_recall:number|null;baseline_refund_recall:number|null;refund_drop:number|null;refund_support:number}};
+type Row={case_id:string;text:string;expected_label:string;baseline:string;candidate:string};
+type Run={id:string;status:string;snapshot:{dataset_id:string;dataset_version:string;mode:string;policy:unknown;effective_spec:unknown};result:null|{cases:Row[];candidate:{accuracy:number;classes:Record<string,{recall:number|null}>}}};
+type Evidence={run_id:string;dataset_version:string;mode_label:string;verdict:Verdict;violation_cases:Row[]};
+type ReleaseDetail={id:string;name:string;scenario_demo:boolean;approval_allowed:boolean;approval_restrictions:string[];system_verdict:string;requirements:{requirement:Requirement;evidence_run_id:string|null;verdict:Verdict}[];initial_run:Run|null;candidate_run:Run|null;comparison:{allowed:boolean;restriction_reasons:string[];deltas:null|{accuracy:number;refund_recall:number|null}};reproduction:{used_cases:{source_run_id:string;source_case_id:string;candidate_case_id:string;initial_prediction:string;candidate_prediction:string;status:string}[];unused_subset:{label:string;count:number;metrics:null|{accuracy:number;classes:Record<string,{recall:number|null}>}}};independent_evaluation:{status:string;label:string;reasons:string[]};reviews:{id:number;reviewer:string;decision:string;reason:string;run_id:string}[]};
+async function api(path:string,init?:RequestInit){const r=await fetch('http://localhost:8000'+path,init);const data=await r.json();if(!r.ok)throw new Error(JSON.stringify(data.detail??data));return data;}
+const post=(path:string,data?:unknown)=>api(path,{method:'POST',headers:{'Content-Type':'application/json'},...(data===undefined?{}:{body:JSON.stringify(data)})});
+const pct=(v:number|null|undefined)=>v==null?'평가 불가':`${(v*100).toFixed(1)}%`;
+const stateLabel=(v:string)=>({passed:'통과',failed:'실패',unverified:'미검증',unevaluable:'평가 불가'}[v]??v);
+
+export function TraceWorkspace({onRun}:{onRun:(runId:string)=>void}){
+ const [requirements,setRequirements]=useState<Requirement[]>([]),[choice,setChoice]=useState(''),[evidence,setEvidence]=useState<Evidence[]>([]);
+ const [initial,setInitial]=useState<Run|null>(null),[candidate,setCandidate]=useState<Run|null>(null),[selected,setSelected]=useState<string[]>([]),[linked,setLinked]=useState(false);
+ const [release,setRelease]=useState<ReleaseDetail|null>(null),[busy,setBusy]=useState(''),[error,setError]=useState(''),[message,setMessage]=useState('');
+ const [reviewer,setReviewer]=useState('릴리스 검토자'),[decision,setDecision]=useState('hold'),[reason,setReason]=useState(''),[artifact,setArtifact]=useState<{json_url:string;markdown_url:string}|null>(null);
+ const req=requirements.find(r=>`${r.identifier}@${r.version}`===choice);
+ async function refreshRequirements(){const values=await api('/requirements');setRequirements(values);return values as Requirement[];}
+ async function refreshEvidence(identifier:string,version:number){const d=await api(`/requirements/${identifier}/versions/${version}`);setEvidence(d.evidence);}
+ useEffect(()=>{refreshRequirements().catch(e=>setError(String(e)));const id=new URLSearchParams(location.search).get('release');if(id){api('/releases/'+encodeURIComponent(id)).then((d:ReleaseDetail)=>{setRelease(d);setInitial(d.initial_run);setCandidate(d.candidate_run);if(d.requirements[0])setChoice(`${d.requirements[0].requirement.identifier}@${d.requirements[0].requirement.version}`)}).catch(e=>setError(String(e)))}},[]);
+ useEffect(()=>{if(req)refreshEvidence(req.identifier,req.version).catch(e=>setError(String(e)))},[choice,requirements.length]);
+ async function action(label:string,task:()=>Promise<void>){setBusy(label);setError('');setMessage('');try{await task()}catch(e){setError(String(e))}finally{setBusy('')}}
+ async function register(){const value=await post('/requirements/sample');await refreshRequirements();setChoice(`${value.identifier}@${value.version}`);setMessage('REQ-REFUND-001 v1과 정책 v1 등록 완료')}
+ async function evaluateVariant(variant:'original'|'repaired'){
+  if(!req)return;
+  const datasetId=initial?.snapshot.dataset_id||(await post('/datasets/sample')).id;
+  const response=await api('/runs',{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':crypto.randomUUID()},body:JSON.stringify({dataset_id:datasetId,mode:'scenario',scenario_variant:variant,requirements:[{identifier:req.identifier,version:req.version}],commit_sha:`scenario-${variant}-demo`})});
+  let run:Run|null=null;
+  for(let i=0;i<120;i++){run=await api('/runs/'+response.run_id);onRun(run!.id);if(run?.status==='succeeded')break;if(run?.status==='failed')throw new Error('평가 실패');await new Promise(r=>setTimeout(r,500));}
+  if(run?.status!=='succeeded')throw new Error('평가 대기 시간 초과');
+  if(variant==='original'){setInitial(run);setCandidate(null);setLinked(false);setRelease(null);setSelected(run.result!.cases.filter(c=>c.baseline===c.expected_label&&c.candidate!==c.expected_label).map(c=>c.case_id));}
+  else{setCandidate(run);setRelease(null);}
+  setArtifact(null);await refreshEvidence(req.identifier,req.version);
+ }
+ async function link(){const response=await post(`/runs/${initial!.id}/regression-links`,{target_dataset_id:initial!.snapshot.dataset_id,case_ids:selected});setLinked(true);setMessage(`기존 세트에 출처 연결 ${response.created_links}건 · 사례 추가 ${response.added_cases}건 · 데이터 버전 보존`)}
+ async function makeRelease(){const d=await post('/releases',{name:'환불 품질 수정 후보 릴리스 검토',initial_run_id:initial!.id,candidate_run_id:candidate?.id,requirements:[{identifier:req!.identifier,version:req!.version}],reproduction_sources:selected.map(id=>({source_run_id:initial!.id,source_case_id:id}))});setRelease(d);window.history.replaceState({},'', '?release='+d.id);setDecision(d.approval_allowed?'approve':'hold');setArtifact(null)}
+ async function save(){await post(`/releases/${release!.id}/reviews`,{reviewer,decision,reason});setRelease(await api('/releases/'+release!.id));setArtifact(null);setMessage('근거 실행 ID와 요구사항 판정을 포함해 검토 결정을 저장했습니다')}
+ async function showRun(id:string){onRun(id);}
+ const failures=initial?.result?.cases.filter(c=>c.baseline===c.expected_label&&c.candidate!==c.expected_label)??[];
+ return <section className="panel trace-panel"><small>REQUIREMENTS / RELEASE EVIDENCE</small><h2>요구사항부터 릴리스 결정까지</h2><p>시나리오 데모로 실패 → 회귀 연결 → 동일 조건 수정 후보 → 검토 → 증빙을 확인합니다.</p>
+ <div className="actions"><button className="secondary" disabled={!!busy} onClick={()=>action('요구사항 등록',register)}>예시 요구사항 등록</button><select aria-label="요구사항 버전" value={choice} onChange={e=>{setChoice(e.target.value);setInitial(null);setCandidate(null);setRelease(null);setLinked(false)}}><option value="">요구사항 선택</option>{requirements.map(r=><option key={r.id} value={`${r.identifier}@${r.version}`}>{r.identifier} v{r.version} · {r.title}</option>)}</select></div>
+ {busy&&<p role="status">{busy} 진행 중…</p>}{error&&<p role="alert" className="error">{error}</p>}{message&&<p role="status" className="case-detail">{message}</p>}
+ {req&&<><div className="case-detail"><h3>{req.identifier} v{req.version} · {req.title}</h3><p>{req.verification_condition}</p><p>적용 기준: 환불 최소 {pct(req.policy.config.refund_min_recall)}, 허용 하락 {(req.policy.config.refund_max_drop*100).toFixed(1)}%p · {req.policy.identifier} v{req.policy.version}</p><small>담당자 {req.owner} · 상태 {req.status} · {req.mandatory?'필수':'선택'}</small></div>
+ <div className="scroll"><table><thead><tr><th>요구사항 → 근거 실행</th><th>관측값</th><th>판정</th></tr></thead><tbody>{evidence.length?evidence.map(e=><tr key={e.run_id}><td><button className="secondary" onClick={()=>action('근거 실행 조회',()=>showRun(e.run_id))}>{e.run_id}</button><p>{e.mode_label} · 세트 {e.dataset_version.slice(0,12)}</p>{e.violation_cases.map(c=><p key={c.case_id}>{c.case_id} · {c.text} / {c.baseline} → {c.candidate}</p>)}</td><td>환불 {pct(e.verdict.observed?.candidate_refund_recall)}<br/>실제 {e.verdict.observed?.refund_support??0}건<br/>하락 {e.verdict.observed?.refund_drop==null?'평가 불가':(e.verdict.observed.refund_drop*100).toFixed(1)+'%p'}</td><td>{e.verdict.status_label}</td></tr>):<tr><td>연결된 평가 없음</td><td>관측 없음</td><td>미검증</td></tr>}</tbody></table></div>
+ <div className="actions trace-actions"><button disabled={!!busy} onClick={()=>action('최초 위반 시나리오 평가',()=>evaluateVariant('original'))}>1. 환불 기준 위반 평가</button><button disabled={!!busy||!initial||selected.length===0} onClick={()=>action('회귀 사례 연결',link)}>2. 선택 사례 회귀 연결</button><button disabled={!!busy||!initial||!linked} onClick={()=>action('동일 조건 수정 후보 평가',()=>evaluateVariant('repaired'))}>3. 동일 조건 수정 후보 평가</button><button disabled={!!busy||!initial||!linked} onClick={()=>action('릴리스 추적표 생성',makeRelease)}>4. 릴리스 검토 생성</button></div>
+ {failures.map(c=><label className="case-select" key={c.case_id}><input type="checkbox" checked={selected.includes(c.case_id)} disabled={!!candidate} onChange={e=>{setSelected(e.target.checked?[...selected,c.case_id]:selected.filter(x=>x!==c.case_id));setLinked(false)}}/><span>{c.case_id} · {c.text} · {c.expected_label} → {c.candidate}</span></label>)}
+ </>}
+ {release&&<><h3>추적표 · {release.scenario_demo?'시나리오 데모':'실제 평가'}</h3><table><thead><tr><th>요구사항 → 최초 실패 → 수정 후보</th><th>시스템 판정</th></tr></thead><tbody>{release.requirements.map(r=><tr key={r.requirement.id}><td>{r.requirement.identifier} v{r.requirement.version}<br/><small>{release.initial_run?.id} → {r.evidence_run_id??'수정 후보 미검증'}</small></td><td>{r.verdict.status_label}{r.verdict.reasons?.map(x=><p key={x}>{x}</p>)}</td></tr>)}</tbody></table>
+ <div className="case-detail"><strong>동일 조건 비교: {release.comparison.allowed?'가능':'제한'}</strong>{release.comparison.restriction_reasons.map(x=><p key={x}>{x}</p>)}{release.comparison.deltas&&<p>수정 전후 정확도 +{(release.comparison.deltas.accuracy*100).toFixed(1)}%p / 환불 재현율 {release.comparison.deltas.refund_recall==null?'평가 불가':'+'+(release.comparison.deltas.refund_recall*100).toFixed(1)+'%p'}</p>}<details><summary>실행별 정책·세트·모델 설정 비교</summary><pre>{JSON.stringify({initial:release.initial_run?.snapshot,candidate:release.candidate_run?.snapshot},null,2)}</pre></details></div>
+ <h4>수정에 사용한 재현 사례</h4>{release.reproduction.used_cases.map(r=><p key={r.source_run_id+r.source_case_id}>{r.source_case_id} → {r.candidate_case_id} · {r.initial_prediction} → {r.candidate_prediction} · {stateLabel(r.status)}</p>)}
+ <h4>{release.reproduction.unused_subset.label}</h4><p>{release.reproduction.unused_subset.count}건 · 정확도 {pct(release.reproduction.unused_subset.metrics?.accuracy)} · 환불 재현율 {pct(release.reproduction.unused_subset.metrics?.classes['환불'].recall)}</p><h4>{release.independent_evaluation.label} · {stateLabel(release.independent_evaluation.status)}</h4>{release.independent_evaluation.reasons.map(x=><p key={x}>{x}</p>)}
+ <div className={release.approval_allowed?'case-detail':'error'}><strong>일반 승인 {release.approval_allowed?'가능':'제한'}</strong>{release.approval_restrictions.map(x=><p key={x}>{x}</p>)}</div>
+ <form onSubmit={e=>{e.preventDefault();action('릴리스 검토 저장',save)}}><h4>5. 검토자 결정 (시스템 판정과 별도)</h4><div className="controls"><label>릴리스 검토자<input required value={reviewer} onChange={e=>setReviewer(e.target.value)}/></label><label>릴리스 최종 결정<select value={decision} onChange={e=>setDecision(e.target.value)}><option value="hold">보류</option><option value="approve" disabled={!release.approval_allowed}>일반 승인</option></select></label></div><label>릴리스 검토 사유<textarea required value={reason} onChange={e=>setReason(e.target.value)}/></label><button disabled={!!busy}>릴리스 결정 저장</button></form>
+ {release.reviews.map(r=><div className="review" key={r.id}><strong>{r.decision==='approve'?'승인':'보류'} · {r.reviewer}</strong><p>{r.reason}</p><small>근거 실행 {r.run_id}</small></div>)}
+ <div className="actions trace-actions"><button disabled={!!busy} onClick={()=>action('증빙 보고서 생성',async()=>{setArtifact(await post(`/releases/${release.id}/exports`))})}>6. 릴리스 검토 보고서 내보내기</button>{artifact&&<><a href={'http://localhost:8000'+artifact.json_url}>JSON 다운로드</a><a href={'http://localhost:8000'+artifact.markdown_url}>Markdown 다운로드</a></>}</div>
+ </>}
+ </section>
+}
+
+

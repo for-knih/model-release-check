@@ -52,6 +52,55 @@ class Review(Base):
     decision: Mapped[str]
     reason: Mapped[str]
     created_at: Mapped[str]
+    release_id: Mapped[str | None] = mapped_column(ForeignKey('releases.id'), nullable=True)
+    evidence: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+
+class PolicyVersion(Base):
+    __tablename__ = 'policy_versions'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    identifier: Mapped[str]
+    version: Mapped[int]
+    config: Mapped[dict] = mapped_column(JSON)
+    __table_args__ = (UniqueConstraint('identifier', 'version'),)
+
+class RequirementVersion(Base):
+    __tablename__ = 'requirement_versions'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    identifier: Mapped[str]
+    version: Mapped[int]
+    title: Mapped[str]
+    verification_condition: Mapped[str]
+    owner: Mapped[str]
+    status: Mapped[str]
+    mandatory: Mapped[bool]
+    policy_id: Mapped[int] = mapped_column(ForeignKey('policy_versions.id'))
+    __table_args__ = (UniqueConstraint('identifier', 'version'),)
+
+class RunRequirement(Base):
+    __tablename__ = 'run_requirements'
+    run_id: Mapped[str] = mapped_column(ForeignKey('runs.id'), primary_key=True)
+    requirement_id: Mapped[int] = mapped_column(ForeignKey('requirement_versions.id'), primary_key=True)
+    snapshot: Mapped[dict] = mapped_column(JSON)
+    result: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+
+class Release(Base):
+    __tablename__ = 'releases'
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    name: Mapped[str]
+    initial_run_id: Mapped[str | None] = mapped_column(ForeignKey('runs.id'), nullable=True)
+    candidate_run_id: Mapped[str | None] = mapped_column(ForeignKey('runs.id'), nullable=True)
+    holdout_run_id: Mapped[str | None] = mapped_column(ForeignKey('runs.id'), nullable=True)
+    requirements: Mapped[list] = mapped_column(JSON)
+    reproduction_sources: Mapped[list] = mapped_column(JSON)
+    created_at: Mapped[str]
+
+class ReleaseExport(Base):
+    __tablename__ = 'release_exports'
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    release_id: Mapped[str] = mapped_column(ForeignKey('releases.id'))
+    snapshot: Mapped[dict] = mapped_column(JSON)
+    markdown: Mapped[str]
+    created_at: Mapped[str]
 
 class Analysis(Base):
     __tablename__ = 'analyses'

@@ -1,0 +1,82 @@
+{
+  "eval-001": {
+    "baseline": "배송",
+    "candidate": "배송"
+  },
+  "eval-002": {
+    "baseline": "배송",
+    "candidate": "배송"
+  },
+  "eval-003": {
+    "baseline": "기타",
+    "candidate": "배송"
+  },
+  "eval-004": {
+    "baseline": "기타",
+    "candidate": "배송"
+  },
+  "eval-005": {
+    "baseline": "기타",
+    "candidate": "배송"
+  },
+  "eval-006": {
+    "baseline": "환불",
+    "candidate": "환불"
+  },
+  "eval-007": {
+    "baseline": "환불",
+    "candidate": "환불"
+  },
+  "eval-008": {
+    "baseline": "환불",
+    "candidate": "환불"
+  },
+  "eval-009": {
+    "baseline": "환불",
+    "candidate": "환불"
+  },
+  "eval-010": {
+    "baseline": "환불",
+    "candidate": "환불"
+  },
+  "eval-011": {
+    "baseline": "결제",
+    "candidate": "결제"
+  },
+  "eval-012": {
+    "baseline": "결제",
+    "candidate": "결제"
+  },
+  "eval-013": {
+    "baseline": "기타",
+    "candidate": "결제"
+  },
+  "eval-014": {
+    "baseline": "기타",
+    "candidate": "결제"
+  },
+  "eval-015": {
+    "baseline": "기타",
+    "candidate": "결제"
+  },
+  "eval-016": {
+    "baseline": "기타",
+    "candidate": "기타"
+  },
+  "eval-017": {
+    "baseline": "기타",
+    "candidate": "기타"
+  },
+  "eval-018": {
+    "baseline": "배송",
+    "candidate": "기타"
+  },
+  "eval-019": {
+    "baseline": "기타",
+    "candidate": "기타"
+  },
+  "eval-020": {
+    "baseline": "배송",
+    "candidate": "배송"
+  }
+}

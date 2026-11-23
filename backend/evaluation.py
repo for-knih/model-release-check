@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from sqlalchemy import select, func
 from sklearn.metrics import accuracy_score, f1_score, recall_score
-from .db import Session, Run, Case, Prediction
+from .db import Session, Run, Case, Prediction, RunRequirement
 from .models import LABELS, KeywordAdapter, LocalAdapter, HuggingFaceAdapter
 from .specs import file_hash
 from .models import DATA
@@ -70,6 +70,12 @@ def evaluate(run_id):
             lookup = {(p.case_id, p.model_role): p.label for p in predictions}
             rows = [dict(case_id=c.case_id, text=c.text, expected_label=c.expected_label, baseline=lookup[c.id, 'baseline'], candidate=lookup[c.id, 'candidate']) for c in cases]
             run.result = {**compare(rows, run.snapshot['policy']), 'cases': rows, 'completed_at': datetime.now(timezone.utc).isoformat()}
+            from .traceability import requirement_verdict
+            requirement_results=[]
+            for link in s.scalars(select(RunRequirement).where(RunRequirement.run_id==run_id)):
+                link.result = requirement_verdict(rows,link.snapshot)
+                requirement_results.append({'requirement':link.snapshot,'verdict':link.result,'evidence_run_id':run_id})
+            run.result = {**run.result,'requirements':requirement_results}
             run.status = 'succeeded'
             s.commit()
     except Exception as exc:

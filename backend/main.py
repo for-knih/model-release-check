@@ -11,9 +11,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
-from .db import Session, Dataset, Case, Run, Review, Analysis, CaseSource
+from .db import Session, Dataset, Case, Run, Review, Analysis, CaseSource, RunRequirement
 from .models import DATA, LABELS, LocalAdapter
 from .specs import BaselineConfig, CandidateConfig, effective_spec, fingerprint
+from .traceability import Ref, resolve_requirements, combined_policy, router as traceability_router
 
 app = FastAPI(title='AI 모델 변경 검증 플랫폼')
 app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:5173', 'http://localhost:8080', 'http://127.0.0.1:5173', 'http://127.0.0.1:8080'], allow_methods=['*'], allow_headers=['*'])
@@ -33,6 +34,8 @@ class Request(BaseModel):
     baseline_version_label: str = Field(default='keyword-v1', max_length=200)
     candidate_version_label: str = Field(default='candidate-v1', max_length=200)
     prompt_version: str = Field(default='none', max_length=200)
+    requirements: list[Ref] = Field(default_factory=list,max_length=30)
+    scenario_variant: Literal['original','repaired'] = 'original'
 
 class Decision(BaseModel):
     reviewer: str = Field(min_length=1, max_length=100)
@@ -118,7 +121,11 @@ def resolve_spec(body: Request):
         dataset = s.get(Dataset, body.dataset_id)
         if not dataset:
             raise HTTPException(404, '데이터셋 없음')
-        spec = effective_spec(body, dataset)
+        requirements = resolve_requirements(s,body.requirements)
+        policy = combined_policy(requirements,body.policy.model_dump())
+        spec = effective_spec(body.model_copy(update={'policy':Policy(**policy)}), dataset)
+        if requirements:
+            spec['requirements'] = requirements
         return {'effective_spec': spec, 'fingerprint': fingerprint(spec)}
 
 def dispatch(run_id):
@@ -149,11 +156,15 @@ def create_run(body: Request, idempotency_key: str = Header(min_length=1, max_le
                 raise HTTPException(404, '데이터셋 없음')
             spec = resolved['effective_spec']
             snapshot = {**body.model_dump(), 'dataset_version': ds.version, 'baseline_version': 'keyword-v1', 'created_at': datetime.now(timezone.utc).isoformat(), 'training_config': {'analyzer': 'char', 'random_state': 42, **spec['candidate_config']}, 'metric_labels': LABELS, 'effective_spec':spec, 'configuration_fingerprint':digest}
+            snapshot['policy'] = spec['policy']
+            snapshot['requirements'] = spec.get('requirements',[])
             if body.mode == 'scenario':
-                fixture = json.loads((DATA / 'scenario.json').read_text(encoding='utf-8'))
+                fixture = json.loads((DATA / ('scenario_repaired.json' if body.scenario_variant=='repaired' else 'scenario.json')).read_text(encoding='utf-8'))
                 if ds.version != hashlib.sha256((DATA / 'evaluation.csv').read_bytes()).hexdigest():
                     raise HTTPException(422, '고정 시나리오는 샘플 평가 세트만 지원합니다')
                 snapshot.update(candidate_version='fixed-scenario-v1', baseline_version='fixed-scenario-v1', scenario_predictions=fixture)
+                if body.scenario_variant=='repaired':
+                    snapshot['candidate_version']='fixed-scenario-repaired-v1'
             else:
                 snapshot['candidate_adapter'] = spec['candidate_config']['adapter']
                 snapshot['candidate_version'] = spec['candidate_config'].get('model_id') if snapshot['candidate_adapter'] == 'huggingface' else LocalAdapter(spec['candidate_config']).version
@@ -162,6 +173,8 @@ def create_run(body: Request, idempotency_key: str = Header(min_length=1, max_le
             run = Run(id=str(uuid4()), dataset_id=ds.id, idempotency_key=idempotency_key, request_hash=digest, snapshot=snapshot)
             s.add(run)
             try:
+                s.flush()
+                s.add_all(RunRequirement(run_id=run.id,requirement_id=r['id'],snapshot=r) for r in snapshot['requirements'])
                 s.commit()
             except IntegrityError:
                 s.rollback()
@@ -209,7 +222,7 @@ def reviews(run_id: str):
     with Session() as s:
         if not s.get(Run, run_id):
             raise HTTPException(404, '실행 없음')
-        return [{'id': r.id, 'reviewer': r.reviewer, 'decision': r.decision, 'reason': r.reason, 'created_at': r.created_at} for r in s.scalars(select(Review).where(Review.run_id == run_id).order_by(Review.id))]
+        return [{'id': r.id, 'reviewer': r.reviewer, 'decision': r.decision, 'reason': r.reason, 'created_at': r.created_at, 'release_id':r.release_id,'evidence':r.evidence} for r in s.scalars(select(Review).where(Review.run_id == run_id).order_by(Review.id))]
 
 @app.get('/health')
 def health():
@@ -330,3 +343,5 @@ def next_dataset(run_id: str, body: AddCases):
             s.rollback()
             return next_dataset(run_id,body)
         return {'id':ds.id,'version':digest,'parent_id':base.id,'count':len(by_content),'reused':False}
+
+app.include_router(traceability_router)

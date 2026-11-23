@@ -18,3 +18,18 @@ def test_upgrade_preserves_existing_dataset_and_downgrade():
         assert connection.execute(text('SELECT version FROM datasets')).scalar()=='v1'
         command.upgrade(cfg,'head')
         assert 'parent_id' in {c['name'] for c in inspect(connection).get_columns('datasets')}
+
+def test_traceability_migration_preserves_historical_reviews():
+    engine=create_engine('sqlite://')
+    with engine.connect() as connection:
+        connection.execute(text('PRAGMA foreign_keys=ON'))
+        cfg=Config('alembic.ini');cfg.attributes['connection']=connection
+        command.upgrade(cfg,'0002')
+        connection.execute(text("INSERT INTO datasets (id,name,version) VALUES ('d','old','hash')"))
+        connection.execute(text("INSERT INTO runs (id,dataset_id,idempotency_key,request_hash,status,dispatched,snapshot) VALUES ('r','d','key','hash','succeeded',1,'{}')"))
+        connection.execute(text("INSERT INTO reviews (run_id,reviewer,decision,reason,created_at) VALUES ('r','QA','hold','historical reason','2026-01-01')"));connection.commit()
+        command.upgrade(cfg,'head')
+        assert connection.execute(text('SELECT reason,release_id,evidence FROM reviews')).one()==('historical reason',None,None)
+        assert {'policy_versions','requirement_versions','run_requirements','releases','release_exports'}<=set(inspect(connection).get_table_names())
+        command.downgrade(cfg,'0002')
+        assert connection.execute(text('SELECT reason FROM reviews')).scalar()=='historical reason'

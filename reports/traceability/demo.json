@@ -1,0 +1,14 @@
+{
+  "initial_run_id": "a764c143-38cd-4cf0-bd2f-019d69e8e983",
+  "candidate_run_id": "c27645af-0337-44e8-bd8d-f61a7d24e24e",
+  "release_id": "23aa2c32-0462-4482-95dc-f31064350f85",
+  "failed_release_id": "f3d654f0-197b-428d-8d2f-c96327fb0dba",
+  "artifact": {
+    "id": "d2ef0808-0935-47b3-89fe-ef94dfa09a7b",
+    "json_url": "/release-exports/d2ef0808-0935-47b3-89fe-ef94dfa09a7b?format=json",
+    "markdown_url": "/release-exports/d2ef0808-0935-47b3-89fe-ef94dfa09a7b?format=markdown"
+  },
+  "approval_rejected_status": 409,
+  "policy_revision_preserved_history": true,
+  "url": "http://localhost:8080/?release=23aa2c32-0462-4482-95dc-f31064350f85"
+}

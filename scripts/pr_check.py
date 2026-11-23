@@ -33,10 +33,13 @@ def markdown(report):
         lines.extend(['',f"- 커밋 SHA: {cell(spec.get('commit_sha',''))}", f"- 설정 지문: {cell(spec.get('configuration_fingerprint',''))}",
                       f"- 기준 버전: {cell(spec.get('baseline_version',''))}",f"- 후보 버전: {cell(spec.get('candidate_version',''))}",
                       f"- 버전 이름(표시용): {cell(spec.get('candidate_version_label',''))}"])
+        for requirement in r.get('requirements',[]):
+            req=requirement['requirement'];p=req['policy']
+            lines.append(f"- 요구사항: {cell(req['identifier'])} v{req['version']} / 정책 {cell(p['identifier'])} v{p['version']} / {cell(requirement['verdict']['status_label'])}")
     return '\n'.join(lines)+'\n'
 
 def run_check(client, body, timeout=120, poll_interval=.5):
-    report={'exit_code':2,'mode':'고정 예측 시나리오' if body['mode']=='scenario' else '실제 로컬 모델 평가'}
+    report={'exit_code':2,'mode':'시나리오 데모 (고정 예측)' if body['mode']=='scenario' else '실제 로컬 모델 평가'}
     started=time.monotonic()
     def send(method,path,**kwargs):
         remaining=timeout-(time.monotonic()-started)
@@ -85,6 +88,8 @@ def parser():
     p.add_argument('--dataset-version',required=True,help='SHA256 버전 또는 sample')
     p.add_argument('--commit-sha',default=os.getenv('GITHUB_SHA'),required=not bool(os.getenv('GITHUB_SHA')))
     p.add_argument('--mode',choices=['local','scenario'],default='local')
+    p.add_argument('--scenario-variant',choices=['original','repaired'],default='original')
+    p.add_argument('--requirement',action='append',default=[],help='ID@버전 (예: REQ-REFUND-001@1), 반복 가능')
     p.add_argument('--baseline-config',type=json_arg,default={'adapter':'keyword','rules_version':'v1'})
     p.add_argument('--candidate-config',type=json_arg,default={'adapter':'local','C':4,'ngram_min':2,'ngram_max':4})
     p.add_argument('--baseline-version',default='keyword-v1',help='표시용 이름; 설정 변경으로 취급하지 않음')
@@ -112,8 +117,10 @@ def main(argv=None):
                   'baseline_config':args.baseline_config,'candidate_config':args.candidate_config,
                   'baseline_version_label':args.baseline_version,'candidate_version_label':args.candidate_version,
                   'prompt_version':args.prompt_version,'policy':{'refund_min_recall':args.refund_min_recall,'refund_max_drop':args.refund_max_drop}}
+            body['scenario_variant']=args.scenario_variant
+            body['requirements']=[{'identifier':value.rsplit('@',1)[0],'version':int(value.rsplit('@',1)[1])} for value in args.requirement]
             report=run_check(client,body,args.timeout)
-    except (httpx.HTTPError,ValueError,KeyError) as exc:
+    except (httpx.HTTPError,ValueError,KeyError,IndexError) as exc:
         report={'exit_code':2,'error':str(exc)}
     args.output_dir.mkdir(parents=True,exist_ok=True)
     (args.output_dir/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

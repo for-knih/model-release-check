@@ -42,7 +42,8 @@ def effective_spec(body, dataset):
               'commit_sha': body.commit_sha, 'policy': body.policy.model_dump(),
               'evaluation_implementation': file_hash(Path(__file__).with_name('evaluation.py'))}
     if body.mode == 'scenario':
-        common.update(baseline_config={'adapter':'fixed-scenario'}, candidate_config={'adapter':'fixed-scenario'}, scenario_hash=file_hash(DATA/'scenario.json'))
+        variant = getattr(body,'scenario_variant','original')
+        common.update(baseline_config={'adapter':'fixed-scenario'}, candidate_config={'adapter':'fixed-scenario','variant':variant}, scenario_hash=file_hash(DATA/('scenario_repaired.json' if variant=='repaired' else 'scenario.json')))
     else:
         common.update(baseline_config=body.baseline_config.model_dump(), candidate_config=settings,
                       model_implementation=file_hash(Path(__file__).with_name('models.py')))

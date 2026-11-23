@@ -14,7 +14,7 @@ docker compose logs -f api worker
 
 화면 http://localhost:8080 / API 문서 http://localhost:8000/docs
 
-PostgreSQL·Redis 준비 → Alembic `0001 → 0002` → API·RQ 워커 순서로 시작합니다. 호스트 API·화면은 loopback에 바인딩하며 DB/Redis 포트는 공개하지 않습니다. `.env`는 Git에 포함하지 않습니다. 기본 비밀번호는 로컬 데모용입니다. `docker compose down`은 DB 볼륨을 보존합니다. `down -v`는 DB를 삭제합니다.
+PostgreSQL·Redis 준비 → Alembic `0001 → 0002 → 0003` → API·RQ 워커 순서로 시작합니다. 호스트 API·화면은 loopback에 바인딩하며 DB/Redis 포트는 공개하지 않습니다. `.env`는 Git에 포함하지 않습니다. 기본 비밀번호는 로컬 데모용입니다. `docker compose down`은 DB 볼륨을 보존합니다. `down -v`는 DB를 삭제합니다.
 
 ### Docker 없는 개발 실행
 
@@ -254,3 +254,163 @@ demo_extensions는 먼저 CLI로 reports/scenario/report.json, reports/local/rep
 외부 배포·원격 푸시·저장소 공개는 이번 추가 개발에서 수행하지 않았습니다.
 
 참고: [RQ 재시도](https://python-rq.org/docs/exceptions/), [HF 추론 클라이언트](https://huggingface.co/docs/huggingface_hub/package_reference/inference_client), [GitHub Actions 변수](https://docs.github.com/en/actions/reference/workflows-and-actions/variables).
+
+## 3차 개발: 요구사항 추적·재검증·릴리스 증빙
+
+요구사항·정책은 **불변 버전**으로 저장합니다. ID와 버전이 같은데 필드가 달라지면 409입니다. 개정은 새 버전 등록으로만 가능합니다. 요구사항 필드는 ID, 버전, 제목, 검증 조건, 담당자, 상태(draft/active/retired), 필수 여부, 정책 ID·버전입니다. 수치 기준의 권위 있는 값은 연결된 정책의 config이며 검증 조건은 사람을 위한 설명입니다.
+
+`REQ-REFUND-001 v1`은 후보 환불 재현율 **85% 이상**, 기준 대비 하락 **5%p 이하**를 `POL-REFUND-001 v1`에 연결합니다. `POST /requirements/sample` 또는 화면의 예시 등록으로 등록합니다. 요구사항을 평가에 전달하면 연결된 정책을 사용합니다. 여러 요구사항은 최소 재현율의 최댓값·허용 하락의 최솟값으로 통합해 기존 `compare()`를 실행하며 각 요구사항도 같은 로직으로 별도 판정합니다. 이 경우 일반 policy 인자보다 요구사항 정책이 우선합니다.
+
+실행 스냅샷과 run_requirements에 요구사항 정의·정책 버전을 복사하고, 워커가 관측값·판정·위반 사례 ID를 **완료 시점에 저장**합니다. 조회 시 최신 정책으로 재계산하지 않습니다. 예전 실행에 요구사항을 사후 소급해 붙이지 않습니다. 연결된 완료 평가가 없으면 **미검증**, 환불 표본 0건이면 **평가 불가**입니다.
+
+### 요구사항 정의·근거 테스트
+
+| ID | 버전 / 검증 조건 | 근거 테스트 |
+|---|---|---|
+| REQ-REFUND-001 | v1: 환불 재현율 ≥85%, 하락 ≤5%p | test_requirement_policy_snapshots_survive_revision, test_required_nonpass_blocks_release_approval |
+| REQ-TRACE-001 | 실행 시점 요구사항·정책·판정 보존 | test_requirement_policy_snapshots_survive_revision |
+| REQ-REGRESSION-001 | 원본 실행·사례·대상 세트 버전 연결, 중복 없음 | test_regression_links_deduplicate_without_changing_dataset |
+| REQ-COMPARE-001 | 같은 세트·정책에서만 직접 지표 증감 제공 | test_dataset_or_policy_version_change_disables_direct_comparison |
+| REQ-REVIEW-001 | 필수 실패/미검증/평가 불가이면 릴리스 일반 승인 제한 | test_required_nonpass_blocks_release_approval, test_run_only_review_cannot_override_release_gate |
+| REQ-EVIDENCE-001 | 보고서 ID·버전·지표가 저장된 실행과 일치, 내보낸 증빙 불변 | test_same_conditions_correction_comparison_review_and_frozen_report |
+| REQ-HOLDOUT-001 | 재현 사례와 수정 미사용·독립 평가 성능 분리 | test_holdout_with_used_cases_is_not_independent, test_separate_unused_holdout_is_reported_independently |
+
+위 표에서 REQ-REFUND-001은 API에 등록하는 모델 품질 요구사항입니다. 나머지 ID는 구현 기능의 추적성 정의이며 임의의 수치 정책에 매핑해 DB에 등록하지 않습니다.
+
+### 실행 명령과 3분 데모
+
+기존 DB에서도 먼저 증분 마이그레이션을 적용합니다. 기존 평가·리뷰는 보존됩니다.
+
+```bash
+alembic upgrade head
+QUEUE_MODE=thread uvicorn backend.main:app --host 127.0.0.1 --port 8000
+# 다른 터미널: 실제 HTTP 전체 흐름과 파일 생성
+python -m scripts.demo_traceability
+pytest tests -q
+```
+
+Compose는 기존 `docker compose up --build -d`를 그대로 사용합니다. 화면 빌드도 `cd frontend && npm ci && npm run build`와 동일합니다. 스크립트는 `reports/traceability/demo.json`, `original-pr.json/md`, `repaired-pr.json/md`, `release.json/md`를 생성합니다. 결과 화면 주소는 demo.json의 url에 저장됩니다.
+
+1. **0:00–0:30** 화면 상단 `예시 요구사항 등록` → REQ-REFUND-001 v1 선택. 적용 기준 85%·5%p와 미검증 표시를 확인합니다.
+2. **0:30–1:00** `1. 환불 기준 위반 평가`. **시나리오 데모** 정확도 기준 60%·후보 85%, 후보 환불 60% → 요구사항 실패. 근거 실행 버튼과 eval-008/009 원문을 확인합니다.
+3. **1:00–1:30** 두 사례를 선택하고 `2. 선택 사례 회귀 연결`. 기존 세트에 있는 원문이므로 **사례 추가 0건·출처 연결 2건**, 버전 유지입니다.
+4. **1:30–2:00** `3. 동일 조건 수정 후보 평가` → `4. 릴리스 검토 생성`. 같은 데이터셋·정책에서 후보 정확도 **85% → 95%**, 환불 **60% → 100%**, 재현 사례 2건 통과를 확인합니다.
+5. **2:00–2:30** 시스템 통과와 검토자 결정을 구분해 사유와 일반 승인을 저장합니다. 실패 실행으로 릴리스를 만들면 일반 승인은 제한됩니다(API 409). 보류 사유를 기록할 수 있습니다.
+6. **2:30–3:00** `6. 릴리스 검토 보고서 내보내기` → JSON·Markdown 다운로드. 요구사항/정책 버전, 두 실행 ID·커밋·세트·모델 설정, 위반 기준, 재현 사례, 검토 결정·사유를 확인합니다.
+
+`data/scenario_repaired.json`은 두 환불 회귀만 수정한 **별도 고정 예측**입니다. 실제 모델 개선으로 해석하지 않습니다. 수정에 사용하지 않은 18건은 정확도 94.4%, 환불 100%(3건)로 표시하지만 **독립 세트는 아닙니다**. 별도 독립 평가 실행이 없으면 미검증입니다. 수정한 사례의 통과를 일반화 성능으로 표시하지 않습니다.
+
+### 추가 API / CLI
+
+| API | 역할 |
+|---|---|
+| POST /policies | 정책 ID·버전·수치 config 불변 등록 |
+| POST /requirements, POST /requirements/sample | 정의 버전 등록, 예시 생성 |
+| GET /requirements | 전체 요구사항 버전 목록 |
+| GET /requirements/{identifier}/versions/{version} | 실행 시점 기준·관측값·판정·위반 원문·출처 |
+| POST /runs/{id}/regression-links | 기존 대상 세트 사례에 출처만 연결 |
+| POST /releases, GET /releases, GET /releases/{id} | 최초/수정/독립 실행과 요구사항 범위·비교·추적표 |
+| POST /releases/{id}/reviews | 기존 reviews 테이블을 재사용해 릴리스 결정 및 근거 저장 |
+| POST /releases/{id}/exports | JSON·Markdown 증빙 스냅샷 생성 |
+| GET /release-exports/{id}?format=json 또는 markdown | 저장된 증빙 다운로드 |
+
+평가·PR CLI에 요구사항을 연결하는 예시:
+
+```bash
+curl -X POST http://localhost:8000/requirements/sample
+python -m scripts.pr_check --dataset-version sample --commit-sha scenario-original-demo \
+  --mode scenario --scenario-variant original --requirement REQ-REFUND-001@1 \
+  --output-dir reports/trace-original
+python -m scripts.pr_check --dataset-version sample --commit-sha scenario-repaired-demo \
+  --mode scenario --scenario-variant repaired --requirement REQ-REFUND-001@1 \
+  --output-dir reports/trace-repaired
+```
+
+기존 POST /runs의 추가 필드:
+
+```json
+{"dataset_id":"DATASET_ID","mode":"scenario","scenario_variant":"repaired","commit_sha":"scenario-repaired-demo","requirements":[{"identifier":"REQ-REFUND-001","version":1}]}
+```
+
+릴리스 생성 예시:
+
+```json
+{"name":"환불 수정 검토","initial_run_id":"INITIAL_RUN_ID","candidate_run_id":"CANDIDATE_RUN_ID","requirements":[{"identifier":"REQ-REFUND-001","version":1}],"reproduction_sources":[{"source_run_id":"INITIAL_RUN_ID","source_case_id":"eval-008"}]}
+```
+
+reproduction_sources는 먼저 대상 세트에 CaseSource로 연결되어야 합니다. 없는 원문을 기존 세트에 삽입하지 않으며 기존 dataset-versions API로 새 버전을 만든 뒤 사용할 수 있습니다. 버전이 달라지면 전체 정확도·환불 증감 비교는 제한하고 원문 재현 결과만 별도 제공합니다.
+
+직접 비교 조건은 두 실행 완료, **같은 테스트 세트 버전·같은 정책 수치와 버전·같은 평가 모드·같은 기준 모델 설정**입니다. 다르면 `comparison.allowed=false`, deltas=null과 제한 사유를 반환합니다. 양쪽 원래 지표와 설정은 조회할 수 있습니다.
+
+`holdout_run_id`는 별도 독립 평가 근거를 연결하는 선택 필드입니다. 수정 사용 원문 중복 없음, 별도 세트 버전, 같은 후보 설정·커밋·정책인지 검사합니다. 불일치는 평가 불가입니다. 이 검사는 제공된 재현 출처 범위에 한하며, 사람의 미기록 학습 사용이나 의미가 비슷한 문장의 누출까지 증명하지 않습니다.
+
+일반 승인은 **해당 릴리스에 포함된 필수 요구사항의 정확한 버전**이 모두 통과하고 수정 후보가 완료된 경우에만 가능합니다. draft/retired는 통과로 계산하지 않습니다. 제한 시 API 409에 restrictions를 포함하고 UI에서 사유·승인 비활성화를 표시합니다. 별도 독립 평가까지 반드시 통과해야 한다는 추가 정책은 현재 요구하지 않으며, 독립 미검증 상태를 분명히 표시합니다.
+
+기존 `/runs/{id}/reviews`의 실행 단독 기록은 릴리스 승인을 대체하지 않습니다. 릴리스 검토에는 같은 reviews 테이블의 release_id, run_id와 evidence JSON(최초/후보/독립 실행 ID, 요구사항 판정)을 저장합니다. 내보낸 release_exports는 생성 시점의 요구사항·실행·결정 전체를 저장하여 이후 정책 개정·추가 결정에 따라 변하지 않습니다. 새로운 검토를 반영하려면 새 보고서를 생성합니다.
+
+### 확장 ERD
+
+```mermaid
+erDiagram
+    policy_versions ||--o{ requirement_versions : binds_policy_version
+    requirement_versions ||--o{ run_requirements : snapshotted
+    runs ||--o{ run_requirements : evaluates
+    datasets ||--o{ runs : evaluates_version
+    runs ||--o{ case_sources : original_regression
+    datasets ||--o{ case_sources : target_version
+    cases ||--o{ case_sources : existing_or_copied_case
+    runs ||--o{ releases : initial_candidate_holdout
+    releases ||--o{ reviews : scoped_decision
+    runs ||--o{ reviews : evidence_run
+    releases ||--o{ release_exports : frozen_export
+    policy_versions {
+        int id PK
+        string identifier "UNIQUE(identifier,version)"
+        int version
+        json config "immutable thresholds"
+    }
+    requirement_versions {
+        int id PK
+        string identifier "UNIQUE(identifier,version)"
+        int version
+        string title
+        string verification_condition
+        string owner
+        string status
+        boolean mandatory
+        int policy_id FK
+    }
+    run_requirements {
+        string run_id PK,FK
+        int requirement_id PK,FK
+        json snapshot "requirement and policy version"
+        json result "stored numeric verdict and observations"
+    }
+    releases {
+        string id PK
+        string initial_run_id FK
+        string candidate_run_id FK
+        string holdout_run_id FK
+        json requirements "immutable definition snapshots"
+        json reproduction_sources "validated source references"
+    }
+    reviews {
+        int id PK
+        string run_id FK
+        string release_id FK "nullable for legacy run-only review"
+        json evidence "saved basis IDs and verdicts"
+        string decision
+        string reason
+    }
+    release_exports {
+        string id PK
+        string release_id FK
+        json snapshot "immutable export-time evidence"
+        string markdown
+        string created_at
+    }
+```
+
+release.requirements와 reproduction_sources는 관계 FK 대신 API로 검증한 **JSON 스냅샷**입니다. 실행별 요구사항 연결은 복합 PK로 중복을 막습니다. CaseSource의 기존 `(dataset_id, source_run_id, source_case_id)` 유니크 제약을 그대로 사용합니다. DB를 직접 변경하는 관리 작업까지 막는 불변 트리거는 없으며 불변성은 공개 API의 생성 전용 인터페이스와 저장된 스냅샷으로 보장합니다.
+
+이번 검증은 SQLite + thread 실제 HTTP·화면·CLI, Alembic 0003, pytest, 프런트 빌드에서 수행했습니다. Docker/PostgreSQL/Redis/RQ 실제 통합, GitHub Actions, HF 외부 호출은 이전과 마찬가지로 미검증이며 원격 푸시·외부 배포를 하지 않았습니다. 자세한 변경 파일과 실측은 `reports/traceability/VALIDATION.md`를 참조하세요.
