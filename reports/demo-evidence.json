@@ -1,0 +1,167 @@
+{
+  "scenario_run_id": "188c178d-75e0-44af-84ad-e1cc2b4006b7",
+  "local_run_id": "c9000e4d-e7ee-4558-af42-c901fa01e1bd",
+  "selected_case_ids": [
+    "eval-008",
+    "eval-009"
+  ],
+  "analysis": {
+    "id": "dcd50a73-ca4b-4df1-b5d2-8f8a59090a3f",
+    "status": "succeeded",
+    "config": {
+      "provider": "local",
+      "prompt_version": "regression-analysis-v1",
+      "prompt_sha256": "ab7c6517e8cda4fce78d1b62fa61bdb4b4e69ffc47d6e6aed814d3979cd30b88"
+    },
+    "result": {
+      "review_only": true,
+      "kind": "local",
+      "case_count": 2,
+      "groups": [
+        {
+          "expected_label": "환불",
+          "candidate_label": "기타",
+          "count": 2,
+          "evidence_ids": [
+            "eval-008",
+            "eval-009"
+          ]
+        }
+      ],
+      "patterns": []
+    },
+    "error": null,
+    "review_only": true
+  },
+  "new_dataset": {
+    "id": "3449b205-0ad9-4a69-bcba-f9af421b2857",
+    "version": "b84322f37aa0b7b565f06277ee44da86537881ea17d1480fae42bd6306d546fd",
+    "name": "쇼핑몰 합성 평가 세트",
+    "parent_id": "9e922213-7877-4276-ad42-ff863e0e7d68",
+    "cases": [
+      {
+        "case_id": "eval-001",
+        "text": "배송 상태 확인 부탁해요",
+        "expected_label": "배송"
+      },
+      {
+        "case_id": "eval-002",
+        "text": "택배가 다른 집으로 갔어요",
+        "expected_label": "배송"
+      },
+      {
+        "case_id": "eval-003",
+        "text": "내일 물건이 도착할까요",
+        "expected_label": "배송"
+      },
+      {
+        "case_id": "eval-004",
+        "text": "출고 날짜를 알려 주세요",
+        "expected_label": "배송"
+      },
+      {
+        "case_id": "eval-005",
+        "text": "수령 주소를 수정하려고 해요",
+        "expected_label": "배송"
+      },
+      {
+        "case_id": "eval-006",
+        "text": "환불 접수 후 진행 상황이 궁금해요",
+        "expected_label": "환불"
+      },
+      {
+        "case_id": "eval-007",
+        "text": "반품한 상품의 돈이 안 왔어요",
+        "expected_label": "환불"
+      },
+      {
+        "case_id": "eval-008",
+        "text": "환불 처리는 며칠 걸리나요",
+        "expected_label": "환불"
+      },
+      {
+        "case_id": "eval-009",
+        "text": "반품 수거를 신청할게요",
+        "expected_label": "환불"
+      },
+      {
+        "case_id": "eval-010",
+        "text": "환불 금액을 확인하고 싶어요",
+        "expected_label": "환불"
+      },
+      {
+        "case_id": "eval-011",
+        "text": "결제가 두 번 되었어요",
+        "expected_label": "결제"
+      },
+      {
+        "case_id": "eval-012",
+        "text": "카드로 금액이 승인되지 않아요",
+        "expected_label": "결제"
+      },
+      {
+        "case_id": "eval-013",
+        "text": "현금영수증 발행이 필요해요",
+        "expected_label": "결제"
+      },
+      {
+        "case_id": "eval-014",
+        "text": "무통장 입금이 확인되었나요",
+        "expected_label": "결제"
+      },
+      {
+        "case_id": "eval-015",
+        "text": "할부 개월 수를 바꾸고 싶어요",
+        "expected_label": "결제"
+      },
+      {
+        "case_id": "eval-016",
+        "text": "비밀번호 초기화 링크 보내주세요",
+        "expected_label": "기타"
+      },
+      {
+        "case_id": "eval-017",
+        "text": "제품 원단이 면인가요",
+        "expected_label": "기타"
+      },
+      {
+        "case_id": "eval-018",
+        "text": "로그인 오류를 해결해주세요",
+        "expected_label": "기타"
+      },
+      {
+        "case_id": "eval-019",
+        "text": "쿠폰 유효 기간 알려 주세요",
+        "expected_label": "기타"
+      },
+      {
+        "case_id": "eval-020",
+        "text": "선물용 포장을 추가해주세요",
+        "expected_label": "기타"
+      }
+    ],
+    "sources": [
+      {
+        "case_id": "eval-008",
+        "source_run_id": "188c178d-75e0-44af-84ad-e1cc2b4006b7",
+        "source_case_id": "eval-008"
+      },
+      {
+        "case_id": "eval-009",
+        "source_run_id": "188c178d-75e0-44af-84ad-e1cc2b4006b7",
+        "source_case_id": "eval-009"
+      }
+    ]
+  },
+  "old_dataset_preserved": true,
+  "duplicate_request_reused": true,
+  "reviews": [
+    {
+      "id": 1,
+      "reviewer": "데모 검토자",
+      "decision": "hold",
+      "reason": "환불 재현율 100%에서 60%로 하락. eval-008, eval-009 원문 확인 후 보류합니다.",
+      "created_at": "2026-11-22T23:49:05.105234+00:00"
+    }
+  ]
+}

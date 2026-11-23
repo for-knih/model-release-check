@@ -1,0 +1,363 @@
+{
+  "exit_code": 1,
+  "mode": "고정 예측 시나리오",
+  "run_id": "188c178d-75e0-44af-84ad-e1cc2b4006b7",
+  "snapshot": {
+    "dataset_id": "9e922213-7877-4276-ad42-ff863e0e7d68",
+    "mode": "scenario",
+    "candidate_adapter": "local",
+    "policy": {
+      "refund_min_recall": 0.8,
+      "refund_max_drop": 0.1
+    },
+    "baseline_config": {
+      "adapter": "keyword",
+      "rules_version": "v1"
+    },
+    "candidate_config": {
+      "adapter": "local",
+      "C": 4.0,
+      "ngram_min": 2,
+      "ngram_max": 4,
+      "model_id": null
+    },
+    "commit_sha": "local-demo-pr-001",
+    "baseline_version_label": "keyword-v1",
+    "candidate_version_label": "candidate-v1",
+    "prompt_version": "none",
+    "dataset_version": "addfc455911ddbaf1f0e6a36f880001d595dad778ec94ebeb819199070366235",
+    "baseline_version": "fixed-scenario-v1",
+    "created_at": "2026-11-22T23:48:36.771477+00:00",
+    "training_config": {
+      "analyzer": "char",
+      "random_state": 42,
+      "adapter": "fixed-scenario"
+    },
+    "metric_labels": [
+      "배송",
+      "환불",
+      "결제",
+      "기타"
+    ],
+    "effective_spec": {
+      "dataset_id": "9e922213-7877-4276-ad42-ff863e0e7d68",
+      "dataset_version": "addfc455911ddbaf1f0e6a36f880001d595dad778ec94ebeb819199070366235",
+      "mode": "scenario",
+      "commit_sha": "local-demo-pr-001",
+      "policy": {
+        "refund_min_recall": 0.8,
+        "refund_max_drop": 0.1
+      },
+      "evaluation_implementation": "59ffeee331535c062bf2d1c06b5f36ec7bc6f287677c716c9f6d81019c6ff47f",
+      "baseline_config": {
+        "adapter": "fixed-scenario"
+      },
+      "candidate_config": {
+        "adapter": "fixed-scenario"
+      },
+      "scenario_hash": "b98a5d2e2d6135b7c224e03c76a43751177b09fbcd7697dd466f68a25d39ae60"
+    },
+    "configuration_fingerprint": "96cc04c0bd40718cea2c0f760a794ed27a5a91e955993c3839a65ee437b413a1",
+    "candidate_version": "fixed-scenario-v1",
+    "scenario_predictions": {
+      "eval-001": {
+        "baseline": "배송",
+        "candidate": "배송"
+      },
+      "eval-002": {
+        "baseline": "배송",
+        "candidate": "배송"
+      },
+      "eval-003": {
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      "eval-004": {
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      "eval-005": {
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      "eval-006": {
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      "eval-007": {
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      "eval-008": {
+        "baseline": "환불",
+        "candidate": "기타"
+      },
+      "eval-009": {
+        "baseline": "환불",
+        "candidate": "기타"
+      },
+      "eval-010": {
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      "eval-011": {
+        "baseline": "결제",
+        "candidate": "결제"
+      },
+      "eval-012": {
+        "baseline": "결제",
+        "candidate": "결제"
+      },
+      "eval-013": {
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      "eval-014": {
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      "eval-015": {
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      "eval-016": {
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      "eval-017": {
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      "eval-018": {
+        "baseline": "배송",
+        "candidate": "기타"
+      },
+      "eval-019": {
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      "eval-020": {
+        "baseline": "배송",
+        "candidate": "배송"
+      }
+    }
+  },
+  "result": {
+    "baseline": {
+      "accuracy": 0.6,
+      "macro_f1": 0.611111111111111,
+      "classes": {
+        "배송": {
+          "recall": 0.4,
+          "support": 5
+        },
+        "환불": {
+          "recall": 1.0,
+          "support": 5
+        },
+        "결제": {
+          "recall": 0.4,
+          "support": 5
+        },
+        "기타": {
+          "recall": 0.6,
+          "support": 5
+        }
+      }
+    },
+    "candidate": {
+      "accuracy": 0.85,
+      "macro_f1": 0.8465909090909092,
+      "classes": {
+        "배송": {
+          "recall": 1.0,
+          "support": 5
+        },
+        "환불": {
+          "recall": 0.6,
+          "support": 5
+        },
+        "결제": {
+          "recall": 1.0,
+          "support": 5
+        },
+        "기타": {
+          "recall": 0.8,
+          "support": 5
+        }
+      }
+    },
+    "recommendation": "hold",
+    "reasons": [
+      "환불 재현율 60.0% < 최소 80.0%",
+      "환불 재현율 하락 40.0%p > 허용 10.0%p"
+    ],
+    "refund_evaluable": true,
+    "cases": [
+      {
+        "case_id": "eval-001",
+        "text": "배송 상태 확인 부탁해요",
+        "expected_label": "배송",
+        "baseline": "배송",
+        "candidate": "배송"
+      },
+      {
+        "case_id": "eval-002",
+        "text": "택배가 다른 집으로 갔어요",
+        "expected_label": "배송",
+        "baseline": "배송",
+        "candidate": "배송"
+      },
+      {
+        "case_id": "eval-003",
+        "text": "내일 물건이 도착할까요",
+        "expected_label": "배송",
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      {
+        "case_id": "eval-004",
+        "text": "출고 날짜를 알려 주세요",
+        "expected_label": "배송",
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      {
+        "case_id": "eval-005",
+        "text": "수령 주소를 수정하려고 해요",
+        "expected_label": "배송",
+        "baseline": "기타",
+        "candidate": "배송"
+      },
+      {
+        "case_id": "eval-006",
+        "text": "환불 접수 후 진행 상황이 궁금해요",
+        "expected_label": "환불",
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      {
+        "case_id": "eval-007",
+        "text": "반품한 상품의 돈이 안 왔어요",
+        "expected_label": "환불",
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      {
+        "case_id": "eval-008",
+        "text": "환불 처리는 며칠 걸리나요",
+        "expected_label": "환불",
+        "baseline": "환불",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-009",
+        "text": "반품 수거를 신청할게요",
+        "expected_label": "환불",
+        "baseline": "환불",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-010",
+        "text": "환불 금액을 확인하고 싶어요",
+        "expected_label": "환불",
+        "baseline": "환불",
+        "candidate": "환불"
+      },
+      {
+        "case_id": "eval-011",
+        "text": "결제가 두 번 되었어요",
+        "expected_label": "결제",
+        "baseline": "결제",
+        "candidate": "결제"
+      },
+      {
+        "case_id": "eval-012",
+        "text": "카드로 금액이 승인되지 않아요",
+        "expected_label": "결제",
+        "baseline": "결제",
+        "candidate": "결제"
+      },
+      {
+        "case_id": "eval-013",
+        "text": "현금영수증 발행이 필요해요",
+        "expected_label": "결제",
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      {
+        "case_id": "eval-014",
+        "text": "무통장 입금이 확인되었나요",
+        "expected_label": "결제",
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      {
+        "case_id": "eval-015",
+        "text": "할부 개월 수를 바꾸고 싶어요",
+        "expected_label": "결제",
+        "baseline": "기타",
+        "candidate": "결제"
+      },
+      {
+        "case_id": "eval-016",
+        "text": "비밀번호 초기화 링크 보내주세요",
+        "expected_label": "기타",
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-017",
+        "text": "제품 원단이 면인가요",
+        "expected_label": "기타",
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-018",
+        "text": "로그인 오류를 해결해주세요",
+        "expected_label": "기타",
+        "baseline": "배송",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-019",
+        "text": "쿠폰 유효 기간 알려 주세요",
+        "expected_label": "기타",
+        "baseline": "기타",
+        "candidate": "기타"
+      },
+      {
+        "case_id": "eval-020",
+        "text": "선물용 포장을 추가해주세요",
+        "expected_label": "기타",
+        "baseline": "배송",
+        "candidate": "배송"
+      }
+    ],
+    "completed_at": "2026-11-22T23:48:37.372147+00:00"
+  },
+  "representative_failures": [
+    {
+      "case_id": "eval-008",
+      "text": "환불 처리는 며칠 걸리나요",
+      "expected_label": "환불",
+      "baseline": "환불",
+      "candidate": "기타"
+    },
+    {
+      "case_id": "eval-009",
+      "text": "반품 수거를 신청할게요",
+      "expected_label": "환불",
+      "baseline": "환불",
+      "candidate": "기타"
+    },
+    {
+      "case_id": "eval-020",
+      "text": "선물용 포장을 추가해주세요",
+      "expected_label": "기타",
+      "baseline": "배송",
+      "candidate": "배송"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: modelcheck
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-demo-only}
+      POSTGRES_DB: modelcheck
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U modelcheck"]
+      interval: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      retries: 20
+  migrate:
+    build: .
+    environment: &env
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://modelcheck:local-demo-only@postgres:5432/modelcheck}
+      REDIS_URL: redis://redis:6379/0
+      HF_MODEL_ID: ${HF_MODEL_ID:-}
+      HF_TOKEN: ${HF_TOKEN:-}
+      HF_ANALYSIS_MODEL_ID: ${HF_ANALYSIS_MODEL_ID:-}
+    command: alembic upgrade head
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    build: .
+    environment: *env
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+  worker:
+    build: .
+    environment: *env
+    command: rq worker --url redis://redis:6379/0
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+  web:
+    build: frontend
+    ports: ["127.0.0.1:8080:80"]
+    depends_on: [api]
+volumes:
+  pgdata:

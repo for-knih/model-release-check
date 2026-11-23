@@ -1,0 +1,76 @@
+name: Model release quality gate
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Restore evaluation DB checkpoint for this commit
+        uses: actions/cache/restore@v4
+        with:
+          path: .ci-cache/database.sql
+          key: modelcheck-db-v1-${{ runner.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Start PostgreSQL, Redis, API and RQ worker
+        run: docker compose up -d --build api worker
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install httpx
+      - name: Wait for API
+        run: |
+          for i in $(seq 1 60); do
+            if curl -fsS http://localhost:8000/health; then exit 0; fi
+            sleep 2
+          done
+          docker compose logs
+          exit 2
+      - name: Restore completed evaluation records
+        run: |
+          if [ -f .ci-cache/database.sql ]; then
+            docker compose exec -T postgres psql -v ON_ERROR_STOP=1 -U modelcheck -d modelcheck < .ci-cache/database.sql
+          fi
+      - name: Run local-model PR validation
+        env:
+          COMMIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: >-
+          python -m scripts.pr_check --dataset-version sample --commit-sha "$COMMIT_SHA"
+          --mode local --output-dir reports/pr
+      - name: Save completed evaluation checkpoint
+        id: checkpoint
+        if: always()
+        run: |
+          if [ -f reports/pr/report.json ] && python -c "import json; assert json.load(open('reports/pr/report.json'))['exit_code'] in (0,1)"; then
+            mkdir -p .ci-cache
+            docker compose exec -T postgres pg_dump -U modelcheck --clean --if-exists modelcheck > .ci-cache/database.sql
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/cache/save@v4
+        if: always() && steps.checkpoint.outputs.ready == 'true'
+        with:
+          path: .ci-cache/database.sql
+          key: modelcheck-db-v1-${{ runner.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Publish job summary
+        if: always()
+        run: |
+          if [ -f reports/pr/report.md ]; then
+            cat reports/pr/report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'API 준비 또는 빌드 실패: 평가 보고서 없음' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: model-quality-report
+          path: reports/pr/
+      - name: Logs and cleanup
+        if: always()
+        run: |
+          docker compose logs --no-color
+          docker compose down -v
