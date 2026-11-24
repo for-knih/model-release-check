@@ -33,3 +33,18 @@ def test_traceability_migration_preserves_historical_reviews():
         assert {'policy_versions','requirement_versions','run_requirements','releases','release_exports'}<=set(inspect(connection).get_table_names())
         command.downgrade(cfg,'0002')
         assert connection.execute(text('SELECT reason FROM reviews')).scalar()=='historical reason'
+
+def test_ivd_migration_preserves_existing_data_and_enforces_evidence_links():
+    engine=create_engine('sqlite://')
+    with engine.connect() as connection:
+        connection.execute(text('PRAGMA foreign_keys=ON'))
+        cfg=Config('alembic.ini');cfg.attributes['connection']=connection
+        command.upgrade(cfg,'0003')
+        connection.execute(text("INSERT INTO datasets (id,name,version) VALUES ('before-ivd','기존 평가','v1')"));connection.commit()
+        command.upgrade(cfg,'0004')
+        tables=set(inspect(connection).get_table_names())
+        assert {'ivd_products','ivd_documents','ivd_evidence','ivd_packages','ivd_mappings','ivd_mapping_evidence','ivd_requests','ivd_events','ivd_exports'}<=tables
+        assert len(inspect(connection).get_foreign_keys('ivd_mapping_evidence'))==2
+        command.downgrade(cfg,'0003')
+        assert connection.execute(text("SELECT name FROM datasets WHERE id='before-ivd'")).scalar()=='기존 평가'
+        command.upgrade(cfg,'head')

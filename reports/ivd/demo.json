@@ -1,0 +1,219 @@
+{
+  "hiv_eu_v1": "b20d5c46-7352-4230-82d0-cd707e48a875",
+  "hiv_eu_v2": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+  "covid_kr": "d9ce3691-8dfe-4642-a8af-d2df1eb6f10a",
+  "hiv_kr": "46b66090-156b-4430-a742-c505293c161b",
+  "missing_requirement": "EU-PERFORMANCE-001",
+  "evidence_revision": {
+    "id": "c42e66be-0abf-4eff-a221-f5ee86c0928a",
+    "product_id": "IVD-HIV-DEMO",
+    "key": "performance",
+    "revision": 1,
+    "title": "가상 성능평가 자료 메타데이터",
+    "summary": "가상 등록 파일과 인용 위치만 확인. 실제 성능 수치 없음.",
+    "citation": "가상://HIV/performance/report §1",
+    "previous_id": null,
+    "affected_references": [],
+    "note": "이전 패키지는 보존됩니다. 새 패키지 버전에 교체 연결하면 재검토 필요로 전환됩니다"
+  },
+  "open_request_completion_rejected": 409,
+  "final_status": "internal_complete",
+  "regulatory_status": "규제 검토 필요",
+  "old_package_preserved": true,
+  "product_market_isolation": true,
+  "diff": {
+    "before_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+    "after_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+    "changes": [
+      {
+        "requirement_key": "EU-OVERVIEW-001",
+        "section": "overview",
+        "document_before": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+        "document_after": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+        "evidence_before": [
+          "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+        ],
+        "evidence_after": [
+          "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+        ],
+        "state_before": "검토 필요",
+        "state_after": "충족",
+        "applicability_before": "unconfirmed",
+        "applicability_after": "applicable"
+      },
+      {
+        "requirement_key": "EU-INTENDED_USE-001",
+        "section": "intended_use",
+        "document_before": "74032bf9-b2a5-463e-a570-72e818799769",
+        "document_after": "74032bf9-b2a5-463e-a570-72e818799769",
+        "evidence_before": [
+          "55073b4c-1494-4153-957e-4cf1c9a12579"
+        ],
+        "evidence_after": [
+          "55073b4c-1494-4153-957e-4cf1c9a12579"
+        ],
+        "state_before": "검토 필요",
+        "state_after": "충족",
+        "applicability_before": "unconfirmed",
+        "applicability_after": "applicable"
+      },
+      {
+        "requirement_key": "EU-PERFORMANCE-001",
+        "section": "performance",
+        "document_before": "91cffaae-87b5-4c17-ba77-4beefb0e642c",
+        "document_after": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+        "evidence_before": [],
+        "evidence_after": [
+          "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+        ],
+        "state_before": "자료 누락",
+        "state_after": "충족",
+        "applicability_before": "unconfirmed",
+        "applicability_after": "applicable"
+      },
+      {
+        "requirement_key": "EU-LABELING-001",
+        "section": "labeling",
+        "document_before": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+        "document_after": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+        "evidence_before": [
+          "a7f04974-c8f5-458b-906a-e56a792d05c3"
+        ],
+        "evidence_after": [
+          "a7f04974-c8f5-458b-906a-e56a792d05c3"
+        ],
+        "state_before": "검토 필요",
+        "state_after": "충족",
+        "applicability_before": "unconfirmed",
+        "applicability_after": "applicable"
+      },
+      {
+        "requirement_key": "EU-EVIDENCE_INDEX-001",
+        "section": "evidence_index",
+        "document_before": "7bae0100-47f3-43ec-9ea4-26943727b129",
+        "document_after": "7bae0100-47f3-43ec-9ea4-26943727b129",
+        "evidence_before": [
+          "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+        ],
+        "evidence_after": [
+          "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+        ],
+        "state_before": "검토 필요",
+        "state_after": "충족",
+        "applicability_before": "unconfirmed",
+        "applicability_after": "applicable"
+      }
+    ],
+    "open_requests": []
+  },
+  "manual_reply": {
+    "provider": "manual",
+    "ai_used": false,
+    "changes": {
+      "before_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+      "after_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+      "changes": [
+        {
+          "requirement_key": "EU-OVERVIEW-001",
+          "section": "overview",
+          "document_before": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+          "document_after": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+          "evidence_before": [
+            "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+          ],
+          "evidence_after": [
+            "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+          ],
+          "state_before": "검토 필요",
+          "state_after": "충족",
+          "applicability_before": "unconfirmed",
+          "applicability_after": "applicable"
+        },
+        {
+          "requirement_key": "EU-INTENDED_USE-001",
+          "section": "intended_use",
+          "document_before": "74032bf9-b2a5-463e-a570-72e818799769",
+          "document_after": "74032bf9-b2a5-463e-a570-72e818799769",
+          "evidence_before": [
+            "55073b4c-1494-4153-957e-4cf1c9a12579"
+          ],
+          "evidence_after": [
+            "55073b4c-1494-4153-957e-4cf1c9a12579"
+          ],
+          "state_before": "검토 필요",
+          "state_after": "충족",
+          "applicability_before": "unconfirmed",
+          "applicability_after": "applicable"
+        },
+        {
+          "requirement_key": "EU-PERFORMANCE-001",
+          "section": "performance",
+          "document_before": "91cffaae-87b5-4c17-ba77-4beefb0e642c",
+          "document_after": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+          "evidence_before": [],
+          "evidence_after": [
+            "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+          ],
+          "state_before": "자료 누락",
+          "state_after": "충족",
+          "applicability_before": "unconfirmed",
+          "applicability_after": "applicable"
+        },
+        {
+          "requirement_key": "EU-LABELING-001",
+          "section": "labeling",
+          "document_before": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+          "document_after": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+          "evidence_before": [
+            "a7f04974-c8f5-458b-906a-e56a792d05c3"
+          ],
+          "evidence_after": [
+            "a7f04974-c8f5-458b-906a-e56a792d05c3"
+          ],
+          "state_before": "검토 필요",
+          "state_after": "충족",
+          "applicability_before": "unconfirmed",
+          "applicability_after": "applicable"
+        },
+        {
+          "requirement_key": "EU-EVIDENCE_INDEX-001",
+          "section": "evidence_index",
+          "document_before": "7bae0100-47f3-43ec-9ea4-26943727b129",
+          "document_after": "7bae0100-47f3-43ec-9ea4-26943727b129",
+          "evidence_before": [
+            "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+          ],
+          "evidence_after": [
+            "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+          ],
+          "state_before": "검토 필요",
+          "state_after": "충족",
+          "applicability_before": "unconfirmed",
+          "applicability_after": "applicable"
+        }
+      ],
+      "open_requests": [
+        {
+          "id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+          "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+          "owner": "자료 담당자",
+          "due_date": "2026-12-01",
+          "status": "requested"
+        }
+      ]
+    },
+    "draft": null,
+    "note": "변경 목록을 확인한 뒤 검토자가 수동 답변을 작성하세요"
+  },
+  "draft_export": {
+    "id": "6d58099f-e2b3-4f3c-90a4-044dd03162c1",
+    "json_url": "/ivd/exports/6d58099f-e2b3-4f3c-90a4-044dd03162c1?format=json",
+    "markdown_url": "/ivd/exports/6d58099f-e2b3-4f3c-90a4-044dd03162c1?format=markdown"
+  },
+  "final_export": {
+    "id": "50afd3f6-cf74-48df-989a-9bcf61d476d0",
+    "json_url": "/ivd/exports/50afd3f6-cf74-48df-989a-9bcf61d476d0?format=json",
+    "markdown_url": "/ivd/exports/50afd3f6-cf74-48df-989a-9bcf61d476d0?format=markdown"
+  },
+  "url": "http://localhost:8080/?ivd=1&package=ab3cecba-5d77-466c-b5da-6244139c2c30"
+}

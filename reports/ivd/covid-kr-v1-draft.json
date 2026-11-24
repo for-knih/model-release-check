@@ -1,0 +1,404 @@
+{
+  "id": "d9ce3691-8dfe-4642-a8af-d2df1eb6f10a",
+  "family_id": "bc8b1138-b1ee-464d-9343-70fafa4469f2",
+  "product": {
+    "id": "IVD-COVID-DEMO",
+    "name": "COVID-19 항원 검사 가상 제품",
+    "fictional": true
+  },
+  "market": "KR",
+  "version": 1,
+  "parent_id": null,
+  "status": "draft",
+  "watermark": "가상 제품 · 검토용 예시",
+  "regulatory_status": "규제 검토 필요",
+  "regulatory_review": null,
+  "mappings": [
+    {
+      "key": "KR-OVERVIEW-001",
+      "market": "KR",
+      "mandatory": true,
+      "section": "overview",
+      "section_title": "제품 개요",
+      "document": {
+        "id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "overview",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/overview §1"
+      },
+      "evidence": [
+        {
+          "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "overview",
+          "revision": 1,
+          "title": "제품 개요 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/overview/r1",
+          "previous_id": null
+        }
+      ],
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      },
+      "clause": "가상-DEMO/overview",
+      "applicability": "unconfirmed",
+      "state": "review_needed",
+      "state_label": "검토 필요",
+      "reviewer": null,
+      "rationale": null,
+      "re_review": false
+    },
+    {
+      "key": "KR-INTENDED_USE-001",
+      "market": "KR",
+      "mandatory": true,
+      "section": "intended_use",
+      "section_title": "사용 목적",
+      "document": {
+        "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "intended_use",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/intended_use §1"
+      },
+      "evidence": [
+        {
+          "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "intended_use",
+          "revision": 1,
+          "title": "사용 목적 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/intended_use/r1",
+          "previous_id": null
+        }
+      ],
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      },
+      "clause": "가상-DEMO/intended_use",
+      "applicability": "unconfirmed",
+      "state": "review_needed",
+      "state_label": "검토 필요",
+      "reviewer": null,
+      "rationale": null,
+      "re_review": false
+    },
+    {
+      "key": "KR-PERFORMANCE-001",
+      "market": "KR",
+      "mandatory": true,
+      "section": "performance",
+      "section_title": "성능평가 요약",
+      "document": {
+        "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "performance",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/performance §1"
+      },
+      "evidence": [],
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      },
+      "clause": "가상-DEMO/performance",
+      "applicability": "unconfirmed",
+      "state": "missing",
+      "state_label": "자료 누락",
+      "reviewer": null,
+      "rationale": null,
+      "re_review": false
+    },
+    {
+      "key": "KR-LABELING-001",
+      "market": "KR",
+      "mandatory": true,
+      "section": "labeling",
+      "section_title": "표시사항 초안",
+      "document": {
+        "id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "labeling",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/labeling §1"
+      },
+      "evidence": [
+        {
+          "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "labeling",
+          "revision": 1,
+          "title": "표시사항 초안 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/labeling/r1",
+          "previous_id": null
+        }
+      ],
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      },
+      "clause": "가상-DEMO/labeling",
+      "applicability": "unconfirmed",
+      "state": "review_needed",
+      "state_label": "검토 필요",
+      "reviewer": null,
+      "rationale": null,
+      "re_review": false
+    },
+    {
+      "key": "KR-EVIDENCE_INDEX-001",
+      "market": "KR",
+      "mandatory": true,
+      "section": "evidence_index",
+      "section_title": "증빙 목록",
+      "document": {
+        "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "evidence_index",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/evidence_index §1"
+      },
+      "evidence": [
+        {
+          "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "evidence_index",
+          "revision": 1,
+          "title": "증빙 목록 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/evidence_index/r1",
+          "previous_id": null
+        }
+      ],
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      },
+      "clause": "가상-DEMO/evidence_index",
+      "applicability": "unconfirmed",
+      "state": "review_needed",
+      "state_label": "검토 필요",
+      "reviewer": null,
+      "rationale": null,
+      "re_review": false
+    }
+  ],
+  "evidence_list": [
+    {
+      "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+      "product_id": "IVD-COVID-DEMO",
+      "key": "overview",
+      "revision": 1,
+      "title": "제품 개요 가상 등록 자료",
+      "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+      "citation": "가상://COVID/overview/r1",
+      "previous_id": null
+    },
+    {
+      "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+      "product_id": "IVD-COVID-DEMO",
+      "key": "intended_use",
+      "revision": 1,
+      "title": "사용 목적 가상 등록 자료",
+      "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+      "citation": "가상://COVID/intended_use/r1",
+      "previous_id": null
+    },
+    {
+      "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+      "product_id": "IVD-COVID-DEMO",
+      "key": "labeling",
+      "revision": 1,
+      "title": "표시사항 초안 가상 등록 자료",
+      "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+      "citation": "가상://COVID/labeling/r1",
+      "previous_id": null
+    },
+    {
+      "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+      "product_id": "IVD-COVID-DEMO",
+      "key": "evidence_index",
+      "revision": 1,
+      "title": "증빙 목록 가상 등록 자료",
+      "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+      "citation": "가상://COVID/evidence_index/r1",
+      "previous_id": null
+    }
+  ],
+  "requests": [],
+  "can_complete": false,
+  "unresolved": [
+    "제품 등급·제출 경로의 규제 검토 필요",
+    "KR-OVERVIEW-001: 미확정 적용 여부",
+    "KR-OVERVIEW-001: 검토 필요",
+    "KR-INTENDED_USE-001: 미확정 적용 여부",
+    "KR-INTENDED_USE-001: 검토 필요",
+    "KR-PERFORMANCE-001: 미확정 적용 여부",
+    "KR-PERFORMANCE-001: 자료 누락",
+    "KR-LABELING-001: 미확정 적용 여부",
+    "KR-LABELING-001: 검토 필요",
+    "KR-EVIDENCE_INDEX-001: 미확정 적용 여부",
+    "KR-EVIDENCE_INDEX-001: 검토 필요"
+  ],
+  "unverified_sources": [
+    {
+      "requirement_key": "KR-OVERVIEW-001",
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      }
+    },
+    {
+      "requirement_key": "KR-INTENDED_USE-001",
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      }
+    },
+    {
+      "requirement_key": "KR-PERFORMANCE-001",
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      }
+    },
+    {
+      "requirement_key": "KR-LABELING-001",
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      }
+    },
+    {
+      "requirement_key": "KR-EVIDENCE_INDEX-001",
+      "source": {
+        "market": "KR",
+        "number": "VIRTUAL-KR-001",
+        "title": "가상 검토 기준 · 국내 패키지 시연용",
+        "url": null,
+        "version": "demo-v1",
+        "checked_on": "2026-11-24",
+        "verification": "fictional",
+        "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+        "official_candidate": "KR-MFDS",
+        "unverified": [
+          "실제 규제 적합성 전부"
+        ]
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": 2,
+      "package_id": "d9ce3691-8dfe-4642-a8af-d2df1eb6f10a",
+      "actor": "system",
+      "action": "package_created",
+      "payload": {
+        "basis": "fictional"
+      },
+      "created_at": "2026-11-24T01:03:49.937445+00:00"
+    }
+  ],
+  "exported_at": "2026-11-24T01:03:51.190334+00:00"
+}

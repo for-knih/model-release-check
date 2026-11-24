@@ -1,0 +1,41 @@
+{
+  "checked_on": "2026-11-24",
+  "sources": {
+    "EU-IVDR": {
+      "market": "EU",
+      "number": "Regulation (EU) 2017/746",
+      "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+      "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+      "version": "02017R0746-20250110; consolidated 2025-01-10",
+      "checked_on": "2026-11-24",
+      "verification": "verified",
+      "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+      "unverified": ["제품별 분류 및 제출 경로", "HIV/COVID 제품별 개별 적용성", "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"]
+    },
+    "KR-MFDS": {
+      "market": "KR",
+      "number": "식품의약품안전처고시 제2026-58호",
+      "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+      "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+      "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+      "version": "제2026-58호; 시행 2026-08-10",
+      "checked_on": "2026-11-24",
+      "verification": "partial",
+      "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+      "unverified": ["첨부 전문의 조항별 원문·별표 대조", "제품별 국내 품목·등급·제출 경로", "개별 제출자료 면제 및 적용성"]
+    },
+    "KR-DEMO": {
+      "market": "KR",
+      "number": "VIRTUAL-KR-001",
+      "title": "가상 검토 기준 · 국내 패키지 시연용",
+      "url": null,
+      "version": "demo-v1",
+      "checked_on": "2026-11-24",
+      "verification": "fictional",
+      "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+      "official_candidate": "KR-MFDS",
+      "unverified": ["실제 규제 적합성 전부"]
+    }
+  }
+}

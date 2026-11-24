@@ -345,3 +345,5 @@ def next_dataset(run_id: str, body: AddCases):
         return {'id':ds.id,'version':digest,'parent_id':base.id,'count':len(by_content),'reused':False}
 
 app.include_router(traceability_router)
+from .ivd import router as ivd_router
+app.include_router(ivd_router)
