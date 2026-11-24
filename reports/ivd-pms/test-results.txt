@@ -1,0 +1,14 @@
+........................................................................ [ 96%]
+...                                                                      [100%]
+============================== warnings summary ===============================
+..\..\work\packages\starlette\testclient.py:45
+  C:\Users\정준하\Documents\Codex\2026-11-22\model-release-check-ai-ai-1\work\packages\starlette\testclient.py:45: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_extensions.py: 57 warnings
+tests/test_traceability.py: 6 warnings
+  C:\Users\정준하\Documents\Codex\2026-11-22\model-release-check-ai-ai-1\work\packages\starlette\testclient.py:439: DeprecationWarning: You should not use the 'timeout' argument with the TestClient. See https://github.com/Kludex/starlette/issues/1108 for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+75 passed, 64 warnings in 23.95s

@@ -1,0 +1,11 @@
+{
+  "frozen_exports_match_database": true,
+  "old_lot_document_preserved": true,
+  "execution_and_effectiveness_evidence_separate": true,
+  "duplicate_receipts_vs_incidents": [
+    2,
+    1
+  ],
+  "covid_failed_then_passed": true,
+  "change_report_ids_and_results_match_database": true
+}

@@ -1,0 +1,1219 @@
+{
+  "id": "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+  "watermark": "가상 제품 · 검토용 예시",
+  "product_id": "IVD-COVID-DEMO",
+  "market": "KR",
+  "received_on": "2026-11-22",
+  "claimed_lot": "LOT-286ceb3b",
+  "status": "investigating",
+  "status_label": "조사 중",
+  "lot": {
+    "id": "201c9aab-5424-4152-9d9d-a0781a40bb46",
+    "product_id": "IVD-COVID-DEMO",
+    "market": "KR",
+    "number": "LOT-286ceb3b",
+    "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+    "package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+    "snapshot": {
+      "id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+      "family_id": "7206946b-bb30-43cd-912a-a0db6b1e1c65",
+      "product": {
+        "id": "IVD-COVID-DEMO",
+        "name": "COVID-19 항원 검사 가상 제품 · 명칭 r2",
+        "fictional": true
+      },
+      "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+      "product_revision": 2,
+      "work_for_change_id": null,
+      "market": "KR",
+      "version": 2,
+      "parent_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+      "status": "internal_complete",
+      "watermark": "가상 제품 · 검토용 예시",
+      "regulatory_status": "규제 검토 필요",
+      "regulatory_review": {
+        "reviewer": "KR 시장 검토자",
+        "classification": "가상 분류 검토 예시",
+        "submission_route": "가상 내부 검토 경로",
+        "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+        "source_ids": [
+          "KR-MFDS"
+        ],
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "KR",
+            "number": "식품의약품안전처고시 제2026-58호",
+            "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+            "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+            "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+            "version": "제2026-58호; 시행 2026-08-10",
+            "checked_on": "2026-11-24",
+            "verification": "partial",
+            "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+            "unverified": [
+              "첨부 전문의 조항별 원문·별표 대조",
+              "제품별 국내 품목·등급·제출 경로",
+              "개별 제출자료 면제 및 적용성"
+            ]
+          }
+        ],
+        "reviewed_at": "2026-11-24T04:25:33.587697+00:00",
+        "change_review": {
+          "reviewer": "KR 시장 검토자",
+          "reason": "KR 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+          "source_ids": [
+            "KR-MFDS"
+          ],
+          "legal_procedure": "KR 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+          "submission_required": null,
+          "fictional_review": true,
+          "sources": [
+            {
+              "market": "KR",
+              "number": "식품의약품안전처고시 제2026-58호",
+              "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+              "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+              "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+              "version": "제2026-58호; 시행 2026-08-10",
+              "checked_on": "2026-11-24",
+              "verification": "partial",
+              "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+              "unverified": [
+                "첨부 전문의 조항별 원문·별표 대조",
+                "제품별 국내 품목·등급·제출 경로",
+                "개별 제출자료 면제 및 적용성"
+              ]
+            }
+          ],
+          "decided_at": "2026-11-24T04:25:34.324430+00:00",
+          "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+        }
+      },
+      "mappings": [
+        {
+          "key": "KR-OVERVIEW-001",
+          "market": "KR",
+          "mandatory": true,
+          "section": "overview",
+          "section_title": "제품 개요",
+          "document": {
+            "id": "2357b087-2911-4de4-91b8-3ef03d2def21",
+            "product_id": "IVD-COVID-DEMO",
+            "section": "overview",
+            "revision": 3,
+            "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+            "citation": "가상 메타데이터 COVID/overview §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+          },
+          "evidence": [
+            {
+              "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "overview",
+              "revision": 1,
+              "title": "제품 개요 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/overview/r1",
+              "previous_id": null
+            }
+          ],
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          },
+          "clause": "가상-DEMO/overview",
+          "applicability": "applicable",
+          "state": "satisfied",
+          "state_label": "충족",
+          "reviewer": "KR 문서 검토자",
+          "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+          "re_review": false
+        },
+        {
+          "key": "KR-INTENDED_USE-001",
+          "market": "KR",
+          "mandatory": true,
+          "section": "intended_use",
+          "section_title": "사용 목적",
+          "document": {
+            "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+            "product_id": "IVD-COVID-DEMO",
+            "section": "intended_use",
+            "revision": 1,
+            "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+            "citation": "가상 메타데이터 COVID/intended_use §1"
+          },
+          "evidence": [
+            {
+              "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "intended_use",
+              "revision": 1,
+              "title": "사용 목적 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/intended_use/r1",
+              "previous_id": null
+            }
+          ],
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          },
+          "clause": "가상-DEMO/intended_use",
+          "applicability": "applicable",
+          "state": "satisfied",
+          "state_label": "충족",
+          "reviewer": "시연 기준 검토자",
+          "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+          "re_review": false
+        },
+        {
+          "key": "KR-PERFORMANCE-001",
+          "market": "KR",
+          "mandatory": true,
+          "section": "performance",
+          "section_title": "성능평가 요약",
+          "document": {
+            "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+            "product_id": "IVD-COVID-DEMO",
+            "section": "performance",
+            "revision": 1,
+            "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+            "citation": "가상 메타데이터 COVID/performance §1"
+          },
+          "evidence": [
+            {
+              "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "performance",
+              "revision": 1,
+              "title": "가상 성능 자료 메타데이터",
+              "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+              "citation": "가상://성능 자료 §1",
+              "previous_id": null
+            }
+          ],
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          },
+          "clause": "가상-DEMO/performance",
+          "applicability": "applicable",
+          "state": "satisfied",
+          "state_label": "충족",
+          "reviewer": "시연 기준 검토자",
+          "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+          "re_review": false
+        },
+        {
+          "key": "KR-LABELING-001",
+          "market": "KR",
+          "mandatory": true,
+          "section": "labeling",
+          "section_title": "표시사항 초안",
+          "document": {
+            "id": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+            "product_id": "IVD-COVID-DEMO",
+            "section": "labeling",
+            "revision": 3,
+            "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+            "citation": "가상 메타데이터 COVID/labeling §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+          },
+          "evidence": [
+            {
+              "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "labeling",
+              "revision": 1,
+              "title": "표시사항 초안 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/labeling/r1",
+              "previous_id": null
+            }
+          ],
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          },
+          "clause": "가상-DEMO/labeling",
+          "applicability": "applicable",
+          "state": "satisfied",
+          "state_label": "충족",
+          "reviewer": "KR 문서 검토자",
+          "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+          "re_review": false
+        },
+        {
+          "key": "KR-EVIDENCE_INDEX-001",
+          "market": "KR",
+          "mandatory": true,
+          "section": "evidence_index",
+          "section_title": "증빙 목록",
+          "document": {
+            "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+            "product_id": "IVD-COVID-DEMO",
+            "section": "evidence_index",
+            "revision": 1,
+            "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+            "citation": "가상 메타데이터 COVID/evidence_index §1"
+          },
+          "evidence": [
+            {
+              "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "evidence_index",
+              "revision": 1,
+              "title": "증빙 목록 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/evidence_index/r1",
+              "previous_id": null
+            }
+          ],
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          },
+          "clause": "가상-DEMO/evidence_index",
+          "applicability": "applicable",
+          "state": "satisfied",
+          "state_label": "충족",
+          "reviewer": "시연 기준 검토자",
+          "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+          "re_review": false
+        }
+      ],
+      "evidence_list": [
+        {
+          "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "overview",
+          "revision": 1,
+          "title": "제품 개요 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/overview/r1",
+          "previous_id": null
+        },
+        {
+          "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "intended_use",
+          "revision": 1,
+          "title": "사용 목적 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/intended_use/r1",
+          "previous_id": null
+        },
+        {
+          "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "performance",
+          "revision": 1,
+          "title": "가상 성능 자료 메타데이터",
+          "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+          "citation": "가상://성능 자료 §1",
+          "previous_id": null
+        },
+        {
+          "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "labeling",
+          "revision": 1,
+          "title": "표시사항 초안 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/labeling/r1",
+          "previous_id": null
+        },
+        {
+          "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "evidence_index",
+          "revision": 1,
+          "title": "증빙 목록 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/evidence_index/r1",
+          "previous_id": null
+        }
+      ],
+      "requests": [],
+      "can_complete": true,
+      "unresolved": [],
+      "unverified_sources": [
+        {
+          "requirement_key": "KR-OVERVIEW-001",
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          }
+        },
+        {
+          "requirement_key": "KR-INTENDED_USE-001",
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          }
+        },
+        {
+          "requirement_key": "KR-PERFORMANCE-001",
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          }
+        },
+        {
+          "requirement_key": "KR-LABELING-001",
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          }
+        },
+        {
+          "requirement_key": "KR-EVIDENCE_INDEX-001",
+          "source": {
+            "market": "KR",
+            "number": "VIRTUAL-KR-001",
+            "title": "가상 검토 기준 · 국내 패키지 시연용",
+            "url": null,
+            "version": "demo-v1",
+            "checked_on": "2026-11-24",
+            "verification": "fictional",
+            "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+            "official_candidate": "KR-MFDS",
+            "unverified": [
+              "실제 규제 적합성 전부"
+            ]
+          }
+        }
+      ],
+      "history": [
+        {
+          "id": 24,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "system",
+          "action": "package_created",
+          "payload": {
+            "basis": "fictional"
+          },
+          "created_at": "2026-11-24T04:25:33.538787+00:00"
+        },
+        {
+          "id": 25,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "regulatory_review",
+          "payload": {
+            "reviewer": "시연 기준 검토자",
+            "classification": "가상 분류 검토 예시",
+            "submission_route": "가상 내부 검토 경로",
+            "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+            "source_ids": [
+              "KR-MFDS"
+            ],
+            "fictional_review": true,
+            "sources": [
+              {
+                "market": "KR",
+                "number": "식품의약품안전처고시 제2026-58호",
+                "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+                "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+                "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+                "version": "제2026-58호; 시행 2026-08-10",
+                "checked_on": "2026-11-24",
+                "verification": "partial",
+                "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+                "unverified": [
+                  "첨부 전문의 조항별 원문·별표 대조",
+                  "제품별 국내 품목·등급·제출 경로",
+                  "개별 제출자료 면제 및 적용성"
+                ]
+              }
+            ],
+            "reviewed_at": "2026-11-24T04:25:33.587697+00:00"
+          },
+          "created_at": "2026-11-24T04:25:33.587697+00:00"
+        },
+        {
+          "id": 26,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "mapping_review",
+          "payload": {
+            "requirement_key": "KR-OVERVIEW-001",
+            "document_id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+            "evidence_ids": [
+              "3ff31401-cbee-43f9-9c52-005bb95b5813"
+            ],
+            "applicability": "applicable",
+            "state": "satisfied",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+          },
+          "created_at": "2026-11-24T04:25:33.645322+00:00"
+        },
+        {
+          "id": 27,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "mapping_review",
+          "payload": {
+            "requirement_key": "KR-INTENDED_USE-001",
+            "document_id": "938a236d-f312-47f8-8584-1914c9aabef2",
+            "evidence_ids": [
+              "bfd47df5-a204-4b96-ad63-e0aea9094270"
+            ],
+            "applicability": "applicable",
+            "state": "satisfied",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+          },
+          "created_at": "2026-11-24T04:25:33.691310+00:00"
+        },
+        {
+          "id": 28,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "mapping_review",
+          "payload": {
+            "requirement_key": "KR-PERFORMANCE-001",
+            "document_id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+            "evidence_ids": [
+              "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb"
+            ],
+            "applicability": "applicable",
+            "state": "satisfied",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+          },
+          "created_at": "2026-11-24T04:25:33.751320+00:00"
+        },
+        {
+          "id": 29,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "mapping_review",
+          "payload": {
+            "requirement_key": "KR-LABELING-001",
+            "document_id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+            "evidence_ids": [
+              "95203ba2-2a6c-4fbe-bfff-232b52ff1a31"
+            ],
+            "applicability": "applicable",
+            "state": "satisfied",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+          },
+          "created_at": "2026-11-24T04:25:33.793080+00:00"
+        },
+        {
+          "id": 30,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "mapping_review",
+          "payload": {
+            "requirement_key": "KR-EVIDENCE_INDEX-001",
+            "document_id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+            "evidence_ids": [
+              "19923c41-f9f4-49e8-aadb-dfb1379e989e"
+            ],
+            "applicability": "applicable",
+            "state": "satisfied",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+          },
+          "created_at": "2026-11-24T04:25:33.830509+00:00"
+        },
+        {
+          "id": 31,
+          "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "actor": "시연 기준 검토자",
+          "action": "internal_complete",
+          "payload": {
+            "note": "규제기관 허가·인증을 의미하지 않음"
+          },
+          "created_at": "2026-11-24T04:25:33.857241+00:00"
+        },
+        {
+          "id": 42,
+          "package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+          "actor": "최종 검토자",
+          "action": "version_created",
+          "payload": {
+            "parent_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "reviewer": "최종 검토자",
+            "evidence_replacements": {},
+            "documents": {
+              "labeling": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+              "overview": "2357b087-2911-4de4-91b8-3ef03d2def21"
+            }
+          },
+          "created_at": "2026-11-24T04:25:34.645835+00:00"
+        },
+        {
+          "id": 43,
+          "package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+          "actor": "최종 검토자",
+          "action": "product_change_approved",
+          "payload": {
+            "change_id": "e576bba6-a64b-47c3-ab0a-0597922e186b",
+            "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97"
+          },
+          "created_at": "2026-11-24T04:25:34.648836+00:00"
+        }
+      ]
+    },
+    "registered_by": "QA",
+    "created_at": "2026-11-24T06:29:04.021149+00:00"
+  },
+  "problem_type": "missing_lot_label",
+  "description": "가상 외부 상자 로트 표기 누락",
+  "evidence_ids": [],
+  "owner": "조사자",
+  "due_date": "2026-12-24",
+  "observed_facts": "합성 사진 메타데이터",
+  "hypothesis": null,
+  "confirmed_cause": null,
+  "reporting_review": {
+    "status": "검토 필요",
+    "deadline": null,
+    "deadline_status": "미확정"
+  },
+  "duplicate_of": null,
+  "synthetic": true,
+  "related": {
+    "raw_receipts": 3,
+    "distinct_incidents": 2,
+    "items": [
+      {
+        "id": "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+        "received_on": "2026-11-22",
+        "duplicate_of": null,
+        "description": "가상 외부 상자 로트 표기 누락"
+      },
+      {
+        "id": "d9dba6f6-a836-4325-a975-ae2f091fcea8",
+        "received_on": "2026-11-22",
+        "duplicate_of": "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+        "description": "가상 외부 상자 로트 표기 누락"
+      },
+      {
+        "id": "2df3a983-1875-4ac1-8c88-d58f8baa458c",
+        "received_on": "2026-11-25",
+        "duplicate_of": null,
+        "description": "가상 외부 상자 로트 표기 누락"
+      }
+    ]
+  },
+  "capas": [
+    {
+      "id": "f3da15f0-cab6-41d7-bc9c-c045c8374573",
+      "product_id": "IVD-COVID-DEMO",
+      "market": "KR",
+      "problem_type": "missing_lot_label",
+      "title": "가상 CAPA",
+      "owner": "담당자",
+      "due_date": "2026-12-24",
+      "status": "closed",
+      "closed_review": {
+        "reviewer": "QA",
+        "confirmed": true,
+        "reason": "재조치 후 합성 관찰 기간 기준 충족",
+        "closed_at": "2026-11-24T06:29:04.358188+00:00"
+      },
+      "complaint_ids": [
+        "2b3baaf1-0fb3-45fb-b770-df5f50bed604"
+      ],
+      "actions": [
+        {
+          "id": "224bda1b-5b0e-4c23-a0f1-f2955be46460",
+          "kind": "rework",
+          "description": "효과성 기준 미달에 따른 재조치 및 새 관찰 계획 필요",
+          "owner": "담당자",
+          "due_date": "2026-12-24",
+          "mandatory": true,
+          "trigger_evaluation_id": "908d7607-d246-469b-abbe-eef831cc67c0",
+          "execution": {
+            "reviewer": "QA",
+            "evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "note": "가상 실행 확인",
+            "completed_at": "2026-11-24T06:29:04.264357+00:00",
+            "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07"
+          }
+        },
+        {
+          "id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+          "kind": "corrective",
+          "description": "가상 포장 확인",
+          "owner": "담당자",
+          "due_date": "2026-12-24",
+          "mandatory": true,
+          "trigger_evaluation_id": null,
+          "execution": {
+            "reviewer": "QA",
+            "evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "note": "가상 실행 확인",
+            "completed_at": "2026-11-24T06:29:04.153050+00:00",
+            "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+          }
+        }
+      ],
+      "plans": [
+        {
+          "id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+          "version": 1,
+          "definition": {
+            "metric": "same_type_incidents_per_1000",
+            "before_start": "2026-11-14",
+            "before_end": "2026-11-23",
+            "after_start": "2026-11-24",
+            "after_end": "2026-12-04",
+            "before_lot_numbers": [
+              "LOT-286ceb3b"
+            ],
+            "after_lot_numbers": [
+              "LOT-286ceb3b"
+            ],
+            "data_source": "가상 제품 · 검토용 예시 합성 원장",
+            "max_after_rate": 0.5
+          },
+          "covered_action_ids": [
+            "e342806f-2c2b-412f-a7f1-5f30bea488c9"
+          ],
+          "registered_by": "QA",
+          "created_at": "2026-11-24T06:29:04.143466+00:00"
+        },
+        {
+          "id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+          "version": 2,
+          "definition": {
+            "metric": "same_type_incidents_per_1000",
+            "before_start": "2026-11-14",
+            "before_end": "2026-11-23",
+            "after_start": "2026-12-05",
+            "after_end": "2026-12-15",
+            "before_lot_numbers": [
+              "LOT-286ceb3b"
+            ],
+            "after_lot_numbers": [
+              "LOT-286ceb3b"
+            ],
+            "data_source": "가상 제품 · 검토용 예시 합성 원장",
+            "max_after_rate": 0.5
+          },
+          "covered_action_ids": [
+            "224bda1b-5b0e-4c23-a0f1-f2955be46460"
+          ],
+          "registered_by": "QA",
+          "created_at": "2026-11-24T06:29:04.256130+00:00"
+        }
+      ],
+      "distributions": [
+        {
+          "id": "330fa14b-6581-455e-9f0d-a46d93a257f2",
+          "lot_ids": [
+            "201c9aab-5424-4152-9d9d-a0781a40bb46"
+          ],
+          "period_start": "2026-11-14",
+          "period_end": "2026-11-23",
+          "quantity": 1000,
+          "source": "합성 유통 원장",
+          "evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ]
+        },
+        {
+          "id": "e460fb46-9816-4dd9-87c2-310257055477",
+          "lot_ids": [
+            "201c9aab-5424-4152-9d9d-a0781a40bb46"
+          ],
+          "period_start": "2026-11-24",
+          "period_end": "2026-12-04",
+          "quantity": 1000,
+          "source": "합성 유통 원장",
+          "evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ]
+        },
+        {
+          "id": "daaa6ace-e2f9-4f06-a505-075f09611db4",
+          "lot_ids": [
+            "201c9aab-5424-4152-9d9d-a0781a40bb46"
+          ],
+          "period_start": "2026-11-14",
+          "period_end": "2026-11-23",
+          "quantity": 1000,
+          "source": "합성 유통 원장",
+          "evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ]
+        },
+        {
+          "id": "07f18f74-698d-4b15-95dd-4eb482731992",
+          "lot_ids": [
+            "201c9aab-5424-4152-9d9d-a0781a40bb46"
+          ],
+          "period_start": "2026-12-05",
+          "period_end": "2026-12-15",
+          "quantity": 1000,
+          "source": "합성 유통 원장",
+          "evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "id": "908d7607-d246-469b-abbe-eef831cc67c0",
+          "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+          "status": "failed",
+          "snapshot": {
+            "metric": "유통 1,000개당 동일 유형 사건 수",
+            "status": "failed",
+            "status_label": "기준 미달",
+            "plan": {
+              "id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+              "version": 1,
+              "definition": {
+                "metric": "same_type_incidents_per_1000",
+                "before_start": "2026-11-14",
+                "before_end": "2026-11-23",
+                "after_start": "2026-11-24",
+                "after_end": "2026-12-04",
+                "before_lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "after_lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "data_source": "가상 제품 · 검토용 예시 합성 원장",
+                "max_after_rate": 0.5
+              },
+              "registered_by": "QA",
+              "registered_at": "2026-11-24T06:29:04.143466+00:00",
+              "covered_action_ids": [
+                "e342806f-2c2b-412f-a7f1-5f30bea488c9"
+              ]
+            },
+            "cohorts": {
+              "before": {
+                "raw_receipts": 2,
+                "incidents": 1,
+                "incident_ids": [
+                  "2b3baaf1-0fb3-45fb-b770-df5f50bed604"
+                ],
+                "receipt_ids": [
+                  "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+                  "d9dba6f6-a836-4325-a975-ae2f091fcea8"
+                ],
+                "unconfirmed_lot_ids": [],
+                "lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "period_start": "2026-11-14",
+                "period_end": "2026-11-23",
+                "quantity": 1000,
+                "rate_per_1000": 1.0,
+                "distribution": {
+                  "id": "330fa14b-6581-455e-9f0d-a46d93a257f2",
+                  "source": "합성 유통 원장",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "registered_by": "QA",
+                  "registered_at": "2026-11-24T06:29:04.184401+00:00"
+                }
+              },
+              "after": {
+                "raw_receipts": 1,
+                "incidents": 1,
+                "incident_ids": [
+                  "2df3a983-1875-4ac1-8c88-d58f8baa458c"
+                ],
+                "receipt_ids": [
+                  "2df3a983-1875-4ac1-8c88-d58f8baa458c"
+                ],
+                "unconfirmed_lot_ids": [],
+                "lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "period_start": "2026-11-24",
+                "period_end": "2026-12-04",
+                "quantity": 1000,
+                "rate_per_1000": 1.0,
+                "distribution": {
+                  "id": "e460fb46-9816-4dd9-87c2-310257055477",
+                  "source": "합성 유통 원장",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "registered_by": "QA",
+                  "registered_at": "2026-11-24T06:29:04.196443+00:00"
+                }
+              }
+            },
+            "action_execution_snapshot": [
+              {
+                "id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+                "mandatory": true,
+                "execution": {
+                  "reviewer": "QA",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "note": "가상 실행 확인",
+                  "completed_at": "2026-11-24T06:29:04.153050+00:00",
+                  "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+                }
+              }
+            ],
+            "result_evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "waiting_reasons": [],
+            "as_of": "2026-12-04",
+            "synthetic": true,
+            "reviewer": "QA",
+            "evaluated_at": "2026-11-24T06:29:04.227609+00:00"
+          },
+          "created_at": "2026-11-24T06:29:04.227609+00:00"
+        },
+        {
+          "id": "44e1502a-067d-4636-bedc-bbc4f4035520",
+          "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+          "status": "passed",
+          "snapshot": {
+            "metric": "유통 1,000개당 동일 유형 사건 수",
+            "status": "passed",
+            "status_label": "통과",
+            "plan": {
+              "id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+              "version": 2,
+              "definition": {
+                "metric": "same_type_incidents_per_1000",
+                "before_start": "2026-11-14",
+                "before_end": "2026-11-23",
+                "after_start": "2026-12-05",
+                "after_end": "2026-12-15",
+                "before_lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "after_lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "data_source": "가상 제품 · 검토용 예시 합성 원장",
+                "max_after_rate": 0.5
+              },
+              "registered_by": "QA",
+              "registered_at": "2026-11-24T06:29:04.256130+00:00",
+              "covered_action_ids": [
+                "224bda1b-5b0e-4c23-a0f1-f2955be46460"
+              ]
+            },
+            "cohorts": {
+              "before": {
+                "raw_receipts": 2,
+                "incidents": 1,
+                "incident_ids": [
+                  "2b3baaf1-0fb3-45fb-b770-df5f50bed604"
+                ],
+                "receipt_ids": [
+                  "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+                  "d9dba6f6-a836-4325-a975-ae2f091fcea8"
+                ],
+                "unconfirmed_lot_ids": [],
+                "lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "period_start": "2026-11-14",
+                "period_end": "2026-11-23",
+                "quantity": 1000,
+                "rate_per_1000": 1.0,
+                "distribution": {
+                  "id": "daaa6ace-e2f9-4f06-a505-075f09611db4",
+                  "source": "합성 유통 원장",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "registered_by": "QA",
+                  "registered_at": "2026-11-24T06:29:04.294533+00:00"
+                }
+              },
+              "after": {
+                "raw_receipts": 0,
+                "incidents": 0,
+                "incident_ids": [],
+                "receipt_ids": [],
+                "unconfirmed_lot_ids": [],
+                "lot_numbers": [
+                  "LOT-286ceb3b"
+                ],
+                "period_start": "2026-12-05",
+                "period_end": "2026-12-15",
+                "quantity": 1000,
+                "rate_per_1000": 0.0,
+                "distribution": {
+                  "id": "07f18f74-698d-4b15-95dd-4eb482731992",
+                  "source": "합성 유통 원장",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "registered_by": "QA",
+                  "registered_at": "2026-11-24T06:29:04.307363+00:00"
+                }
+              }
+            },
+            "action_execution_snapshot": [
+              {
+                "id": "224bda1b-5b0e-4c23-a0f1-f2955be46460",
+                "mandatory": true,
+                "execution": {
+                  "reviewer": "QA",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "note": "가상 실행 확인",
+                  "completed_at": "2026-11-24T06:29:04.264357+00:00",
+                  "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07"
+                }
+              },
+              {
+                "id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+                "mandatory": true,
+                "execution": {
+                  "reviewer": "QA",
+                  "evidence_ids": [
+                    "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                  ],
+                  "note": "가상 실행 확인",
+                  "completed_at": "2026-11-24T06:29:04.153050+00:00",
+                  "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+                }
+              }
+            ],
+            "result_evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "waiting_reasons": [],
+            "as_of": "2026-12-15",
+            "synthetic": true,
+            "reviewer": "QA",
+            "evaluated_at": "2026-11-24T06:29:04.337525+00:00"
+          },
+          "created_at": "2026-11-24T06:29:04.338527+00:00"
+        }
+      ],
+      "changes": [],
+      "blockers": [],
+      "history": [
+        {
+          "id": 27,
+          "actor": "QA",
+          "action": "created",
+          "payload": {
+            "complaint_id": "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+            "reviewer": "QA",
+            "title": "가상 CAPA",
+            "owner": "담당자",
+            "due_date": "2026-12-24"
+          },
+          "created_at": "2026-11-24T06:29:04.107529+00:00"
+        },
+        {
+          "id": 28,
+          "actor": "QA",
+          "action": "action_created",
+          "payload": {
+            "reviewer": "QA",
+            "kind": "corrective",
+            "description": "가상 포장 확인",
+            "owner": "담당자",
+            "due_date": "2026-12-24",
+            "mandatory": true
+          },
+          "created_at": "2026-11-24T06:29:04.125719+00:00"
+        },
+        {
+          "id": 29,
+          "actor": "QA",
+          "action": "action_completed",
+          "payload": {
+            "action_id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+            "reviewer": "QA",
+            "evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "note": "가상 실행 확인",
+            "completed_at": "2026-11-24T06:29:04.153050+00:00",
+            "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+          },
+          "created_at": "2026-11-24T06:29:04.153050+00:00"
+        },
+        {
+          "id": 30,
+          "actor": "QA",
+          "action": "effectiveness_evaluated",
+          "payload": {
+            "id": "908d7607-d246-469b-abbe-eef831cc67c0",
+            "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+            "status": "failed"
+          },
+          "created_at": "2026-11-24T06:29:04.228689+00:00"
+        },
+        {
+          "id": 31,
+          "actor": "QA",
+          "action": "action_completed",
+          "payload": {
+            "action_id": "224bda1b-5b0e-4c23-a0f1-f2955be46460",
+            "reviewer": "QA",
+            "evidence_ids": [
+              "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+            ],
+            "note": "가상 실행 확인",
+            "completed_at": "2026-11-24T06:29:04.264357+00:00",
+            "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07"
+          },
+          "created_at": "2026-11-24T06:29:04.264357+00:00"
+        },
+        {
+          "id": 32,
+          "actor": "QA",
+          "action": "effectiveness_evaluated",
+          "payload": {
+            "id": "44e1502a-067d-4636-bedc-bbc4f4035520",
+            "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+            "status": "passed"
+          },
+          "created_at": "2026-11-24T06:29:04.338527+00:00"
+        },
+        {
+          "id": 33,
+          "actor": "QA",
+          "action": "closed",
+          "payload": {
+            "reviewer": "QA",
+            "confirmed": true,
+            "reason": "재조치 후 합성 관찰 기간 기준 충족",
+            "closed_at": "2026-11-24T06:29:04.358188+00:00"
+          },
+          "created_at": "2026-11-24T06:29:04.358188+00:00"
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "id": 14,
+      "actor": "QA",
+      "action": "received",
+      "payload": {
+        "reviewer": "QA",
+        "received_on": "2026-11-22",
+        "product_id": "IVD-COVID-DEMO",
+        "market": "KR",
+        "lot_number": "LOT-286ceb3b",
+        "problem_type": "missing_lot_label",
+        "description": "가상 외부 상자 로트 표기 누락",
+        "observed_facts": "합성 사진 메타데이터",
+        "evidence_ids": [],
+        "owner": "조사자",
+        "due_date": "2026-12-24",
+        "synthetic": true
+      },
+      "created_at": "2026-11-24T06:29:04.047393+00:00"
+    }
+  ],
+  "exported_at": "2026-11-24T06:29:04.391197+00:00"
+}

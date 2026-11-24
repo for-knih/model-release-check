@@ -4,6 +4,8 @@ import './style.css';
 import {AnalysisPanel} from './AnalysisPanel';
 import {TraceWorkspace} from './TraceWorkspace';
 import {IVDWorkspace} from './IVDWorkspace';
+import {IVDChangesWorkspace} from './IVDChangesWorkspace';
+import {PMSWorkspace} from './PMSWorkspace';
 const API='http://localhost:8000';
 type Row={case_id:string;text:string;expected_label:string;baseline:string;candidate:string};
 type Metric={accuracy:number;macro_f1:number;classes:Record<string,{recall:number|null;support:number}>};
@@ -35,4 +37,4 @@ function App(){
  {r&&run&&<AnalysisPanel key={run.id} runId={run.id} datasetId={run.snapshot.dataset_id} cases={r.cases} onDataset={(id,version)=>{setDataset(id);setDatasetName('새 평가 세트 · '+version.slice(0,12));setMode('local');setPending(null);window.scrollTo({top:0,behavior:'smooth'})}}/>}
  <footer>MODEL RELEASE CHECK · 합성 데이터 / 외부 API 없이 로컬 평가 가능</footer></main>
 }
-createRoot(document.getElementById('root')!).render(new URLSearchParams(location.search).has('ivd')?<IVDWorkspace/>:<App/>);
+createRoot(document.getElementById('root')!).render(new URLSearchParams(location.search).has('pms')?<PMSWorkspace/>:new URLSearchParams(location.search).has('ivd_changes')?<IVDChangesWorkspace/>:new URLSearchParams(location.search).has('ivd')?<IVDWorkspace/>:<App/>);

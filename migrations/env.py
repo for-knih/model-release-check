@@ -3,6 +3,7 @@ from alembic import context
 from sqlalchemy import create_engine
 from backend.db import Base
 from backend import ivd_models
+from backend import ivd_pms_models
 config = context.config
 url = os.getenv('DATABASE_URL', config.get_main_option('sqlalchemy.url'))
 def migrate(connection):

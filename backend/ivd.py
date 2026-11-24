@@ -13,7 +13,7 @@ from pydantic import BaseModel,Field,ConfigDict,model_validator
 from sqlalchemy import select,func,delete
 from sqlalchemy.exc import IntegrityError
 from .db import Session
-from .ivd_models import Product,Document,Evidence,Package,Mapping,EvidenceLink,Supplement,Event,Export
+from .ivd_models import Product,Document,Evidence,Package,Mapping,EvidenceLink,Supplement,Event,Export,ProductRevision
 
 router=APIRouter(prefix='/ivd',tags=['IVD 검토용 패키지'])
 SECTIONS={'overview':'제품 개요','intended_use':'사용 목적','performance':'성능평가 요약','labeling':'표시사항 초안','evidence_index':'증빙 목록'}
@@ -48,6 +48,13 @@ def mapping(s,p,key):
 def document_dict(d):return {'id':d.id,'product_id':d.product_id,'section':d.section,'revision':d.revision,'content':d.content,'citation':d.citation}
 def evidence_dict(e):return {'id':e.id,'product_id':e.product_id,'key':e.evidence_key,'revision':e.revision,'title':e.title,'summary':e.summary,'citation':e.citation,'previous_id':e.previous_id}
 
+def product_revision(s,product):
+    revision=s.scalar(select(ProductRevision).where(ProductRevision.product_id==product.id,ProductRevision.revision==product.current_revision))
+    if not revision:
+        revision=ProductRevision(id=uid(),product_id=product.id,revision=product.current_revision,data={'name':product.name,'metadata':copy.deepcopy(product.metadata_json),'fictional':product.fictional},created_at=now())
+        s.add(revision);s.flush()
+    return revision
+
 @router.get('/sources')
 def sources():return registry()
 
@@ -59,6 +66,7 @@ def seed():
             if s.get(Product,product_id):continue
             p=Product(id=product_id,name=name,fictional=True,metadata_json={'origin':'기존 IVD 데이터가 없어 시연용 최소 메타데이터를 신규 작성','performance_values':None,'regulatory_class':None,'submission_route':None})
             s.add(p);s.flush()
+            product_revision(s,p)
             for section,title in SECTIONS.items():
                 s.add(Document(id=uid(),product_id=p.id,section=section,revision=1,
                     content=f'가상 제품 · 검토용 예시. {name}의 {title} 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.',citation=f'가상 메타데이터 {key}/{section} §1'))
@@ -69,7 +77,7 @@ def seed():
 
 @router.get('/products')
 def products():
-    with Session() as s:return [{'id':p.id,'name':p.name,'fictional':p.fictional,'metadata':p.metadata_json} for p in s.scalars(select(Product).order_by(Product.id))]
+    with Session() as s:return [{'id':p.id,'name':p.name,'fictional':p.fictional,'metadata':p.metadata_json,'current_revision':p.current_revision} for p in s.scalars(select(Product).order_by(Product.id))]
 
 @router.get('/products/{product_id}/materials')
 def materials(product_id:str):
@@ -128,6 +136,7 @@ def create_package(body:PackageInput):
         product=get(s,Product,body.product_id)
         if body.basis=='fictional' and not product.fictional:raise HTTPException(422,'가상 기준은 가상 제품에서만 사용할 수 있습니다')
         p=Package(id=uid(),family_id=uid(),product_id=product.id,market=body.market,version=1,created_at=now())
+        p.product_revision_id=product_revision(s,product).id
         s.add(p);s.flush()
         source=copy.deepcopy(registry()['sources']['EU-IVDR' if p.market=='EU' else 'KR-MFDS'])
         if body.basis=='fictional':
@@ -216,7 +225,8 @@ def detail(s,p):
     ancestry=[p.id];ancestor=p
     while ancestor.parent_id:
         ancestor=get(s,Package,ancestor.parent_id);ancestry.append(ancestor.id)
-    return {'id':p.id,'family_id':p.family_id,'product':{'id':product.id,'name':product.name,'fictional':product.fictional},'market':p.market,'version':p.version,'parent_id':p.parent_id,
+    revision=get(s,ProductRevision,p.product_revision_id) if p.product_revision_id else None
+    return {'id':p.id,'family_id':p.family_id,'product':{'id':product.id,'name':revision.data['name'] if revision else product.name,'fictional':product.fictional},'product_revision_id':p.product_revision_id,'product_revision':revision.revision if revision else None,'work_for_change_id':p.work_for_change_id,'market':p.market,'version':p.version,'parent_id':p.parent_id,
         'status':p.status,'watermark':'가상 제품 · 검토용 예시' if product.fictional else '내부 검토용 초안',
         'regulatory_status':'규제 검토 필요' if not p.regulatory_review or p.regulatory_review['fictional_review'] else '검토자가 근거를 확인한 판단 · 규제기관 승인 아님',
         'regulatory_review':p.regulatory_review,'mappings':maps,'evidence_list':list(evidence.values()),'requests':requests,
@@ -224,11 +234,12 @@ def detail(s,p):
         'history':[{'id':e.id,'package_id':e.package_id,'actor':e.actor,'action':e.action,'payload':e.payload,'created_at':e.created_at} for e in s.scalars(select(Event).where(Event.package_id.in_(ancestry)).order_by(Event.id))]}
 
 @router.get('/packages')
-def list_packages(product_id:str|None=None,market:Literal['KR','EU']|None=None):
+def list_packages(product_id:str|None=None,market:Literal['KR','EU']|None=None,include_work:bool=False):
     with Session() as s:
         q=select(Package)
         if product_id:q=q.where(Package.product_id==product_id)
         if market:q=q.where(Package.market==market)
+        if not include_work:q=q.where(Package.work_for_change_id.is_(None))
         return [{'id':p.id,'product_id':p.product_id,'market':p.market,'version':p.version,'status':p.status,'family_id':p.family_id} for p in s.scalars(q.order_by(Package.created_at.desc()))]
 
 @router.get('/packages/{package_id}')
@@ -247,34 +258,38 @@ class VersionInput(Actor):
     evidence_replacements:dict[str,str]=Field(default_factory=dict)
     documents:dict[str,str]=Field(default_factory=dict)
 
+def clone_version(s,old,body):
+    s.scalar(select(Package).where(Package.family_id==old.family_id,Package.version==1).with_for_update())
+    version=(s.scalar(select(func.max(Package.version)).where(Package.family_id==old.family_id)) or 0)+1
+    p=Package(id=uid(),family_id=old.family_id,product_id=old.product_id,market=old.market,version=version,parent_id=old.id,regulatory_review=copy.deepcopy(old.regulatory_review),created_at=now(),product_revision_id=old.product_revision_id)
+    old_maps=rows(s,Mapping,old.id);referenced={id for m in old_maps for id in links(s,m)}
+    if not set(body.evidence_replacements)<=referenced:raise HTTPException(422,'이전 패키지에 없는 증빙 교체 ID')
+    for previous_id,new_id in body.evidence_replacements.items():
+        before=get(s,Evidence,previous_id);after=evidence_refs(s,old,[new_id])[0]
+        if before.evidence_key!=after.evidence_key or after.revision<=before.revision:raise HTTPException(422,'같은 증빙의 더 높은 개정본만 교체할 수 있습니다')
+    for section,id in body.documents.items():
+        d=get(s,Document,id)
+        if section not in SECTIONS or d.product_id!=old.product_id or d.section!=section:raise HTTPException(422,'문서 제품·섹션 불일치')
+        before=next(m for m in old_maps if m.section==section)
+        if before.document_id and d.revision<=get(s,Document,before.document_id).revision:raise HTTPException(422,'더 높은 문서 개정본이 필요합니다')
+    if 'intended_use' in body.documents or 'overview' in body.documents:p.regulatory_review=None
+    s.add(p);s.flush()
+    for a in old_maps:
+        ids=links(s,a);changed=a.section in body.documents or any(id in body.evidence_replacements for id in ids)
+        m=Mapping(package_id=p.id,requirement_key=a.requirement_key,section=a.section,document_id=body.documents.get(a.section,a.document_id),source=copy.deepcopy(a.source),clause=a.clause,mandatory=a.mandatory,applicability=a.applicability,state='review_needed' if changed else a.state,re_review=changed or a.re_review,reviewer=a.reviewer,rationale=a.rationale)
+        s.add(m);s.flush();s.add_all(EvidenceLink(mapping_id=m.id,evidence_id=body.evidence_replacements.get(id,id)) for id in ids)
+    for r in rows(s,Supplement,old.id):
+        values={k:copy.deepcopy(getattr(r,k)) for k in ['origin_id','requirement_key','section','reason','owner','due_date','status','answer','evidence_ids','reviewer','closure_reason']}
+        if r.status!='closed' and any(id in body.evidence_replacements for id in r.evidence_ids):values.update(status='requested',answer=None,evidence_ids=[],reviewer=None,closure_reason=None)
+        s.add(Supplement(id=uid(),package_id=p.id,**values))
+    event(s,p,body.reviewer,'version_created',{'parent_id':old.id,**body.model_dump()})
+    s.flush()
+    return p
+
 @router.post('/packages/{package_id}/versions',status_code=201)
 def new_version(package_id:str,body:VersionInput):
     with Session() as s:
-        old=get(s,Package,package_id)
-        s.scalar(select(Package).where(Package.family_id==old.family_id,Package.version==1).with_for_update())
-        version=(s.scalar(select(func.max(Package.version)).where(Package.family_id==old.family_id)) or 0)+1
-        p=Package(id=uid(),family_id=old.family_id,product_id=old.product_id,market=old.market,version=version,parent_id=old.id,regulatory_review=copy.deepcopy(old.regulatory_review),created_at=now())
-        old_maps=rows(s,Mapping,old.id);referenced={id for m in old_maps for id in links(s,m)}
-        if not set(body.evidence_replacements)<=referenced:raise HTTPException(422,'이전 패키지에 없는 증빙 교체 ID')
-        for previous_id,new_id in body.evidence_replacements.items():
-            before=get(s,Evidence,previous_id);after=evidence_refs(s,old,[new_id])[0]
-            if before.evidence_key!=after.evidence_key or after.revision<=before.revision:raise HTTPException(422,'같은 증빙의 더 높은 개정본만 교체할 수 있습니다')
-        for section,id in body.documents.items():
-            d=get(s,Document,id)
-            if section not in SECTIONS or d.product_id!=old.product_id or d.section!=section:raise HTTPException(422,'문서 제품·섹션 불일치')
-            before=next(m for m in old_maps if m.section==section)
-            if before.document_id and d.revision<=get(s,Document,before.document_id).revision:raise HTTPException(422,'더 높은 문서 개정본이 필요합니다')
-        if 'intended_use' in body.documents or 'overview' in body.documents:p.regulatory_review=None
-        s.add(p);s.flush()
-        for a in old_maps:
-            ids=links(s,a);changed=a.section in body.documents or any(id in body.evidence_replacements for id in ids)
-            m=Mapping(package_id=p.id,requirement_key=a.requirement_key,section=a.section,document_id=body.documents.get(a.section,a.document_id),source=copy.deepcopy(a.source),clause=a.clause,mandatory=a.mandatory,applicability=a.applicability,state='review_needed' if changed else a.state,re_review=changed or a.re_review,reviewer=a.reviewer,rationale=a.rationale)
-            s.add(m);s.flush();s.add_all(EvidenceLink(mapping_id=m.id,evidence_id=body.evidence_replacements.get(id,id)) for id in ids)
-        for r in rows(s,Supplement,old.id):
-            values={k:copy.deepcopy(getattr(r,k)) for k in ['origin_id','requirement_key','section','reason','owner','due_date','status','answer','evidence_ids','reviewer','closure_reason']}
-            if r.status!='closed' and any(id in body.evidence_replacements for id in r.evidence_ids):values.update(status='requested',answer=None,evidence_ids=[],reviewer=None,closure_reason=None)
-            s.add(Supplement(id=uid(),package_id=p.id,**values))
-        event(s,p,body.reviewer,'version_created',{'parent_id':old.id,**body.model_dump()})
+        p=clone_version(s,get(s,Package,package_id),body)
         try:s.commit()
         except IntegrityError:raise HTTPException(409,'패키지 버전 충돌: 다시 요청하세요')
         return detail(s,p)

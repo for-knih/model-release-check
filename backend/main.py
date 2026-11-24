@@ -347,3 +347,7 @@ def next_dataset(run_id: str, body: AddCases):
 app.include_router(traceability_router)
 from .ivd import router as ivd_router
 app.include_router(ivd_router)
+from .ivd_changes import router as ivd_changes_router
+app.include_router(ivd_changes_router)
+from .ivd_pms import router as ivd_pms_router
+app.include_router(ivd_pms_router)

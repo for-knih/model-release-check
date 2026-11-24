@@ -1,0 +1,440 @@
+{
+  "watermark": "가상 제품 · 검토용 예시",
+  "hiv": {
+    "complaint_id": "4955534e-1304-4cb3-a86a-9eaacc50122e",
+    "capa_id": "f1419163-0bbe-433a-bd4c-f00b6f2d15f1",
+    "change_id": "1dc9fd38-0517-435a-9335-cf55b3a6d1e0",
+    "waiting": "waiting",
+    "final": {
+      "id": "fe74951e-8de1-4105-8d6a-9636f9d44107",
+      "plan_id": "5544d810-8d28-490b-84b8-0674d41fc64b",
+      "status": "passed",
+      "snapshot": {
+        "metric": "유통 1,000개당 동일 유형 사건 수",
+        "status": "passed",
+        "status_label": "통과",
+        "plan": {
+          "id": "5544d810-8d28-490b-84b8-0674d41fc64b",
+          "version": 1,
+          "definition": {
+            "metric": "same_type_incidents_per_1000",
+            "before_start": "2026-11-14",
+            "before_end": "2026-11-23",
+            "after_start": "2026-11-24",
+            "after_end": "2026-12-04",
+            "before_lot_numbers": [
+              "LOT-64cee178"
+            ],
+            "after_lot_numbers": [
+              "LOT-64cee178"
+            ],
+            "data_source": "가상 제품 · 검토용 예시 합성 원장",
+            "max_after_rate": 0.5
+          },
+          "registered_by": "QA",
+          "registered_at": "2026-11-24T06:29:03.497885+00:00",
+          "covered_action_ids": [
+            "c85c4861-c93b-451e-910c-c267dffb3ee7",
+            "fea0dce0-cdda-4af5-b258-5b603f3f5d1a"
+          ]
+        },
+        "cohorts": {
+          "before": {
+            "raw_receipts": 1,
+            "incidents": 1,
+            "incident_ids": [
+              "4955534e-1304-4cb3-a86a-9eaacc50122e"
+            ],
+            "receipt_ids": [
+              "4955534e-1304-4cb3-a86a-9eaacc50122e"
+            ],
+            "unconfirmed_lot_ids": [],
+            "lot_numbers": [
+              "LOT-64cee178"
+            ],
+            "period_start": "2026-11-14",
+            "period_end": "2026-11-23",
+            "quantity": 1000,
+            "rate_per_1000": 1.0,
+            "distribution": {
+              "id": "e1e112da-e0f8-4df6-8973-2a6d31851621",
+              "source": "합성 유통 원장",
+              "evidence_ids": [
+                "b944a103-0d4f-4fc2-9b87-1a2778e96ee1"
+              ],
+              "registered_by": "QA",
+              "registered_at": "2026-11-24T06:29:03.823279+00:00"
+            }
+          },
+          "after": {
+            "raw_receipts": 0,
+            "incidents": 0,
+            "incident_ids": [],
+            "receipt_ids": [],
+            "unconfirmed_lot_ids": [],
+            "lot_numbers": [
+              "LOT-64cee178"
+            ],
+            "period_start": "2026-11-24",
+            "period_end": "2026-12-04",
+            "quantity": 1000,
+            "rate_per_1000": 0.0,
+            "distribution": {
+              "id": "6e0f5db5-ae72-4662-a0bd-c10efddda99e",
+              "source": "합성 유통 원장",
+              "evidence_ids": [
+                "b944a103-0d4f-4fc2-9b87-1a2778e96ee1"
+              ],
+              "registered_by": "QA",
+              "registered_at": "2026-11-24T06:29:03.831426+00:00"
+            }
+          }
+        },
+        "action_execution_snapshot": [
+          {
+            "id": "c85c4861-c93b-451e-910c-c267dffb3ee7",
+            "mandatory": true,
+            "execution": {
+              "reviewer": "QA",
+              "evidence_ids": [
+                "333cfef9-fa9d-47a4-b684-d3f5266680cd"
+              ],
+              "note": "가상 실행 확인",
+              "completed_at": "2026-11-24T06:29:03.506569+00:00",
+              "plan_id": "5544d810-8d28-490b-84b8-0674d41fc64b"
+            }
+          },
+          {
+            "id": "fea0dce0-cdda-4af5-b258-5b603f3f5d1a",
+            "mandatory": true,
+            "execution": {
+              "reviewer": "QA",
+              "evidence_ids": [
+                "333cfef9-fa9d-47a4-b684-d3f5266680cd"
+              ],
+              "note": "가상 실행 확인",
+              "completed_at": "2026-11-24T06:29:03.525180+00:00",
+              "plan_id": "5544d810-8d28-490b-84b8-0674d41fc64b"
+            }
+          }
+        ],
+        "result_evidence_ids": [
+          "b944a103-0d4f-4fc2-9b87-1a2778e96ee1"
+        ],
+        "waiting_reasons": [],
+        "as_of": "2026-12-04",
+        "synthetic": true,
+        "reviewer": "QA",
+        "evaluated_at": "2026-11-24T06:29:03.848099+00:00"
+      },
+      "created_at": "2026-11-24T06:29:03.848099+00:00"
+    },
+    "old_document_id": "2133c483-5c42-457c-af22-176f7ca10781",
+    "final_document_id": "1aa5c0de-2477-471f-b420-46d51a140744",
+    "old_lot_preserved": true,
+    "export": {
+      "id": "709ee30c-6bf7-4b35-b44f-a0089c614a7a",
+      "json_url": "/ivd/pms-exports/709ee30c-6bf7-4b35-b44f-a0089c614a7a?format=json",
+      "markdown_url": "/ivd/pms-exports/709ee30c-6bf7-4b35-b44f-a0089c614a7a?format=markdown"
+    }
+  },
+  "covid": {
+    "complaint_id": "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+    "capa_id": "f3da15f0-cab6-41d7-bc9c-c045c8374573",
+    "raw_receipts": 2,
+    "distinct_incidents": 1,
+    "evaluations": [
+      {
+        "id": "908d7607-d246-469b-abbe-eef831cc67c0",
+        "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+        "status": "failed",
+        "snapshot": {
+          "metric": "유통 1,000개당 동일 유형 사건 수",
+          "status": "failed",
+          "status_label": "기준 미달",
+          "plan": {
+            "id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+            "version": 1,
+            "definition": {
+              "metric": "same_type_incidents_per_1000",
+              "before_start": "2026-11-14",
+              "before_end": "2026-11-23",
+              "after_start": "2026-11-24",
+              "after_end": "2026-12-04",
+              "before_lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "after_lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "data_source": "가상 제품 · 검토용 예시 합성 원장",
+              "max_after_rate": 0.5
+            },
+            "registered_by": "QA",
+            "registered_at": "2026-11-24T06:29:04.143466+00:00",
+            "covered_action_ids": [
+              "e342806f-2c2b-412f-a7f1-5f30bea488c9"
+            ]
+          },
+          "cohorts": {
+            "before": {
+              "raw_receipts": 2,
+              "incidents": 1,
+              "incident_ids": [
+                "2b3baaf1-0fb3-45fb-b770-df5f50bed604"
+              ],
+              "receipt_ids": [
+                "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+                "d9dba6f6-a836-4325-a975-ae2f091fcea8"
+              ],
+              "unconfirmed_lot_ids": [],
+              "lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "period_start": "2026-11-14",
+              "period_end": "2026-11-23",
+              "quantity": 1000,
+              "rate_per_1000": 1.0,
+              "distribution": {
+                "id": "330fa14b-6581-455e-9f0d-a46d93a257f2",
+                "source": "합성 유통 원장",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "registered_by": "QA",
+                "registered_at": "2026-11-24T06:29:04.184401+00:00"
+              }
+            },
+            "after": {
+              "raw_receipts": 1,
+              "incidents": 1,
+              "incident_ids": [
+                "2df3a983-1875-4ac1-8c88-d58f8baa458c"
+              ],
+              "receipt_ids": [
+                "2df3a983-1875-4ac1-8c88-d58f8baa458c"
+              ],
+              "unconfirmed_lot_ids": [],
+              "lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "period_start": "2026-11-24",
+              "period_end": "2026-12-04",
+              "quantity": 1000,
+              "rate_per_1000": 1.0,
+              "distribution": {
+                "id": "e460fb46-9816-4dd9-87c2-310257055477",
+                "source": "합성 유통 원장",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "registered_by": "QA",
+                "registered_at": "2026-11-24T06:29:04.196443+00:00"
+              }
+            }
+          },
+          "action_execution_snapshot": [
+            {
+              "id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+              "mandatory": true,
+              "execution": {
+                "reviewer": "QA",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "note": "가상 실행 확인",
+                "completed_at": "2026-11-24T06:29:04.153050+00:00",
+                "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+              }
+            }
+          ],
+          "result_evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ],
+          "waiting_reasons": [],
+          "as_of": "2026-12-04",
+          "synthetic": true,
+          "reviewer": "QA",
+          "evaluated_at": "2026-11-24T06:29:04.227609+00:00"
+        },
+        "created_at": "2026-11-24T06:29:04.227609+00:00"
+      },
+      {
+        "id": "44e1502a-067d-4636-bedc-bbc4f4035520",
+        "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+        "status": "passed",
+        "snapshot": {
+          "metric": "유통 1,000개당 동일 유형 사건 수",
+          "status": "passed",
+          "status_label": "통과",
+          "plan": {
+            "id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+            "version": 2,
+            "definition": {
+              "metric": "same_type_incidents_per_1000",
+              "before_start": "2026-11-14",
+              "before_end": "2026-11-23",
+              "after_start": "2026-12-05",
+              "after_end": "2026-12-15",
+              "before_lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "after_lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "data_source": "가상 제품 · 검토용 예시 합성 원장",
+              "max_after_rate": 0.5
+            },
+            "registered_by": "QA",
+            "registered_at": "2026-11-24T06:29:04.256130+00:00",
+            "covered_action_ids": [
+              "224bda1b-5b0e-4c23-a0f1-f2955be46460"
+            ]
+          },
+          "cohorts": {
+            "before": {
+              "raw_receipts": 2,
+              "incidents": 1,
+              "incident_ids": [
+                "2b3baaf1-0fb3-45fb-b770-df5f50bed604"
+              ],
+              "receipt_ids": [
+                "2b3baaf1-0fb3-45fb-b770-df5f50bed604",
+                "d9dba6f6-a836-4325-a975-ae2f091fcea8"
+              ],
+              "unconfirmed_lot_ids": [],
+              "lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "period_start": "2026-11-14",
+              "period_end": "2026-11-23",
+              "quantity": 1000,
+              "rate_per_1000": 1.0,
+              "distribution": {
+                "id": "daaa6ace-e2f9-4f06-a505-075f09611db4",
+                "source": "합성 유통 원장",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "registered_by": "QA",
+                "registered_at": "2026-11-24T06:29:04.294533+00:00"
+              }
+            },
+            "after": {
+              "raw_receipts": 0,
+              "incidents": 0,
+              "incident_ids": [],
+              "receipt_ids": [],
+              "unconfirmed_lot_ids": [],
+              "lot_numbers": [
+                "LOT-286ceb3b"
+              ],
+              "period_start": "2026-12-05",
+              "period_end": "2026-12-15",
+              "quantity": 1000,
+              "rate_per_1000": 0.0,
+              "distribution": {
+                "id": "07f18f74-698d-4b15-95dd-4eb482731992",
+                "source": "합성 유통 원장",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "registered_by": "QA",
+                "registered_at": "2026-11-24T06:29:04.307363+00:00"
+              }
+            }
+          },
+          "action_execution_snapshot": [
+            {
+              "id": "224bda1b-5b0e-4c23-a0f1-f2955be46460",
+              "mandatory": true,
+              "execution": {
+                "reviewer": "QA",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "note": "가상 실행 확인",
+                "completed_at": "2026-11-24T06:29:04.264357+00:00",
+                "plan_id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07"
+              }
+            },
+            {
+              "id": "e342806f-2c2b-412f-a7f1-5f30bea488c9",
+              "mandatory": true,
+              "execution": {
+                "reviewer": "QA",
+                "evidence_ids": [
+                  "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+                ],
+                "note": "가상 실행 확인",
+                "completed_at": "2026-11-24T06:29:04.153050+00:00",
+                "plan_id": "8482fffe-b7c5-4a24-bf43-f955187e40d6"
+              }
+            }
+          ],
+          "result_evidence_ids": [
+            "48a62f04-6f4d-4b8b-b21c-9ba2469dcfa6"
+          ],
+          "waiting_reasons": [],
+          "as_of": "2026-12-15",
+          "synthetic": true,
+          "reviewer": "QA",
+          "evaluated_at": "2026-11-24T06:29:04.337525+00:00"
+        },
+        "created_at": "2026-11-24T06:29:04.338527+00:00"
+      }
+    ],
+    "plans": [
+      {
+        "id": "8482fffe-b7c5-4a24-bf43-f955187e40d6",
+        "version": 1,
+        "definition": {
+          "metric": "same_type_incidents_per_1000",
+          "before_start": "2026-11-14",
+          "before_end": "2026-11-23",
+          "after_start": "2026-11-24",
+          "after_end": "2026-12-04",
+          "before_lot_numbers": [
+            "LOT-286ceb3b"
+          ],
+          "after_lot_numbers": [
+            "LOT-286ceb3b"
+          ],
+          "data_source": "가상 제품 · 검토용 예시 합성 원장",
+          "max_after_rate": 0.5
+        },
+        "covered_action_ids": [
+          "e342806f-2c2b-412f-a7f1-5f30bea488c9"
+        ]
+      },
+      {
+        "id": "1b65058a-f0f0-4e30-bbf4-9ffc4cf9dc07",
+        "version": 2,
+        "definition": {
+          "metric": "same_type_incidents_per_1000",
+          "before_start": "2026-11-14",
+          "before_end": "2026-11-23",
+          "after_start": "2026-12-05",
+          "after_end": "2026-12-15",
+          "before_lot_numbers": [
+            "LOT-286ceb3b"
+          ],
+          "after_lot_numbers": [
+            "LOT-286ceb3b"
+          ],
+          "data_source": "가상 제품 · 검토용 예시 합성 원장",
+          "max_after_rate": 0.5
+        },
+        "covered_action_ids": [
+          "224bda1b-5b0e-4c23-a0f1-f2955be46460"
+        ]
+      }
+    ],
+    "retry_same_id": true,
+    "export": {
+      "id": "f5a84e59-a58c-46f5-934a-66babe79f2b5",
+      "json_url": "/ivd/pms-exports/f5a84e59-a58c-46f5-934a-66babe79f2b5?format=json",
+      "markdown_url": "/ivd/pms-exports/f5a84e59-a58c-46f5-934a-66babe79f2b5?format=markdown"
+    }
+  }
+}

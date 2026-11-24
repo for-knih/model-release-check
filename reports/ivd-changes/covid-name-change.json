@@ -1,0 +1,2797 @@
+{
+  "id": "e576bba6-a64b-47c3-ab0a-0597922e186b",
+  "product_id": "IVD-COVID-DEMO",
+  "watermark": "가상 제품 · 검토용 예시",
+  "status": "internal_complete",
+  "status_label": "내부 검토 완료",
+  "base_revision": {
+    "id": "5c3961da-cb97-4696-a3b0-62f1fa58ef68",
+    "revision": 1,
+    "data": {
+      "name": "COVID-19 항원 검사 가상 제품",
+      "metadata": {
+        "origin": "기존 IVD 데이터가 없어 시연용 최소 메타데이터를 신규 작성",
+        "performance_values": null,
+        "regulatory_class": null,
+        "submission_route": null
+      },
+      "fictional": true
+    }
+  },
+  "changes": [
+    {
+      "field": "name",
+      "before": "COVID-19 항원 검사 가상 제품",
+      "after": "COVID-19 항원 검사 가상 제품 · 명칭 r2"
+    }
+  ],
+  "evidence_replacements": {},
+  "reason": "가상 제품 · 검토용 예시 변경 요청",
+  "requester": "시연 요청자",
+  "created_at": "2026-11-24T04:25:34.219900+00:00",
+  "markets": [
+    {
+      "id": "016d5d6c-c272-48ef-bf6d-bd95670cd9d1",
+      "market": "EU",
+      "baseline_package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+      "baseline_package_version": 1,
+      "baseline_snapshot": {
+        "id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+        "family_id": "e748be76-a3d9-4c0d-88ff-960594753524",
+        "product": {
+          "id": "IVD-COVID-DEMO",
+          "name": "COVID-19 항원 검사 가상 제품",
+          "fictional": true
+        },
+        "product_revision_id": "5c3961da-cb97-4696-a3b0-62f1fa58ef68",
+        "product_revision": 1,
+        "work_for_change_id": null,
+        "market": "EU",
+        "version": 1,
+        "parent_id": null,
+        "status": "internal_complete",
+        "watermark": "가상 제품 · 검토용 예시",
+        "regulatory_status": "규제 검토 필요",
+        "regulatory_review": {
+          "reviewer": "시연 기준 검토자",
+          "classification": "가상 분류 검토 예시",
+          "submission_route": "가상 내부 검토 경로",
+          "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+          "source_ids": [
+            "EU-IVDR"
+          ],
+          "fictional_review": true,
+          "sources": [
+            {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            }
+          ],
+          "reviewed_at": "2026-11-24T04:25:33.974945+00:00"
+        },
+        "mappings": [
+          {
+            "key": "EU-OVERVIEW-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "overview",
+            "section_title": "제품 개요",
+            "document": {
+              "id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "overview",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/overview §1"
+            },
+            "evidence": [
+              {
+                "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "overview",
+                "revision": 1,
+                "title": "제품 개요 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/overview/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 1.1(a)",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "EU-INTENDED_USE-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "intended_use",
+            "section_title": "사용 목적",
+            "document": {
+              "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "intended_use",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/intended_use §1"
+            },
+            "evidence": [
+              {
+                "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "intended_use",
+                "revision": 1,
+                "title": "사용 목적 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/intended_use/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 1.1(c)",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "EU-PERFORMANCE-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "performance",
+            "section_title": "성능평가 요약",
+            "document": {
+              "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "performance",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/performance §1"
+            },
+            "evidence": [
+              {
+                "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "performance",
+                "revision": 1,
+                "title": "가상 성능 자료 메타데이터",
+                "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+                "citation": "가상://성능 자료 §1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 6 / Annex XIII",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "EU-LABELING-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "labeling",
+            "section_title": "표시사항 초안",
+            "document": {
+              "id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "labeling",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/labeling §1"
+            },
+            "evidence": [
+              {
+                "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "labeling",
+                "revision": 1,
+                "title": "표시사항 초안 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/labeling/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex I 20.2",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "EU-EVIDENCE_INDEX-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "evidence_index",
+            "section_title": "증빙 목록",
+            "document": {
+              "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "evidence_index",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/evidence_index §1"
+            },
+            "evidence": [
+              {
+                "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "evidence_index",
+                "revision": 1,
+                "title": "증빙 목록 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/evidence_index/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II introductory statement",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          }
+        ],
+        "evidence_list": [
+          {
+            "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "overview",
+            "revision": 1,
+            "title": "제품 개요 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/overview/r1",
+            "previous_id": null
+          },
+          {
+            "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "intended_use",
+            "revision": 1,
+            "title": "사용 목적 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/intended_use/r1",
+            "previous_id": null
+          },
+          {
+            "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "performance",
+            "revision": 1,
+            "title": "가상 성능 자료 메타데이터",
+            "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+            "citation": "가상://성능 자료 §1",
+            "previous_id": null
+          },
+          {
+            "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "labeling",
+            "revision": 1,
+            "title": "표시사항 초안 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/labeling/r1",
+            "previous_id": null
+          },
+          {
+            "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "evidence_index",
+            "revision": 1,
+            "title": "증빙 목록 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/evidence_index/r1",
+            "previous_id": null
+          }
+        ],
+        "requests": [],
+        "can_complete": true,
+        "unresolved": [],
+        "unverified_sources": [],
+        "history": [
+          {
+            "id": 32,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "system",
+            "action": "package_created",
+            "payload": {
+              "basis": "official"
+            },
+            "created_at": "2026-11-24T04:25:33.924337+00:00"
+          },
+          {
+            "id": 33,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "regulatory_review",
+            "payload": {
+              "reviewer": "시연 기준 검토자",
+              "classification": "가상 분류 검토 예시",
+              "submission_route": "가상 내부 검토 경로",
+              "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+              "source_ids": [
+                "EU-IVDR"
+              ],
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "EU",
+                  "number": "Regulation (EU) 2017/746",
+                  "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                  "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                  "version": "02017R0746-20250110; consolidated 2025-01-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "verified",
+                  "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                  "unverified": [
+                    "제품별 분류 및 제출 경로",
+                    "HIV/COVID 제품별 개별 적용성",
+                    "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                  ]
+                }
+              ],
+              "reviewed_at": "2026-11-24T04:25:33.974945+00:00"
+            },
+            "created_at": "2026-11-24T04:25:33.974945+00:00"
+          },
+          {
+            "id": 34,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-OVERVIEW-001",
+              "document_id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+              "evidence_ids": [
+                "3ff31401-cbee-43f9-9c52-005bb95b5813"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:34.024533+00:00"
+          },
+          {
+            "id": 35,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-INTENDED_USE-001",
+              "document_id": "938a236d-f312-47f8-8584-1914c9aabef2",
+              "evidence_ids": [
+                "bfd47df5-a204-4b96-ad63-e0aea9094270"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:34.058075+00:00"
+          },
+          {
+            "id": 36,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-PERFORMANCE-001",
+              "document_id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+              "evidence_ids": [
+                "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:34.112168+00:00"
+          },
+          {
+            "id": 37,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-LABELING-001",
+              "document_id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+              "evidence_ids": [
+                "95203ba2-2a6c-4fbe-bfff-232b52ff1a31"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:34.147280+00:00"
+          },
+          {
+            "id": 38,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-EVIDENCE_INDEX-001",
+              "document_id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+              "evidence_ids": [
+                "19923c41-f9f4-49e8-aadb-dfb1379e989e"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:34.157370+00:00"
+          },
+          {
+            "id": 39,
+            "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+            "actor": "시연 기준 검토자",
+            "action": "internal_complete",
+            "payload": {
+              "note": "규제기관 허가·인증을 의미하지 않음"
+            },
+            "created_at": "2026-11-24T04:25:34.190601+00:00"
+          }
+        ]
+      },
+      "judgment": {
+        "reviewer": "EU 시장 검토자",
+        "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "EU-IVDR"
+        ],
+        "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "EU",
+            "number": "Regulation (EU) 2017/746",
+            "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+            "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+            "version": "02017R0746-20250110; consolidated 2025-01-10",
+            "checked_on": "2026-11-24",
+            "verification": "verified",
+            "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+            "unverified": [
+              "제품별 분류 및 제출 경로",
+              "HIV/COVID 제품별 개별 적용성",
+              "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:34.579794+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "regulatory_status": "규제 검토 필요 · 가상 판단만 기록",
+      "work_package_id": null,
+      "work_requests": [],
+      "final_package_id": "e918f191-d489-4eb1-a44e-2a89b43403a2"
+    },
+    {
+      "id": "fff22e14-c303-4a6a-bde4-d9a3bce78501",
+      "market": "KR",
+      "baseline_package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+      "baseline_package_version": 1,
+      "baseline_snapshot": {
+        "id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+        "family_id": "7206946b-bb30-43cd-912a-a0db6b1e1c65",
+        "product": {
+          "id": "IVD-COVID-DEMO",
+          "name": "COVID-19 항원 검사 가상 제품",
+          "fictional": true
+        },
+        "product_revision_id": "5c3961da-cb97-4696-a3b0-62f1fa58ef68",
+        "product_revision": 1,
+        "work_for_change_id": null,
+        "market": "KR",
+        "version": 1,
+        "parent_id": null,
+        "status": "internal_complete",
+        "watermark": "가상 제품 · 검토용 예시",
+        "regulatory_status": "규제 검토 필요",
+        "regulatory_review": {
+          "reviewer": "시연 기준 검토자",
+          "classification": "가상 분류 검토 예시",
+          "submission_route": "가상 내부 검토 경로",
+          "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+          "source_ids": [
+            "KR-MFDS"
+          ],
+          "fictional_review": true,
+          "sources": [
+            {
+              "market": "KR",
+              "number": "식품의약품안전처고시 제2026-58호",
+              "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+              "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+              "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+              "version": "제2026-58호; 시행 2026-08-10",
+              "checked_on": "2026-11-24",
+              "verification": "partial",
+              "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+              "unverified": [
+                "첨부 전문의 조항별 원문·별표 대조",
+                "제품별 국내 품목·등급·제출 경로",
+                "개별 제출자료 면제 및 적용성"
+              ]
+            }
+          ],
+          "reviewed_at": "2026-11-24T04:25:33.587697+00:00"
+        },
+        "mappings": [
+          {
+            "key": "KR-OVERVIEW-001",
+            "market": "KR",
+            "mandatory": true,
+            "section": "overview",
+            "section_title": "제품 개요",
+            "document": {
+              "id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "overview",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/overview §1"
+            },
+            "evidence": [
+              {
+                "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "overview",
+                "revision": 1,
+                "title": "제품 개요 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/overview/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            },
+            "clause": "가상-DEMO/overview",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "KR-INTENDED_USE-001",
+            "market": "KR",
+            "mandatory": true,
+            "section": "intended_use",
+            "section_title": "사용 목적",
+            "document": {
+              "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "intended_use",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/intended_use §1"
+            },
+            "evidence": [
+              {
+                "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "intended_use",
+                "revision": 1,
+                "title": "사용 목적 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/intended_use/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            },
+            "clause": "가상-DEMO/intended_use",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "KR-PERFORMANCE-001",
+            "market": "KR",
+            "mandatory": true,
+            "section": "performance",
+            "section_title": "성능평가 요약",
+            "document": {
+              "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "performance",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/performance §1"
+            },
+            "evidence": [
+              {
+                "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "performance",
+                "revision": 1,
+                "title": "가상 성능 자료 메타데이터",
+                "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+                "citation": "가상://성능 자료 §1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            },
+            "clause": "가상-DEMO/performance",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "KR-LABELING-001",
+            "market": "KR",
+            "mandatory": true,
+            "section": "labeling",
+            "section_title": "표시사항 초안",
+            "document": {
+              "id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "labeling",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/labeling §1"
+            },
+            "evidence": [
+              {
+                "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "labeling",
+                "revision": 1,
+                "title": "표시사항 초안 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/labeling/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            },
+            "clause": "가상-DEMO/labeling",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          },
+          {
+            "key": "KR-EVIDENCE_INDEX-001",
+            "market": "KR",
+            "mandatory": true,
+            "section": "evidence_index",
+            "section_title": "증빙 목록",
+            "document": {
+              "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+              "product_id": "IVD-COVID-DEMO",
+              "section": "evidence_index",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 COVID/evidence_index §1"
+            },
+            "evidence": [
+              {
+                "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+                "product_id": "IVD-COVID-DEMO",
+                "key": "evidence_index",
+                "revision": 1,
+                "title": "증빙 목록 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://COVID/evidence_index/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            },
+            "clause": "가상-DEMO/evidence_index",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 기준 검토자",
+            "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+            "re_review": false
+          }
+        ],
+        "evidence_list": [
+          {
+            "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "overview",
+            "revision": 1,
+            "title": "제품 개요 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/overview/r1",
+            "previous_id": null
+          },
+          {
+            "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "intended_use",
+            "revision": 1,
+            "title": "사용 목적 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/intended_use/r1",
+            "previous_id": null
+          },
+          {
+            "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "performance",
+            "revision": 1,
+            "title": "가상 성능 자료 메타데이터",
+            "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+            "citation": "가상://성능 자료 §1",
+            "previous_id": null
+          },
+          {
+            "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "labeling",
+            "revision": 1,
+            "title": "표시사항 초안 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/labeling/r1",
+            "previous_id": null
+          },
+          {
+            "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+            "product_id": "IVD-COVID-DEMO",
+            "key": "evidence_index",
+            "revision": 1,
+            "title": "증빙 목록 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://COVID/evidence_index/r1",
+            "previous_id": null
+          }
+        ],
+        "requests": [],
+        "can_complete": true,
+        "unresolved": [],
+        "unverified_sources": [
+          {
+            "requirement_key": "KR-OVERVIEW-001",
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            }
+          },
+          {
+            "requirement_key": "KR-INTENDED_USE-001",
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            }
+          },
+          {
+            "requirement_key": "KR-PERFORMANCE-001",
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            }
+          },
+          {
+            "requirement_key": "KR-LABELING-001",
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            }
+          },
+          {
+            "requirement_key": "KR-EVIDENCE_INDEX-001",
+            "source": {
+              "market": "KR",
+              "number": "VIRTUAL-KR-001",
+              "title": "가상 검토 기준 · 국내 패키지 시연용",
+              "url": null,
+              "version": "demo-v1",
+              "checked_on": "2026-11-24",
+              "verification": "fictional",
+              "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+              "official_candidate": "KR-MFDS",
+              "unverified": [
+                "실제 규제 적합성 전부"
+              ]
+            }
+          }
+        ],
+        "history": [
+          {
+            "id": 24,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "system",
+            "action": "package_created",
+            "payload": {
+              "basis": "fictional"
+            },
+            "created_at": "2026-11-24T04:25:33.538787+00:00"
+          },
+          {
+            "id": 25,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "regulatory_review",
+            "payload": {
+              "reviewer": "시연 기준 검토자",
+              "classification": "가상 분류 검토 예시",
+              "submission_route": "가상 내부 검토 경로",
+              "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+              "source_ids": [
+                "KR-MFDS"
+              ],
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "KR",
+                  "number": "식품의약품안전처고시 제2026-58호",
+                  "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+                  "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+                  "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+                  "version": "제2026-58호; 시행 2026-08-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "partial",
+                  "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+                  "unverified": [
+                    "첨부 전문의 조항별 원문·별표 대조",
+                    "제품별 국내 품목·등급·제출 경로",
+                    "개별 제출자료 면제 및 적용성"
+                  ]
+                }
+              ],
+              "reviewed_at": "2026-11-24T04:25:33.587697+00:00"
+            },
+            "created_at": "2026-11-24T04:25:33.587697+00:00"
+          },
+          {
+            "id": 26,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "KR-OVERVIEW-001",
+              "document_id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+              "evidence_ids": [
+                "3ff31401-cbee-43f9-9c52-005bb95b5813"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:33.645322+00:00"
+          },
+          {
+            "id": 27,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "KR-INTENDED_USE-001",
+              "document_id": "938a236d-f312-47f8-8584-1914c9aabef2",
+              "evidence_ids": [
+                "bfd47df5-a204-4b96-ad63-e0aea9094270"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:33.691310+00:00"
+          },
+          {
+            "id": 28,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "KR-PERFORMANCE-001",
+              "document_id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+              "evidence_ids": [
+                "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:33.751320+00:00"
+          },
+          {
+            "id": 29,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "KR-LABELING-001",
+              "document_id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+              "evidence_ids": [
+                "95203ba2-2a6c-4fbe-bfff-232b52ff1a31"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:33.793080+00:00"
+          },
+          {
+            "id": 30,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "KR-EVIDENCE_INDEX-001",
+              "document_id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+              "evidence_ids": [
+                "19923c41-f9f4-49e8-aadb-dfb1379e989e"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+            },
+            "created_at": "2026-11-24T04:25:33.830509+00:00"
+          },
+          {
+            "id": 31,
+            "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+            "actor": "시연 기준 검토자",
+            "action": "internal_complete",
+            "payload": {
+              "note": "규제기관 허가·인증을 의미하지 않음"
+            },
+            "created_at": "2026-11-24T04:25:33.857241+00:00"
+          }
+        ]
+      },
+      "judgment": {
+        "reviewer": "KR 시장 검토자",
+        "reason": "KR 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "KR-MFDS"
+        ],
+        "legal_procedure": "KR 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "KR",
+            "number": "식품의약품안전처고시 제2026-58호",
+            "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+            "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+            "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+            "version": "제2026-58호; 시행 2026-08-10",
+            "checked_on": "2026-11-24",
+            "verification": "partial",
+            "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+            "unverified": [
+              "첨부 전문의 조항별 원문·별표 대조",
+              "제품별 국내 품목·등급·제출 경로",
+              "개별 제출자료 면제 및 적용성"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:34.324430+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "regulatory_status": "규제 검토 필요 · 가상 판단만 기록",
+      "work_package_id": null,
+      "work_requests": [],
+      "final_package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19"
+    }
+  ],
+  "items": [
+    {
+      "id": "68c9e421-257a-484a-ab99-05130d921c2d",
+      "market": "EU",
+      "section": "labeling",
+      "requirement_key": "EU-LABELING-001",
+      "document": {
+        "id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "labeling",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/labeling §1"
+      },
+      "evidence": [
+        {
+          "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "labeling",
+          "revision": 1,
+          "title": "표시사항 초안 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/labeling/r1",
+          "previous_id": null
+        }
+      ],
+      "mandatory": true,
+      "manual_check": false,
+      "reasons": [
+        {
+          "kind": "field_rule",
+          "rule_id": "694e3c04-090d-47d5-a390-9671c26c8ccb",
+          "version": 1,
+          "field": "name",
+          "reason": "가상 메타데이터 연결 규칙: name → labeling. 법적 변경 절차 판단 아님"
+        }
+      ],
+      "decision": {
+        "reviewer": "EU 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "a58791c9-bd32-417c-9f7c-e7bbb4c6fe9e",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.383031+00:00"
+      }
+    },
+    {
+      "id": "d47f1041-7169-46aa-96e0-40de268e2f45",
+      "market": "EU",
+      "section": "overview",
+      "requirement_key": "EU-OVERVIEW-001",
+      "document": {
+        "id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "overview",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/overview §1"
+      },
+      "evidence": [
+        {
+          "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "overview",
+          "revision": 1,
+          "title": "제품 개요 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/overview/r1",
+          "previous_id": null
+        }
+      ],
+      "mandatory": true,
+      "manual_check": false,
+      "reasons": [
+        {
+          "kind": "field_rule",
+          "rule_id": "b1f6caaf-9be2-449d-a6fe-fa32cc275124",
+          "version": 1,
+          "field": "name",
+          "reason": "가상 메타데이터 연결 규칙: name → overview. 법적 변경 절차 판단 아님"
+        }
+      ],
+      "decision": {
+        "reviewer": "EU 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "5041da91-3006-4cee-b5ae-cfd125723809",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.424156+00:00"
+      }
+    },
+    {
+      "id": "c4a73259-d145-4f74-bbe7-72934774e6dc",
+      "market": "KR",
+      "section": "labeling",
+      "requirement_key": "KR-LABELING-001",
+      "document": {
+        "id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "labeling",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/labeling §1"
+      },
+      "evidence": [
+        {
+          "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "labeling",
+          "revision": 1,
+          "title": "표시사항 초안 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/labeling/r1",
+          "previous_id": null
+        }
+      ],
+      "mandatory": true,
+      "manual_check": false,
+      "reasons": [
+        {
+          "kind": "field_rule",
+          "rule_id": "a6f79e08-de98-4a5d-8c88-64f54ef61e38",
+          "version": 1,
+          "field": "name",
+          "reason": "가상 메타데이터 연결 규칙: name → labeling. 법적 변경 절차 판단 아님"
+        }
+      ],
+      "decision": {
+        "reviewer": "KR 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.483991+00:00"
+      }
+    },
+    {
+      "id": "a1230043-4815-4e61-9c2c-40ae432e1e97",
+      "market": "KR",
+      "section": "overview",
+      "requirement_key": "KR-OVERVIEW-001",
+      "document": {
+        "id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+        "product_id": "IVD-COVID-DEMO",
+        "section": "overview",
+        "revision": 1,
+        "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+        "citation": "가상 메타데이터 COVID/overview §1"
+      },
+      "evidence": [
+        {
+          "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+          "product_id": "IVD-COVID-DEMO",
+          "key": "overview",
+          "revision": 1,
+          "title": "제품 개요 가상 등록 자료",
+          "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+          "citation": "가상://COVID/overview/r1",
+          "previous_id": null
+        }
+      ],
+      "mandatory": true,
+      "manual_check": false,
+      "reasons": [
+        {
+          "kind": "field_rule",
+          "rule_id": "89d1f717-5105-43e8-acd0-e30972224bc8",
+          "version": 1,
+          "field": "name",
+          "reason": "가상 메타데이터 연결 규칙: name → overview. 법적 변경 절차 판단 아님"
+        }
+      ],
+      "decision": {
+        "reviewer": "KR 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "2357b087-2911-4de4-91b8-3ef03d2def21",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.524527+00:00"
+      }
+    }
+  ],
+  "blockers": [],
+  "result": {
+    "change_id": "e576bba6-a64b-47c3-ab0a-0597922e186b",
+    "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+    "product_revision": 2,
+    "product_data": {
+      "name": "COVID-19 항원 검사 가상 제품 · 명칭 r2",
+      "metadata": {
+        "origin": "기존 IVD 데이터가 없어 시연용 최소 메타데이터를 신규 작성",
+        "performance_values": null,
+        "regulatory_class": null,
+        "submission_route": null
+      },
+      "fictional": true
+    },
+    "packages": {
+      "EU": {
+        "id": "e918f191-d489-4eb1-a44e-2a89b43403a2",
+        "version": 2,
+        "baseline_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+        "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+        "snapshot": {
+          "id": "e918f191-d489-4eb1-a44e-2a89b43403a2",
+          "family_id": "e748be76-a3d9-4c0d-88ff-960594753524",
+          "product": {
+            "id": "IVD-COVID-DEMO",
+            "name": "COVID-19 항원 검사 가상 제품 · 명칭 r2",
+            "fictional": true
+          },
+          "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+          "product_revision": 2,
+          "work_for_change_id": null,
+          "market": "EU",
+          "version": 2,
+          "parent_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+          "status": "internal_complete",
+          "watermark": "가상 제품 · 검토용 예시",
+          "regulatory_status": "규제 검토 필요",
+          "regulatory_review": {
+            "reviewer": "EU 시장 검토자",
+            "classification": "가상 분류 검토 예시",
+            "submission_route": "가상 내부 검토 경로",
+            "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+            "source_ids": [
+              "EU-IVDR"
+            ],
+            "fictional_review": true,
+            "sources": [
+              {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              }
+            ],
+            "reviewed_at": "2026-11-24T04:25:33.974945+00:00",
+            "change_review": {
+              "reviewer": "EU 시장 검토자",
+              "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+              "source_ids": [
+                "EU-IVDR"
+              ],
+              "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+              "submission_required": null,
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "EU",
+                  "number": "Regulation (EU) 2017/746",
+                  "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                  "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                  "version": "02017R0746-20250110; consolidated 2025-01-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "verified",
+                  "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                  "unverified": [
+                    "제품별 분류 및 제출 경로",
+                    "HIV/COVID 제품별 개별 적용성",
+                    "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                  ]
+                }
+              ],
+              "decided_at": "2026-11-24T04:25:34.579794+00:00",
+              "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+            }
+          },
+          "mappings": [
+            {
+              "key": "EU-OVERVIEW-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "overview",
+              "section_title": "제품 개요",
+              "document": {
+                "id": "5041da91-3006-4cee-b5ae-cfd125723809",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "overview",
+                "revision": 2,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/overview §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+              },
+              "evidence": [
+                {
+                  "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "overview",
+                  "revision": 1,
+                  "title": "제품 개요 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/overview/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 1.1(a)",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "EU 문서 검토자",
+              "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+              "re_review": false
+            },
+            {
+              "key": "EU-INTENDED_USE-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "intended_use",
+              "section_title": "사용 목적",
+              "document": {
+                "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "intended_use",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/intended_use §1"
+              },
+              "evidence": [
+                {
+                  "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "intended_use",
+                  "revision": 1,
+                  "title": "사용 목적 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/intended_use/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 1.1(c)",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            },
+            {
+              "key": "EU-PERFORMANCE-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "performance",
+              "section_title": "성능평가 요약",
+              "document": {
+                "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "performance",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/performance §1"
+              },
+              "evidence": [
+                {
+                  "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "performance",
+                  "revision": 1,
+                  "title": "가상 성능 자료 메타데이터",
+                  "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+                  "citation": "가상://성능 자료 §1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 6 / Annex XIII",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            },
+            {
+              "key": "EU-LABELING-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "labeling",
+              "section_title": "표시사항 초안",
+              "document": {
+                "id": "a58791c9-bd32-417c-9f7c-e7bbb4c6fe9e",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "labeling",
+                "revision": 2,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/labeling §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+              },
+              "evidence": [
+                {
+                  "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "labeling",
+                  "revision": 1,
+                  "title": "표시사항 초안 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/labeling/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex I 20.2",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "EU 문서 검토자",
+              "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+              "re_review": false
+            },
+            {
+              "key": "EU-EVIDENCE_INDEX-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "evidence_index",
+              "section_title": "증빙 목록",
+              "document": {
+                "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "evidence_index",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/evidence_index §1"
+              },
+              "evidence": [
+                {
+                  "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "evidence_index",
+                  "revision": 1,
+                  "title": "증빙 목록 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/evidence_index/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II introductory statement",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            }
+          ],
+          "evidence_list": [
+            {
+              "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "overview",
+              "revision": 1,
+              "title": "제품 개요 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/overview/r1",
+              "previous_id": null
+            },
+            {
+              "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "intended_use",
+              "revision": 1,
+              "title": "사용 목적 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/intended_use/r1",
+              "previous_id": null
+            },
+            {
+              "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "performance",
+              "revision": 1,
+              "title": "가상 성능 자료 메타데이터",
+              "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+              "citation": "가상://성능 자료 §1",
+              "previous_id": null
+            },
+            {
+              "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "labeling",
+              "revision": 1,
+              "title": "표시사항 초안 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/labeling/r1",
+              "previous_id": null
+            },
+            {
+              "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "evidence_index",
+              "revision": 1,
+              "title": "증빙 목록 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/evidence_index/r1",
+              "previous_id": null
+            }
+          ],
+          "requests": [],
+          "can_complete": true,
+          "unresolved": [],
+          "unverified_sources": [],
+          "history": [
+            {
+              "id": 32,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "system",
+              "action": "package_created",
+              "payload": {
+                "basis": "official"
+              },
+              "created_at": "2026-11-24T04:25:33.924337+00:00"
+            },
+            {
+              "id": 33,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "regulatory_review",
+              "payload": {
+                "reviewer": "시연 기준 검토자",
+                "classification": "가상 분류 검토 예시",
+                "submission_route": "가상 내부 검토 경로",
+                "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+                "source_ids": [
+                  "EU-IVDR"
+                ],
+                "fictional_review": true,
+                "sources": [
+                  {
+                    "market": "EU",
+                    "number": "Regulation (EU) 2017/746",
+                    "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                    "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                    "version": "02017R0746-20250110; consolidated 2025-01-10",
+                    "checked_on": "2026-11-24",
+                    "verification": "verified",
+                    "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                    "unverified": [
+                      "제품별 분류 및 제출 경로",
+                      "HIV/COVID 제품별 개별 적용성",
+                      "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                    ]
+                  }
+                ],
+                "reviewed_at": "2026-11-24T04:25:33.974945+00:00"
+              },
+              "created_at": "2026-11-24T04:25:33.974945+00:00"
+            },
+            {
+              "id": 34,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-OVERVIEW-001",
+                "document_id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+                "evidence_ids": [
+                  "3ff31401-cbee-43f9-9c52-005bb95b5813"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:34.024533+00:00"
+            },
+            {
+              "id": 35,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-INTENDED_USE-001",
+                "document_id": "938a236d-f312-47f8-8584-1914c9aabef2",
+                "evidence_ids": [
+                  "bfd47df5-a204-4b96-ad63-e0aea9094270"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:34.058075+00:00"
+            },
+            {
+              "id": 36,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-PERFORMANCE-001",
+                "document_id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+                "evidence_ids": [
+                  "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:34.112168+00:00"
+            },
+            {
+              "id": 37,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-LABELING-001",
+                "document_id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+                "evidence_ids": [
+                  "95203ba2-2a6c-4fbe-bfff-232b52ff1a31"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:34.147280+00:00"
+            },
+            {
+              "id": 38,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-EVIDENCE_INDEX-001",
+                "document_id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+                "evidence_ids": [
+                  "19923c41-f9f4-49e8-aadb-dfb1379e989e"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:34.157370+00:00"
+            },
+            {
+              "id": 39,
+              "package_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+              "actor": "시연 기준 검토자",
+              "action": "internal_complete",
+              "payload": {
+                "note": "규제기관 허가·인증을 의미하지 않음"
+              },
+              "created_at": "2026-11-24T04:25:34.190601+00:00"
+            },
+            {
+              "id": 40,
+              "package_id": "e918f191-d489-4eb1-a44e-2a89b43403a2",
+              "actor": "최종 검토자",
+              "action": "version_created",
+              "payload": {
+                "parent_id": "c2dca22a-5ca3-4c52-88c0-e264b33df6be",
+                "reviewer": "최종 검토자",
+                "evidence_replacements": {},
+                "documents": {
+                  "labeling": "a58791c9-bd32-417c-9f7c-e7bbb4c6fe9e",
+                  "overview": "5041da91-3006-4cee-b5ae-cfd125723809"
+                }
+              },
+              "created_at": "2026-11-24T04:25:34.625165+00:00"
+            },
+            {
+              "id": 41,
+              "package_id": "e918f191-d489-4eb1-a44e-2a89b43403a2",
+              "actor": "최종 검토자",
+              "action": "product_change_approved",
+              "payload": {
+                "change_id": "e576bba6-a64b-47c3-ab0a-0597922e186b",
+                "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97"
+              },
+              "created_at": "2026-11-24T04:25:34.629109+00:00"
+            }
+          ]
+        }
+      },
+      "KR": {
+        "id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+        "version": 2,
+        "baseline_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+        "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+        "snapshot": {
+          "id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+          "family_id": "7206946b-bb30-43cd-912a-a0db6b1e1c65",
+          "product": {
+            "id": "IVD-COVID-DEMO",
+            "name": "COVID-19 항원 검사 가상 제품 · 명칭 r2",
+            "fictional": true
+          },
+          "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+          "product_revision": 2,
+          "work_for_change_id": null,
+          "market": "KR",
+          "version": 2,
+          "parent_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "status": "internal_complete",
+          "watermark": "가상 제품 · 검토용 예시",
+          "regulatory_status": "규제 검토 필요",
+          "regulatory_review": {
+            "reviewer": "KR 시장 검토자",
+            "classification": "가상 분류 검토 예시",
+            "submission_route": "가상 내부 검토 경로",
+            "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+            "source_ids": [
+              "KR-MFDS"
+            ],
+            "fictional_review": true,
+            "sources": [
+              {
+                "market": "KR",
+                "number": "식품의약품안전처고시 제2026-58호",
+                "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+                "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+                "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+                "version": "제2026-58호; 시행 2026-08-10",
+                "checked_on": "2026-11-24",
+                "verification": "partial",
+                "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+                "unverified": [
+                  "첨부 전문의 조항별 원문·별표 대조",
+                  "제품별 국내 품목·등급·제출 경로",
+                  "개별 제출자료 면제 및 적용성"
+                ]
+              }
+            ],
+            "reviewed_at": "2026-11-24T04:25:33.587697+00:00",
+            "change_review": {
+              "reviewer": "KR 시장 검토자",
+              "reason": "KR 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+              "source_ids": [
+                "KR-MFDS"
+              ],
+              "legal_procedure": "KR 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+              "submission_required": null,
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "KR",
+                  "number": "식품의약품안전처고시 제2026-58호",
+                  "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+                  "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+                  "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+                  "version": "제2026-58호; 시행 2026-08-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "partial",
+                  "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+                  "unverified": [
+                    "첨부 전문의 조항별 원문·별표 대조",
+                    "제품별 국내 품목·등급·제출 경로",
+                    "개별 제출자료 면제 및 적용성"
+                  ]
+                }
+              ],
+              "decided_at": "2026-11-24T04:25:34.324430+00:00",
+              "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+            }
+          },
+          "mappings": [
+            {
+              "key": "KR-OVERVIEW-001",
+              "market": "KR",
+              "mandatory": true,
+              "section": "overview",
+              "section_title": "제품 개요",
+              "document": {
+                "id": "2357b087-2911-4de4-91b8-3ef03d2def21",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "overview",
+                "revision": 3,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/overview §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+              },
+              "evidence": [
+                {
+                  "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "overview",
+                  "revision": 1,
+                  "title": "제품 개요 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/overview/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              },
+              "clause": "가상-DEMO/overview",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "KR 문서 검토자",
+              "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+              "re_review": false
+            },
+            {
+              "key": "KR-INTENDED_USE-001",
+              "market": "KR",
+              "mandatory": true,
+              "section": "intended_use",
+              "section_title": "사용 목적",
+              "document": {
+                "id": "938a236d-f312-47f8-8584-1914c9aabef2",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "intended_use",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/intended_use §1"
+              },
+              "evidence": [
+                {
+                  "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "intended_use",
+                  "revision": 1,
+                  "title": "사용 목적 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/intended_use/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              },
+              "clause": "가상-DEMO/intended_use",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            },
+            {
+              "key": "KR-PERFORMANCE-001",
+              "market": "KR",
+              "mandatory": true,
+              "section": "performance",
+              "section_title": "성능평가 요약",
+              "document": {
+                "id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "performance",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 성능평가 요약 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/performance §1"
+              },
+              "evidence": [
+                {
+                  "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "performance",
+                  "revision": 1,
+                  "title": "가상 성능 자료 메타데이터",
+                  "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+                  "citation": "가상://성능 자료 §1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              },
+              "clause": "가상-DEMO/performance",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            },
+            {
+              "key": "KR-LABELING-001",
+              "market": "KR",
+              "mandatory": true,
+              "section": "labeling",
+              "section_title": "표시사항 초안",
+              "document": {
+                "id": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "labeling",
+                "revision": 3,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품 · 명칭 r2의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/labeling §1; 제품명 변경 요청 e576bba6-a64b-47c3-ab0a-0597922e186b"
+              },
+              "evidence": [
+                {
+                  "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "labeling",
+                  "revision": 1,
+                  "title": "표시사항 초안 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/labeling/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              },
+              "clause": "가상-DEMO/labeling",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "KR 문서 검토자",
+              "rationale": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+              "re_review": false
+            },
+            {
+              "key": "KR-EVIDENCE_INDEX-001",
+              "market": "KR",
+              "mandatory": true,
+              "section": "evidence_index",
+              "section_title": "증빙 목록",
+              "document": {
+                "id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+                "product_id": "IVD-COVID-DEMO",
+                "section": "evidence_index",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. COVID-19 항원 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 COVID/evidence_index §1"
+              },
+              "evidence": [
+                {
+                  "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+                  "product_id": "IVD-COVID-DEMO",
+                  "key": "evidence_index",
+                  "revision": 1,
+                  "title": "증빙 목록 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://COVID/evidence_index/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              },
+              "clause": "가상-DEMO/evidence_index",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 기준 검토자",
+              "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인",
+              "re_review": false
+            }
+          ],
+          "evidence_list": [
+            {
+              "id": "3ff31401-cbee-43f9-9c52-005bb95b5813",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "overview",
+              "revision": 1,
+              "title": "제품 개요 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/overview/r1",
+              "previous_id": null
+            },
+            {
+              "id": "bfd47df5-a204-4b96-ad63-e0aea9094270",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "intended_use",
+              "revision": 1,
+              "title": "사용 목적 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/intended_use/r1",
+              "previous_id": null
+            },
+            {
+              "id": "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "performance",
+              "revision": 1,
+              "title": "가상 성능 자료 메타데이터",
+              "summary": "실제 성능값 없음. 시연을 위한 등록 자료 위치만 표시",
+              "citation": "가상://성능 자료 §1",
+              "previous_id": null
+            },
+            {
+              "id": "95203ba2-2a6c-4fbe-bfff-232b52ff1a31",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "labeling",
+              "revision": 1,
+              "title": "표시사항 초안 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/labeling/r1",
+              "previous_id": null
+            },
+            {
+              "id": "19923c41-f9f4-49e8-aadb-dfb1379e989e",
+              "product_id": "IVD-COVID-DEMO",
+              "key": "evidence_index",
+              "revision": 1,
+              "title": "증빙 목록 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://COVID/evidence_index/r1",
+              "previous_id": null
+            }
+          ],
+          "requests": [],
+          "can_complete": true,
+          "unresolved": [],
+          "unverified_sources": [
+            {
+              "requirement_key": "KR-OVERVIEW-001",
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              }
+            },
+            {
+              "requirement_key": "KR-INTENDED_USE-001",
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              }
+            },
+            {
+              "requirement_key": "KR-PERFORMANCE-001",
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              }
+            },
+            {
+              "requirement_key": "KR-LABELING-001",
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              }
+            },
+            {
+              "requirement_key": "KR-EVIDENCE_INDEX-001",
+              "source": {
+                "market": "KR",
+                "number": "VIRTUAL-KR-001",
+                "title": "가상 검토 기준 · 국내 패키지 시연용",
+                "url": null,
+                "version": "demo-v1",
+                "checked_on": "2026-11-24",
+                "verification": "fictional",
+                "verified_scope": "법적 근거가 아닌 가상 제품·검토 절차 예시",
+                "official_candidate": "KR-MFDS",
+                "unverified": [
+                  "실제 규제 적합성 전부"
+                ]
+              }
+            }
+          ],
+          "history": [
+            {
+              "id": 24,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "system",
+              "action": "package_created",
+              "payload": {
+                "basis": "fictional"
+              },
+              "created_at": "2026-11-24T04:25:33.538787+00:00"
+            },
+            {
+              "id": 25,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "regulatory_review",
+              "payload": {
+                "reviewer": "시연 기준 검토자",
+                "classification": "가상 분류 검토 예시",
+                "submission_route": "가상 내부 검토 경로",
+                "rationale": "가상 메타데이터 및 등록 근거 확인; 실제 규제 확정 아님",
+                "source_ids": [
+                  "KR-MFDS"
+                ],
+                "fictional_review": true,
+                "sources": [
+                  {
+                    "market": "KR",
+                    "number": "식품의약품안전처고시 제2026-58호",
+                    "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+                    "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+                    "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+                    "version": "제2026-58호; 시행 2026-08-10",
+                    "checked_on": "2026-11-24",
+                    "verification": "partial",
+                    "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+                    "unverified": [
+                      "첨부 전문의 조항별 원문·별표 대조",
+                      "제품별 국내 품목·등급·제출 경로",
+                      "개별 제출자료 면제 및 적용성"
+                    ]
+                  }
+                ],
+                "reviewed_at": "2026-11-24T04:25:33.587697+00:00"
+              },
+              "created_at": "2026-11-24T04:25:33.587697+00:00"
+            },
+            {
+              "id": 26,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "KR-OVERVIEW-001",
+                "document_id": "bd70f8b7-5dcd-4462-9c9a-0622aca37405",
+                "evidence_ids": [
+                  "3ff31401-cbee-43f9-9c52-005bb95b5813"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:33.645322+00:00"
+            },
+            {
+              "id": 27,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "KR-INTENDED_USE-001",
+                "document_id": "938a236d-f312-47f8-8584-1914c9aabef2",
+                "evidence_ids": [
+                  "bfd47df5-a204-4b96-ad63-e0aea9094270"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:33.691310+00:00"
+            },
+            {
+              "id": 28,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "KR-PERFORMANCE-001",
+                "document_id": "767148f5-7516-46b5-b808-5a0473fea4ec",
+                "evidence_ids": [
+                  "826a928b-9cc1-4ed7-bbc7-c2062f15c5cb"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:33.751320+00:00"
+            },
+            {
+              "id": 29,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "KR-LABELING-001",
+                "document_id": "c164222f-9056-4c8b-ba5f-bff751207dd9",
+                "evidence_ids": [
+                  "95203ba2-2a6c-4fbe-bfff-232b52ff1a31"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:33.793080+00:00"
+            },
+            {
+              "id": 30,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "KR-EVIDENCE_INDEX-001",
+                "document_id": "0921c7c9-d5e4-458d-b543-33d550e5f20a",
+                "evidence_ids": [
+                  "19923c41-f9f4-49e8-aadb-dfb1379e989e"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 기준 검토자",
+                "rationale": "등록된 합성 문서·메타데이터의 검토 범위 확인"
+              },
+              "created_at": "2026-11-24T04:25:33.830509+00:00"
+            },
+            {
+              "id": 31,
+              "package_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+              "actor": "시연 기준 검토자",
+              "action": "internal_complete",
+              "payload": {
+                "note": "규제기관 허가·인증을 의미하지 않음"
+              },
+              "created_at": "2026-11-24T04:25:33.857241+00:00"
+            },
+            {
+              "id": 42,
+              "package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+              "actor": "최종 검토자",
+              "action": "version_created",
+              "payload": {
+                "parent_id": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+                "reviewer": "최종 검토자",
+                "evidence_replacements": {},
+                "documents": {
+                  "labeling": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+                  "overview": "2357b087-2911-4de4-91b8-3ef03d2def21"
+                }
+              },
+              "created_at": "2026-11-24T04:25:34.645835+00:00"
+            },
+            {
+              "id": 43,
+              "package_id": "304d53ca-52f5-407d-b44d-4cbe1da0cc19",
+              "actor": "최종 검토자",
+              "action": "product_change_approved",
+              "payload": {
+                "change_id": "e576bba6-a64b-47c3-ab0a-0597922e186b",
+                "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97"
+              },
+              "created_at": "2026-11-24T04:25:34.648836+00:00"
+            }
+          ]
+        }
+      }
+    },
+    "reviewer": "최종 검토자",
+    "completed_at": "2026-11-24T04:25:34.653890+00:00"
+  },
+  "corrections": [],
+  "history": [
+    {
+      "id": 8,
+      "actor": "시연 요청자",
+      "action": "created",
+      "payload": {
+        "product_id": "IVD-COVID-DEMO",
+        "base_revision_id": "5c3961da-cb97-4696-a3b0-62f1fa58ef68",
+        "changes": [
+          {
+            "field": "name",
+            "before": "COVID-19 항원 검사 가상 제품",
+            "after": "COVID-19 항원 검사 가상 제품 · 명칭 r2"
+          }
+        ],
+        "evidence_replacements": {},
+        "baseline_packages": {
+          "KR": "f79984de-b3ca-4fc5-807b-9e6932c4a068",
+          "EU": "c2dca22a-5ca3-4c52-88c0-e264b33df6be"
+        },
+        "reason": "가상 제품 · 검토용 예시 변경 요청",
+        "requester": "시연 요청자"
+      },
+      "created_at": "2026-11-24T04:25:34.226907+00:00"
+    },
+    {
+      "id": 9,
+      "actor": "영향평가자",
+      "action": "impact_assessed",
+      "payload": {
+        "method": "저장된 필드–섹션 규칙 및 증빙 참조 관계, AI 사용 안 함"
+      },
+      "created_at": "2026-11-24T04:25:34.261594+00:00"
+    },
+    {
+      "id": 10,
+      "actor": "재검토자",
+      "action": "review_started",
+      "payload": {},
+      "created_at": "2026-11-24T04:25:34.291139+00:00"
+    },
+    {
+      "id": 11,
+      "actor": "KR 시장 검토자",
+      "action": "market_decision",
+      "payload": {
+        "market": "KR",
+        "reviewer": "KR 시장 검토자",
+        "reason": "KR 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "KR-MFDS"
+        ],
+        "legal_procedure": "KR 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "KR",
+            "number": "식품의약품안전처고시 제2026-58호",
+            "title": "체외진단의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정",
+            "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000283814",
+            "publisher_url": "https://www.mfds.go.kr/law/board/boardDetail.do?brdId=data0008&menuKey=28&seq=15186",
+            "version": "제2026-58호; 시행 2026-08-10",
+            "checked_on": "2026-11-24",
+            "verification": "partial",
+            "verified_scope": "국가법령정보센터의 제목·고시번호·시행일 및 식약처 개정 공고 확인. 공고의 제25~27조 변경 설명 확인",
+            "unverified": [
+              "첨부 전문의 조항별 원문·별표 대조",
+              "제품별 국내 품목·등급·제출 경로",
+              "개별 제출자료 면제 및 적용성"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:34.324430+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "created_at": "2026-11-24T04:25:34.324430+00:00"
+    },
+    {
+      "id": 12,
+      "actor": "EU 문서 검토자",
+      "action": "item_decision",
+      "payload": {
+        "item_id": "68c9e421-257a-484a-ab99-05130d921c2d",
+        "reviewer": "EU 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "a58791c9-bd32-417c-9f7c-e7bbb4c6fe9e",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.383031+00:00"
+      },
+      "created_at": "2026-11-24T04:25:34.383031+00:00"
+    },
+    {
+      "id": 13,
+      "actor": "EU 문서 검토자",
+      "action": "item_decision",
+      "payload": {
+        "item_id": "d47f1041-7169-46aa-96e0-40de268e2f45",
+        "reviewer": "EU 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "5041da91-3006-4cee-b5ae-cfd125723809",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.424156+00:00"
+      },
+      "created_at": "2026-11-24T04:25:34.424156+00:00"
+    },
+    {
+      "id": 14,
+      "actor": "KR 문서 검토자",
+      "action": "item_decision",
+      "payload": {
+        "item_id": "c4a73259-d145-4f74-bbe7-72934774e6dc",
+        "reviewer": "KR 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "2e2ea5e5-c330-4125-bdbf-9efb476f706c",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.483991+00:00"
+      },
+      "created_at": "2026-11-24T04:25:34.483991+00:00"
+    },
+    {
+      "id": 15,
+      "actor": "KR 문서 검토자",
+      "action": "item_decision",
+      "payload": {
+        "item_id": "a1230043-4815-4e61-9c2c-40ae432e1e97",
+        "reviewer": "KR 문서 검토자",
+        "choice": "revise",
+        "reason": "가상 제품명 변경 부분만 새 문서 개정본에 반영",
+        "document_id": "2357b087-2911-4de4-91b8-3ef03d2def21",
+        "evidence_replacements": {},
+        "decided_at": "2026-11-24T04:25:34.524527+00:00"
+      },
+      "created_at": "2026-11-24T04:25:34.524527+00:00"
+    },
+    {
+      "id": 16,
+      "actor": "EU 시장 검토자",
+      "action": "market_decision",
+      "payload": {
+        "market": "EU",
+        "reviewer": "EU 시장 검토자",
+        "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "EU-IVDR"
+        ],
+        "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "EU",
+            "number": "Regulation (EU) 2017/746",
+            "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+            "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+            "version": "02017R0746-20250110; consolidated 2025-01-10",
+            "checked_on": "2026-11-24",
+            "verification": "verified",
+            "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+            "unverified": [
+              "제품별 분류 및 제출 경로",
+              "HIV/COVID 제품별 개별 적용성",
+              "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:34.579794+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "created_at": "2026-11-24T04:25:34.579794+00:00"
+    },
+    {
+      "id": 17,
+      "actor": "최종 검토자",
+      "action": "approved",
+      "payload": {
+        "product_revision_id": "3fa819e0-16d9-4e29-a421-db8a0836cb97",
+        "packages": {
+          "EU": "e918f191-d489-4eb1-a44e-2a89b43403a2",
+          "KR": "304d53ca-52f5-407d-b44d-4cbe1da0cc19"
+        }
+      },
+      "created_at": "2026-11-24T04:25:34.653890+00:00"
+    }
+  ],
+  "exported_at": "2026-11-24T04:25:34.710292+00:00"
+}

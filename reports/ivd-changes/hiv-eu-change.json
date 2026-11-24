@@ -1,0 +1,1550 @@
+{
+  "id": "f0321a8b-db4a-4ed9-ab3e-79abed56e684",
+  "product_id": "IVD-HIV-DEMO",
+  "watermark": "가상 제품 · 검토용 예시",
+  "status": "internal_complete",
+  "status_label": "내부 검토 완료",
+  "base_revision": {
+    "id": "d552ac11-f909-479d-a0a7-cfc9946ab210",
+    "revision": 1,
+    "data": {
+      "name": "HIV 항원·항체 검사 가상 제품",
+      "metadata": {
+        "origin": "기존 IVD 데이터가 없어 시연용 최소 메타데이터를 신규 작성",
+        "performance_values": null,
+        "regulatory_class": null,
+        "submission_route": null
+      },
+      "fictional": true
+    }
+  },
+  "changes": [],
+  "evidence_replacements": {
+    "c42e66be-0abf-4eff-a221-f5ee86c0928a": "a6f2b490-72a7-4a25-8675-3517b258f560"
+  },
+  "reason": "가상 제품 · 검토용 예시 변경 요청",
+  "requester": "시연 요청자",
+  "created_at": "2026-11-24T04:25:32.840380+00:00",
+  "markets": [
+    {
+      "id": "b7082269-c55e-4869-a884-0d10485c44d5",
+      "market": "EU",
+      "baseline_package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+      "baseline_package_version": 2,
+      "baseline_snapshot": {
+        "id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+        "family_id": "8afe3bd2-18c1-4e90-a57f-46a062b99ed1",
+        "product": {
+          "id": "IVD-HIV-DEMO",
+          "name": "HIV 항원·항체 검사 가상 제품",
+          "fictional": true
+        },
+        "product_revision_id": "d552ac11-f909-479d-a0a7-cfc9946ab210",
+        "product_revision": 1,
+        "work_for_change_id": null,
+        "market": "EU",
+        "version": 2,
+        "parent_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+        "status": "internal_complete",
+        "watermark": "가상 제품 · 검토용 예시",
+        "regulatory_status": "규제 검토 필요",
+        "regulatory_review": {
+          "reviewer": "시연 검토자",
+          "classification": "가상 분류 검토 예시",
+          "submission_route": "가상 내부 문서 검토 경로",
+          "rationale": "공식 IVDR 번호·제목과 제품 가상 메타데이터를 대조한 내부 검토 예시. 실제 등급이나 제출 경로 확정 아님",
+          "source_ids": [
+            "EU-IVDR"
+          ],
+          "fictional_review": true,
+          "sources": [
+            {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            }
+          ],
+          "reviewed_at": "2026-11-24T01:03:50.423412+00:00"
+        },
+        "mappings": [
+          {
+            "key": "EU-OVERVIEW-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "overview",
+            "section_title": "제품 개요",
+            "document": {
+              "id": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+              "product_id": "IVD-HIV-DEMO",
+              "section": "overview",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 HIV/overview §1"
+            },
+            "evidence": [
+              {
+                "id": "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b",
+                "product_id": "IVD-HIV-DEMO",
+                "key": "overview",
+                "revision": 1,
+                "title": "제품 개요 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://HIV/overview/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 1.1(a)",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 검토자",
+            "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+            "re_review": false
+          },
+          {
+            "key": "EU-INTENDED_USE-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "intended_use",
+            "section_title": "사용 목적",
+            "document": {
+              "id": "74032bf9-b2a5-463e-a570-72e818799769",
+              "product_id": "IVD-HIV-DEMO",
+              "section": "intended_use",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 HIV/intended_use §1"
+            },
+            "evidence": [
+              {
+                "id": "55073b4c-1494-4153-957e-4cf1c9a12579",
+                "product_id": "IVD-HIV-DEMO",
+                "key": "intended_use",
+                "revision": 1,
+                "title": "사용 목적 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://HIV/intended_use/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 1.1(c)",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 검토자",
+            "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+            "re_review": false
+          },
+          {
+            "key": "EU-PERFORMANCE-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "performance",
+            "section_title": "성능평가 요약",
+            "document": {
+              "id": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+              "product_id": "IVD-HIV-DEMO",
+              "section": "performance",
+              "revision": 2,
+              "content": "가상 제품 · 검토용 예시. 등록된 성능평가 자료 메타데이터와 인용 위치를 목록화했습니다. 실제 성능 수치는 제공되지 않았습니다.",
+              "citation": "가상://HIV/performance/report §1"
+            },
+            "evidence": [
+              {
+                "id": "c42e66be-0abf-4eff-a221-f5ee86c0928a",
+                "product_id": "IVD-HIV-DEMO",
+                "key": "performance",
+                "revision": 1,
+                "title": "가상 성능평가 자료 메타데이터",
+                "summary": "가상 등록 파일과 인용 위치만 확인. 실제 성능 수치 없음.",
+                "citation": "가상://HIV/performance/report §1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II 6 / Annex XIII",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 검토자",
+            "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+            "re_review": false
+          },
+          {
+            "key": "EU-LABELING-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "labeling",
+            "section_title": "표시사항 초안",
+            "document": {
+              "id": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+              "product_id": "IVD-HIV-DEMO",
+              "section": "labeling",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 HIV/labeling §1"
+            },
+            "evidence": [
+              {
+                "id": "a7f04974-c8f5-458b-906a-e56a792d05c3",
+                "product_id": "IVD-HIV-DEMO",
+                "key": "labeling",
+                "revision": 1,
+                "title": "표시사항 초안 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://HIV/labeling/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex I 20.2",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 검토자",
+            "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+            "re_review": false
+          },
+          {
+            "key": "EU-EVIDENCE_INDEX-001",
+            "market": "EU",
+            "mandatory": true,
+            "section": "evidence_index",
+            "section_title": "증빙 목록",
+            "document": {
+              "id": "7bae0100-47f3-43ec-9ea4-26943727b129",
+              "product_id": "IVD-HIV-DEMO",
+              "section": "evidence_index",
+              "revision": 1,
+              "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+              "citation": "가상 메타데이터 HIV/evidence_index §1"
+            },
+            "evidence": [
+              {
+                "id": "53093abf-dbb9-4eea-8e66-fe76e9ec704f",
+                "product_id": "IVD-HIV-DEMO",
+                "key": "evidence_index",
+                "revision": 1,
+                "title": "증빙 목록 가상 등록 자료",
+                "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                "citation": "가상://HIV/evidence_index/r1",
+                "previous_id": null
+              }
+            ],
+            "source": {
+              "market": "EU",
+              "number": "Regulation (EU) 2017/746",
+              "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+              "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+              "version": "02017R0746-20250110; consolidated 2025-01-10",
+              "checked_on": "2026-11-24",
+              "verification": "verified",
+              "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+              "unverified": [
+                "제품별 분류 및 제출 경로",
+                "HIV/COVID 제품별 개별 적용성",
+                "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+              ]
+            },
+            "clause": "Annex II introductory statement",
+            "applicability": "applicable",
+            "state": "satisfied",
+            "state_label": "충족",
+            "reviewer": "시연 검토자",
+            "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+            "re_review": false
+          }
+        ],
+        "evidence_list": [
+          {
+            "id": "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b",
+            "product_id": "IVD-HIV-DEMO",
+            "key": "overview",
+            "revision": 1,
+            "title": "제품 개요 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://HIV/overview/r1",
+            "previous_id": null
+          },
+          {
+            "id": "55073b4c-1494-4153-957e-4cf1c9a12579",
+            "product_id": "IVD-HIV-DEMO",
+            "key": "intended_use",
+            "revision": 1,
+            "title": "사용 목적 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://HIV/intended_use/r1",
+            "previous_id": null
+          },
+          {
+            "id": "c42e66be-0abf-4eff-a221-f5ee86c0928a",
+            "product_id": "IVD-HIV-DEMO",
+            "key": "performance",
+            "revision": 1,
+            "title": "가상 성능평가 자료 메타데이터",
+            "summary": "가상 등록 파일과 인용 위치만 확인. 실제 성능 수치 없음.",
+            "citation": "가상://HIV/performance/report §1",
+            "previous_id": null
+          },
+          {
+            "id": "a7f04974-c8f5-458b-906a-e56a792d05c3",
+            "product_id": "IVD-HIV-DEMO",
+            "key": "labeling",
+            "revision": 1,
+            "title": "표시사항 초안 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://HIV/labeling/r1",
+            "previous_id": null
+          },
+          {
+            "id": "53093abf-dbb9-4eea-8e66-fe76e9ec704f",
+            "product_id": "IVD-HIV-DEMO",
+            "key": "evidence_index",
+            "revision": 1,
+            "title": "증빙 목록 가상 등록 자료",
+            "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+            "citation": "가상://HIV/evidence_index/r1",
+            "previous_id": null
+          }
+        ],
+        "requests": [
+          {
+            "id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+            "origin_id": "e88a12c6-71ac-49aa-b8d6-ed303e032c53",
+            "requirement_key": "EU-PERFORMANCE-001",
+            "section": null,
+            "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+            "owner": "자료 담당자",
+            "due_date": "2026-12-01",
+            "status": "closed",
+            "answer": "성능평가 자료 메타데이터와 문서 개정본을 연결했습니다. 등록 인용 위치만 요약했으며 실제 성능 수치를 추가하지 않았습니다.",
+            "evidence_ids": [
+              "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+            ],
+            "reviewer": "재검토자",
+            "closure_reason": "답변·문서 ID·증빙 개정본과 인용 위치를 확인한 가상 검토 종결",
+            "status_label": "종결"
+          }
+        ],
+        "can_complete": true,
+        "unresolved": [],
+        "unverified_sources": [],
+        "history": [
+          {
+            "id": 1,
+            "package_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+            "actor": "system",
+            "action": "package_created",
+            "payload": {
+              "basis": "official"
+            },
+            "created_at": "2026-11-24T01:03:49.865657+00:00"
+          },
+          {
+            "id": 4,
+            "package_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+            "actor": "시연 검토자",
+            "action": "supplement_requested",
+            "payload": {
+              "request_id": "e88a12c6-71ac-49aa-b8d6-ed303e032c53",
+              "requirement_key": "EU-PERFORMANCE-001",
+              "section": null,
+              "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+              "owner": "자료 담당자",
+              "due_date": "2026-12-01",
+              "reviewer": "시연 검토자"
+            },
+            "created_at": "2026-11-24T01:03:50.149357+00:00"
+          },
+          {
+            "id": 5,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "version_created",
+            "payload": {
+              "parent_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+              "reviewer": "시연 검토자",
+              "evidence_replacements": {},
+              "documents": {
+                "performance": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2"
+              }
+            },
+            "created_at": "2026-11-24T01:03:50.334642+00:00"
+          },
+          {
+            "id": 6,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "regulatory_review",
+            "payload": {
+              "reviewer": "시연 검토자",
+              "classification": "가상 분류 검토 예시",
+              "submission_route": "가상 내부 문서 검토 경로",
+              "rationale": "공식 IVDR 번호·제목과 제품 가상 메타데이터를 대조한 내부 검토 예시. 실제 등급이나 제출 경로 확정 아님",
+              "source_ids": [
+                "EU-IVDR"
+              ],
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "EU",
+                  "number": "Regulation (EU) 2017/746",
+                  "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                  "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                  "version": "02017R0746-20250110; consolidated 2025-01-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "verified",
+                  "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                  "unverified": [
+                    "제품별 분류 및 제출 경로",
+                    "HIV/COVID 제품별 개별 적용성",
+                    "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                  ]
+                }
+              ],
+              "reviewed_at": "2026-11-24T01:03:50.423412+00:00"
+            },
+            "created_at": "2026-11-24T01:03:50.423412+00:00"
+          },
+          {
+            "id": 7,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-OVERVIEW-001",
+              "document_id": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+              "evidence_ids": [
+                "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+            },
+            "created_at": "2026-11-24T01:03:50.469541+00:00"
+          },
+          {
+            "id": 8,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-INTENDED_USE-001",
+              "document_id": "74032bf9-b2a5-463e-a570-72e818799769",
+              "evidence_ids": [
+                "55073b4c-1494-4153-957e-4cf1c9a12579"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+            },
+            "created_at": "2026-11-24T01:03:50.528025+00:00"
+          },
+          {
+            "id": 9,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-PERFORMANCE-001",
+              "document_id": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+              "evidence_ids": [
+                "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+            },
+            "created_at": "2026-11-24T01:03:50.574768+00:00"
+          },
+          {
+            "id": 10,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-LABELING-001",
+              "document_id": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+              "evidence_ids": [
+                "a7f04974-c8f5-458b-906a-e56a792d05c3"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+            },
+            "created_at": "2026-11-24T01:03:50.635355+00:00"
+          },
+          {
+            "id": 11,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "시연 검토자",
+            "action": "mapping_review",
+            "payload": {
+              "requirement_key": "EU-EVIDENCE_INDEX-001",
+              "document_id": "7bae0100-47f3-43ec-9ea4-26943727b129",
+              "evidence_ids": [
+                "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+              ],
+              "applicability": "applicable",
+              "state": "satisfied",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+            },
+            "created_at": "2026-11-24T01:03:50.697374+00:00"
+          },
+          {
+            "id": 12,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "답변 작성자",
+            "action": "answer_saved",
+            "payload": {
+              "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+              "reviewer": "답변 작성자",
+              "answer": "성능평가 자료 메타데이터와 문서 개정본을 연결했습니다. 등록 인용 위치만 요약했으며 실제 성능 수치를 추가하지 않았습니다.",
+              "evidence_ids": [
+                "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+              ],
+              "draft": null
+            },
+            "created_at": "2026-11-24T01:03:50.875470+00:00"
+          },
+          {
+            "id": 13,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "재검토자",
+            "action": "supplement_reviewing",
+            "payload": {
+              "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d"
+            },
+            "created_at": "2026-11-24T01:03:50.931469+00:00"
+          },
+          {
+            "id": 14,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "재검토자",
+            "action": "supplement_closed",
+            "payload": {
+              "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+              "reviewer": "재검토자",
+              "confirmed": true,
+              "reason": "답변·문서 ID·증빙 개정본과 인용 위치를 확인한 가상 검토 종결"
+            },
+            "created_at": "2026-11-24T01:03:50.996154+00:00"
+          },
+          {
+            "id": 15,
+            "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+            "actor": "재검토자",
+            "action": "internal_complete",
+            "payload": {
+              "note": "규제기관 허가·인증을 의미하지 않음"
+            },
+            "created_at": "2026-11-24T01:03:51.058059+00:00"
+          }
+        ]
+      },
+      "judgment": {
+        "reviewer": "EU 시장 검토자",
+        "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "EU-IVDR"
+        ],
+        "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "EU",
+            "number": "Regulation (EU) 2017/746",
+            "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+            "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+            "version": "02017R0746-20250110; consolidated 2025-01-10",
+            "checked_on": "2026-11-24",
+            "verification": "verified",
+            "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+            "unverified": [
+              "제품별 분류 및 제출 경로",
+              "HIV/COVID 제품별 개별 적용성",
+              "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:33.274201+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "regulatory_status": "규제 검토 필요 · 가상 판단만 기록",
+      "work_package_id": "7bea5e04-2b73-4275-a984-be76f8970c82",
+      "work_requests": [
+        {
+          "id": "676babdc-89fe-4834-b059-cfdfd0ab4fff",
+          "origin_id": "676babdc-89fe-4834-b059-cfdfd0ab4fff",
+          "requirement_key": null,
+          "section": "performance",
+          "reason": "교체 증빙 인용 위치의 추가 확인",
+          "owner": "자료 담당자",
+          "due_date": "2026-12-01",
+          "status": "closed",
+          "answer": "새 합성 증빙의 인용 위치와 개정본 식별자를 확인했습니다. 성능값은 변경하지 않았습니다.",
+          "evidence_ids": [
+            "a6f2b490-72a7-4a25-8675-3517b258f560"
+          ],
+          "reviewer": "자료 검토자",
+          "closure_reason": "등록 위치와 인용 개정본 확인",
+          "status_label": "종결"
+        },
+        {
+          "id": "c479ca5c-7e7f-4cac-972a-bbe0740b82b9",
+          "origin_id": "e88a12c6-71ac-49aa-b8d6-ed303e032c53",
+          "requirement_key": "EU-PERFORMANCE-001",
+          "section": null,
+          "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+          "owner": "자료 담당자",
+          "due_date": "2026-12-01",
+          "status": "closed",
+          "answer": "성능평가 자료 메타데이터와 문서 개정본을 연결했습니다. 등록 인용 위치만 요약했으며 실제 성능 수치를 추가하지 않았습니다.",
+          "evidence_ids": [
+            "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+          ],
+          "reviewer": "재검토자",
+          "closure_reason": "답변·문서 ID·증빙 개정본과 인용 위치를 확인한 가상 검토 종결",
+          "status_label": "종결"
+        }
+      ],
+      "final_package_id": "7f01aac6-bec5-4e22-afb4-210666025a72"
+    }
+  ],
+  "items": [
+    {
+      "id": "65f41d99-3397-4914-b0f5-0126b80d08b2",
+      "market": "EU",
+      "section": "performance",
+      "requirement_key": "EU-PERFORMANCE-001",
+      "document": {
+        "id": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+        "product_id": "IVD-HIV-DEMO",
+        "section": "performance",
+        "revision": 2,
+        "content": "가상 제품 · 검토용 예시. 등록된 성능평가 자료 메타데이터와 인용 위치를 목록화했습니다. 실제 성능 수치는 제공되지 않았습니다.",
+        "citation": "가상://HIV/performance/report §1"
+      },
+      "evidence": [
+        {
+          "id": "c42e66be-0abf-4eff-a221-f5ee86c0928a",
+          "product_id": "IVD-HIV-DEMO",
+          "key": "performance",
+          "revision": 1,
+          "title": "가상 성능평가 자료 메타데이터",
+          "summary": "가상 등록 파일과 인용 위치만 확인. 실제 성능 수치 없음.",
+          "citation": "가상://HIV/performance/report §1",
+          "previous_id": null
+        }
+      ],
+      "mandatory": true,
+      "manual_check": false,
+      "reasons": [
+        {
+          "kind": "evidence_reference",
+          "old_evidence_id": "c42e66be-0abf-4eff-a221-f5ee86c0928a",
+          "proposed_evidence_id": "a6f2b490-72a7-4a25-8675-3517b258f560",
+          "reason": "기준 패키지가 교체 대상 증빙 개정본을 실제 참조함"
+        }
+      ],
+      "decision": {
+        "reviewer": "재검토자",
+        "choice": "revise",
+        "reason": "참조된 합성 증빙의 개정본으로 교체 필요",
+        "document_id": null,
+        "evidence_replacements": {
+          "c42e66be-0abf-4eff-a221-f5ee86c0928a": "a6f2b490-72a7-4a25-8675-3517b258f560"
+        },
+        "decided_at": "2026-11-24T04:25:33.223956+00:00"
+      }
+    }
+  ],
+  "blockers": [],
+  "result": {
+    "change_id": "f0321a8b-db4a-4ed9-ab3e-79abed56e684",
+    "product_revision_id": "2525c9d9-d394-480e-9eaf-810b2066b8a5",
+    "product_revision": 2,
+    "product_data": {
+      "name": "HIV 항원·항체 검사 가상 제품",
+      "metadata": {
+        "origin": "기존 IVD 데이터가 없어 시연용 최소 메타데이터를 신규 작성",
+        "performance_values": null,
+        "regulatory_class": null,
+        "submission_route": null
+      },
+      "fictional": true
+    },
+    "packages": {
+      "EU": {
+        "id": "7f01aac6-bec5-4e22-afb4-210666025a72",
+        "version": 3,
+        "baseline_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+        "product_revision_id": "2525c9d9-d394-480e-9eaf-810b2066b8a5",
+        "snapshot": {
+          "id": "7f01aac6-bec5-4e22-afb4-210666025a72",
+          "family_id": "8afe3bd2-18c1-4e90-a57f-46a062b99ed1",
+          "product": {
+            "id": "IVD-HIV-DEMO",
+            "name": "HIV 항원·항체 검사 가상 제품",
+            "fictional": true
+          },
+          "product_revision_id": "2525c9d9-d394-480e-9eaf-810b2066b8a5",
+          "product_revision": 2,
+          "work_for_change_id": null,
+          "market": "EU",
+          "version": 3,
+          "parent_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+          "status": "internal_complete",
+          "watermark": "가상 제품 · 검토용 예시",
+          "regulatory_status": "규제 검토 필요",
+          "regulatory_review": {
+            "reviewer": "EU 시장 검토자",
+            "classification": "가상 분류 검토 예시",
+            "submission_route": "가상 내부 문서 검토 경로",
+            "rationale": "공식 IVDR 번호·제목과 제품 가상 메타데이터를 대조한 내부 검토 예시. 실제 등급이나 제출 경로 확정 아님",
+            "source_ids": [
+              "EU-IVDR"
+            ],
+            "fictional_review": true,
+            "sources": [
+              {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              }
+            ],
+            "reviewed_at": "2026-11-24T01:03:50.423412+00:00",
+            "change_review": {
+              "reviewer": "EU 시장 검토자",
+              "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+              "source_ids": [
+                "EU-IVDR"
+              ],
+              "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+              "submission_required": null,
+              "fictional_review": true,
+              "sources": [
+                {
+                  "market": "EU",
+                  "number": "Regulation (EU) 2017/746",
+                  "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                  "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                  "version": "02017R0746-20250110; consolidated 2025-01-10",
+                  "checked_on": "2026-11-24",
+                  "verification": "verified",
+                  "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                  "unverified": [
+                    "제품별 분류 및 제출 경로",
+                    "HIV/COVID 제품별 개별 적용성",
+                    "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                  ]
+                }
+              ],
+              "decided_at": "2026-11-24T04:25:33.274201+00:00",
+              "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+            }
+          },
+          "mappings": [
+            {
+              "key": "EU-OVERVIEW-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "overview",
+              "section_title": "제품 개요",
+              "document": {
+                "id": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+                "product_id": "IVD-HIV-DEMO",
+                "section": "overview",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 제품 개요 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 HIV/overview §1"
+              },
+              "evidence": [
+                {
+                  "id": "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b",
+                  "product_id": "IVD-HIV-DEMO",
+                  "key": "overview",
+                  "revision": 1,
+                  "title": "제품 개요 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://HIV/overview/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 1.1(a)",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+              "re_review": false
+            },
+            {
+              "key": "EU-INTENDED_USE-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "intended_use",
+              "section_title": "사용 목적",
+              "document": {
+                "id": "74032bf9-b2a5-463e-a570-72e818799769",
+                "product_id": "IVD-HIV-DEMO",
+                "section": "intended_use",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 사용 목적 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 HIV/intended_use §1"
+              },
+              "evidence": [
+                {
+                  "id": "55073b4c-1494-4153-957e-4cf1c9a12579",
+                  "product_id": "IVD-HIV-DEMO",
+                  "key": "intended_use",
+                  "revision": 1,
+                  "title": "사용 목적 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://HIV/intended_use/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 1.1(c)",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+              "re_review": false
+            },
+            {
+              "key": "EU-PERFORMANCE-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "performance",
+              "section_title": "성능평가 요약",
+              "document": {
+                "id": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+                "product_id": "IVD-HIV-DEMO",
+                "section": "performance",
+                "revision": 2,
+                "content": "가상 제품 · 검토용 예시. 등록된 성능평가 자료 메타데이터와 인용 위치를 목록화했습니다. 실제 성능 수치는 제공되지 않았습니다.",
+                "citation": "가상://HIV/performance/report §1"
+              },
+              "evidence": [
+                {
+                  "id": "a6f2b490-72a7-4a25-8675-3517b258f560",
+                  "product_id": "IVD-HIV-DEMO",
+                  "key": "performance",
+                  "revision": 2,
+                  "title": "가상 성능 자료 위치 개정",
+                  "summary": "합성 증빙의 등록 위치·문서 식별자만 개정. 실제 성능 수치 추가 없음",
+                  "citation": "가상://성능 자료 개정 §1",
+                  "previous_id": "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II 6 / Annex XIII",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "재검토자",
+              "rationale": "참조된 합성 증빙의 개정본으로 교체 필요",
+              "re_review": false
+            },
+            {
+              "key": "EU-LABELING-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "labeling",
+              "section_title": "표시사항 초안",
+              "document": {
+                "id": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+                "product_id": "IVD-HIV-DEMO",
+                "section": "labeling",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 표시사항 초안 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 HIV/labeling §1"
+              },
+              "evidence": [
+                {
+                  "id": "a7f04974-c8f5-458b-906a-e56a792d05c3",
+                  "product_id": "IVD-HIV-DEMO",
+                  "key": "labeling",
+                  "revision": 1,
+                  "title": "표시사항 초안 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://HIV/labeling/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex I 20.2",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+              "re_review": false
+            },
+            {
+              "key": "EU-EVIDENCE_INDEX-001",
+              "market": "EU",
+              "mandatory": true,
+              "section": "evidence_index",
+              "section_title": "증빙 목록",
+              "document": {
+                "id": "7bae0100-47f3-43ec-9ea4-26943727b129",
+                "product_id": "IVD-HIV-DEMO",
+                "section": "evidence_index",
+                "revision": 1,
+                "content": "가상 제품 · 검토용 예시. HIV 항원·항체 검사 가상 제품의 증빙 목록 메타데이터 초안. 실제 기술·성능 자료 및 수치는 미제공.",
+                "citation": "가상 메타데이터 HIV/evidence_index §1"
+              },
+              "evidence": [
+                {
+                  "id": "53093abf-dbb9-4eea-8e66-fe76e9ec704f",
+                  "product_id": "IVD-HIV-DEMO",
+                  "key": "evidence_index",
+                  "revision": 1,
+                  "title": "증빙 목록 가상 등록 자료",
+                  "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+                  "citation": "가상://HIV/evidence_index/r1",
+                  "previous_id": null
+                }
+              ],
+              "source": {
+                "market": "EU",
+                "number": "Regulation (EU) 2017/746",
+                "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                "version": "02017R0746-20250110; consolidated 2025-01-10",
+                "checked_on": "2026-11-24",
+                "verification": "verified",
+                "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                "unverified": [
+                  "제품별 분류 및 제출 경로",
+                  "HIV/COVID 제품별 개별 적용성",
+                  "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                ]
+              },
+              "clause": "Annex II introductory statement",
+              "applicability": "applicable",
+              "state": "satisfied",
+              "state_label": "충족",
+              "reviewer": "시연 검토자",
+              "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님",
+              "re_review": false
+            }
+          ],
+          "evidence_list": [
+            {
+              "id": "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b",
+              "product_id": "IVD-HIV-DEMO",
+              "key": "overview",
+              "revision": 1,
+              "title": "제품 개요 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://HIV/overview/r1",
+              "previous_id": null
+            },
+            {
+              "id": "55073b4c-1494-4153-957e-4cf1c9a12579",
+              "product_id": "IVD-HIV-DEMO",
+              "key": "intended_use",
+              "revision": 1,
+              "title": "사용 목적 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://HIV/intended_use/r1",
+              "previous_id": null
+            },
+            {
+              "id": "a6f2b490-72a7-4a25-8675-3517b258f560",
+              "product_id": "IVD-HIV-DEMO",
+              "key": "performance",
+              "revision": 2,
+              "title": "가상 성능 자료 위치 개정",
+              "summary": "합성 증빙의 등록 위치·문서 식별자만 개정. 실제 성능 수치 추가 없음",
+              "citation": "가상://성능 자료 개정 §1",
+              "previous_id": "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+            },
+            {
+              "id": "a7f04974-c8f5-458b-906a-e56a792d05c3",
+              "product_id": "IVD-HIV-DEMO",
+              "key": "labeling",
+              "revision": 1,
+              "title": "표시사항 초안 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://HIV/labeling/r1",
+              "previous_id": null
+            },
+            {
+              "id": "53093abf-dbb9-4eea-8e66-fe76e9ec704f",
+              "product_id": "IVD-HIV-DEMO",
+              "key": "evidence_index",
+              "revision": 1,
+              "title": "증빙 목록 가상 등록 자료",
+              "summary": "가상 문서 메타데이터만 등록. 제품 성능에 관한 사실·수치 없음.",
+              "citation": "가상://HIV/evidence_index/r1",
+              "previous_id": null
+            }
+          ],
+          "requests": [
+            {
+              "id": "1364ebea-dc63-481a-854f-9073c327e9fc",
+              "origin_id": "676babdc-89fe-4834-b059-cfdfd0ab4fff",
+              "requirement_key": null,
+              "section": "performance",
+              "reason": "교체 증빙 인용 위치의 추가 확인",
+              "owner": "자료 담당자",
+              "due_date": "2026-12-01",
+              "status": "closed",
+              "answer": "새 합성 증빙의 인용 위치와 개정본 식별자를 확인했습니다. 성능값은 변경하지 않았습니다.",
+              "evidence_ids": [
+                "a6f2b490-72a7-4a25-8675-3517b258f560"
+              ],
+              "reviewer": "자료 검토자",
+              "closure_reason": "등록 위치와 인용 개정본 확인",
+              "status_label": "종결"
+            },
+            {
+              "id": "b26fc13a-481f-4bbc-9c10-4dfe77673ce9",
+              "origin_id": "e88a12c6-71ac-49aa-b8d6-ed303e032c53",
+              "requirement_key": "EU-PERFORMANCE-001",
+              "section": null,
+              "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+              "owner": "자료 담당자",
+              "due_date": "2026-12-01",
+              "status": "closed",
+              "answer": "성능평가 자료 메타데이터와 문서 개정본을 연결했습니다. 등록 인용 위치만 요약했으며 실제 성능 수치를 추가하지 않았습니다.",
+              "evidence_ids": [
+                "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+              ],
+              "reviewer": "재검토자",
+              "closure_reason": "답변·문서 ID·증빙 개정본과 인용 위치를 확인한 가상 검토 종결",
+              "status_label": "종결"
+            }
+          ],
+          "can_complete": true,
+          "unresolved": [],
+          "unverified_sources": [],
+          "history": [
+            {
+              "id": 1,
+              "package_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+              "actor": "system",
+              "action": "package_created",
+              "payload": {
+                "basis": "official"
+              },
+              "created_at": "2026-11-24T01:03:49.865657+00:00"
+            },
+            {
+              "id": 4,
+              "package_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+              "actor": "시연 검토자",
+              "action": "supplement_requested",
+              "payload": {
+                "request_id": "e88a12c6-71ac-49aa-b8d6-ed303e032c53",
+                "requirement_key": "EU-PERFORMANCE-001",
+                "section": null,
+                "reason": "성능평가 자료 메타데이터와 문서 개정본 보완 필요",
+                "owner": "자료 담당자",
+                "due_date": "2026-12-01",
+                "reviewer": "시연 검토자"
+              },
+              "created_at": "2026-11-24T01:03:50.149357+00:00"
+            },
+            {
+              "id": 5,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "version_created",
+              "payload": {
+                "parent_id": "b20d5c46-7352-4230-82d0-cd707e48a875",
+                "reviewer": "시연 검토자",
+                "evidence_replacements": {},
+                "documents": {
+                  "performance": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2"
+                }
+              },
+              "created_at": "2026-11-24T01:03:50.334642+00:00"
+            },
+            {
+              "id": 6,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "regulatory_review",
+              "payload": {
+                "reviewer": "시연 검토자",
+                "classification": "가상 분류 검토 예시",
+                "submission_route": "가상 내부 문서 검토 경로",
+                "rationale": "공식 IVDR 번호·제목과 제품 가상 메타데이터를 대조한 내부 검토 예시. 실제 등급이나 제출 경로 확정 아님",
+                "source_ids": [
+                  "EU-IVDR"
+                ],
+                "fictional_review": true,
+                "sources": [
+                  {
+                    "market": "EU",
+                    "number": "Regulation (EU) 2017/746",
+                    "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+                    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+                    "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+                    "version": "02017R0746-20250110; consolidated 2025-01-10",
+                    "checked_on": "2026-11-24",
+                    "verification": "verified",
+                    "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+                    "unverified": [
+                      "제품별 분류 및 제출 경로",
+                      "HIV/COVID 제품별 개별 적용성",
+                      "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+                    ]
+                  }
+                ],
+                "reviewed_at": "2026-11-24T01:03:50.423412+00:00"
+              },
+              "created_at": "2026-11-24T01:03:50.423412+00:00"
+            },
+            {
+              "id": 7,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-OVERVIEW-001",
+                "document_id": "0e0d60fd-07cb-4621-9b67-5f98f48b60d9",
+                "evidence_ids": [
+                  "c372f9c9-bf8d-466c-bb10-1a4eb5d4b60b"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 검토자",
+                "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+              },
+              "created_at": "2026-11-24T01:03:50.469541+00:00"
+            },
+            {
+              "id": 8,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-INTENDED_USE-001",
+                "document_id": "74032bf9-b2a5-463e-a570-72e818799769",
+                "evidence_ids": [
+                  "55073b4c-1494-4153-957e-4cf1c9a12579"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 검토자",
+                "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+              },
+              "created_at": "2026-11-24T01:03:50.528025+00:00"
+            },
+            {
+              "id": 9,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-PERFORMANCE-001",
+                "document_id": "6d0aae45-8090-49a8-a6b8-3a5ae55037a2",
+                "evidence_ids": [
+                  "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 검토자",
+                "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+              },
+              "created_at": "2026-11-24T01:03:50.574768+00:00"
+            },
+            {
+              "id": 10,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-LABELING-001",
+                "document_id": "6f969b1f-31f3-459c-84e3-c1c3de2ee333",
+                "evidence_ids": [
+                  "a7f04974-c8f5-458b-906a-e56a792d05c3"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 검토자",
+                "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+              },
+              "created_at": "2026-11-24T01:03:50.635355+00:00"
+            },
+            {
+              "id": 11,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "시연 검토자",
+              "action": "mapping_review",
+              "payload": {
+                "requirement_key": "EU-EVIDENCE_INDEX-001",
+                "document_id": "7bae0100-47f3-43ec-9ea4-26943727b129",
+                "evidence_ids": [
+                  "53093abf-dbb9-4eea-8e66-fe76e9ec704f"
+                ],
+                "applicability": "applicable",
+                "state": "satisfied",
+                "reviewer": "시연 검토자",
+                "rationale": "가상 제품 내부 검토: 등록 메타데이터·인용 범위 및 문서 개정본을 확인. 규제 적합성 확정 아님"
+              },
+              "created_at": "2026-11-24T01:03:50.697374+00:00"
+            },
+            {
+              "id": 12,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "답변 작성자",
+              "action": "answer_saved",
+              "payload": {
+                "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+                "reviewer": "답변 작성자",
+                "answer": "성능평가 자료 메타데이터와 문서 개정본을 연결했습니다. 등록 인용 위치만 요약했으며 실제 성능 수치를 추가하지 않았습니다.",
+                "evidence_ids": [
+                  "c42e66be-0abf-4eff-a221-f5ee86c0928a"
+                ],
+                "draft": null
+              },
+              "created_at": "2026-11-24T01:03:50.875470+00:00"
+            },
+            {
+              "id": 13,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "재검토자",
+              "action": "supplement_reviewing",
+              "payload": {
+                "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d"
+              },
+              "created_at": "2026-11-24T01:03:50.931469+00:00"
+            },
+            {
+              "id": 14,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "재검토자",
+              "action": "supplement_closed",
+              "payload": {
+                "request_id": "f057bfb2-f029-4550-8e92-625c4ce8be9d",
+                "reviewer": "재검토자",
+                "confirmed": true,
+                "reason": "답변·문서 ID·증빙 개정본과 인용 위치를 확인한 가상 검토 종결"
+              },
+              "created_at": "2026-11-24T01:03:50.996154+00:00"
+            },
+            {
+              "id": 15,
+              "package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+              "actor": "재검토자",
+              "action": "internal_complete",
+              "payload": {
+                "note": "규제기관 허가·인증을 의미하지 않음"
+              },
+              "created_at": "2026-11-24T01:03:51.058059+00:00"
+            },
+            {
+              "id": 22,
+              "package_id": "7f01aac6-bec5-4e22-afb4-210666025a72",
+              "actor": "최종 검토자",
+              "action": "version_created",
+              "payload": {
+                "parent_id": "ab3cecba-5d77-466c-b5da-6244139c2c30",
+                "reviewer": "최종 검토자",
+                "evidence_replacements": {
+                  "c42e66be-0abf-4eff-a221-f5ee86c0928a": "a6f2b490-72a7-4a25-8675-3517b258f560"
+                },
+                "documents": {}
+              },
+              "created_at": "2026-11-24T04:25:33.357494+00:00"
+            },
+            {
+              "id": 23,
+              "package_id": "7f01aac6-bec5-4e22-afb4-210666025a72",
+              "actor": "최종 검토자",
+              "action": "product_change_approved",
+              "payload": {
+                "change_id": "f0321a8b-db4a-4ed9-ab3e-79abed56e684",
+                "product_revision_id": "2525c9d9-d394-480e-9eaf-810b2066b8a5"
+              },
+              "created_at": "2026-11-24T04:25:33.375395+00:00"
+            }
+          ]
+        }
+      }
+    },
+    "reviewer": "최종 검토자",
+    "completed_at": "2026-11-24T04:25:33.389813+00:00"
+  },
+  "corrections": [],
+  "history": [
+    {
+      "id": 1,
+      "actor": "시연 요청자",
+      "action": "created",
+      "payload": {
+        "product_id": "IVD-HIV-DEMO",
+        "base_revision_id": "d552ac11-f909-479d-a0a7-cfc9946ab210",
+        "changes": [],
+        "evidence_replacements": {
+          "c42e66be-0abf-4eff-a221-f5ee86c0928a": "a6f2b490-72a7-4a25-8675-3517b258f560"
+        },
+        "baseline_packages": {
+          "EU": "ab3cecba-5d77-466c-b5da-6244139c2c30"
+        },
+        "reason": "가상 제품 · 검토용 예시 변경 요청",
+        "requester": "시연 요청자"
+      },
+      "created_at": "2026-11-24T04:25:32.868342+00:00"
+    },
+    {
+      "id": 2,
+      "actor": "영향평가자",
+      "action": "impact_assessed",
+      "payload": {
+        "method": "저장된 필드–섹션 규칙 및 증빙 참조 관계, AI 사용 안 함"
+      },
+      "created_at": "2026-11-24T04:25:32.917311+00:00"
+    },
+    {
+      "id": 3,
+      "actor": "재검토자",
+      "action": "review_started",
+      "payload": {},
+      "created_at": "2026-11-24T04:25:32.948374+00:00"
+    },
+    {
+      "id": 4,
+      "actor": "재검토자",
+      "action": "supplement_workspace_created",
+      "payload": {
+        "market": "EU",
+        "work_package_id": "7bea5e04-2b73-4275-a984-be76f8970c82",
+        "baseline_package_id": "ab3cecba-5d77-466c-b5da-6244139c2c30"
+      },
+      "created_at": "2026-11-24T04:25:33.011969+00:00"
+    },
+    {
+      "id": 5,
+      "actor": "재검토자",
+      "action": "item_decision",
+      "payload": {
+        "item_id": "65f41d99-3397-4914-b0f5-0126b80d08b2",
+        "reviewer": "재검토자",
+        "choice": "revise",
+        "reason": "참조된 합성 증빙의 개정본으로 교체 필요",
+        "document_id": null,
+        "evidence_replacements": {
+          "c42e66be-0abf-4eff-a221-f5ee86c0928a": "a6f2b490-72a7-4a25-8675-3517b258f560"
+        },
+        "decided_at": "2026-11-24T04:25:33.223956+00:00"
+      },
+      "created_at": "2026-11-24T04:25:33.223956+00:00"
+    },
+    {
+      "id": 6,
+      "actor": "EU 시장 검토자",
+      "action": "market_decision",
+      "payload": {
+        "market": "EU",
+        "reviewer": "EU 시장 검토자",
+        "reason": "EU 공식 근거 메타데이터와 변경 후보를 확인한 가상 판단",
+        "source_ids": [
+          "EU-IVDR"
+        ],
+        "legal_procedure": "EU 가상 변경 절차 검토. 실제 제출 여부는 규제 검토 필요",
+        "submission_required": null,
+        "fictional_review": true,
+        "sources": [
+          {
+            "market": "EU",
+            "number": "Regulation (EU) 2017/746",
+            "title": "Regulation (EU) 2017/746 of the European Parliament and of the Council of 5 April 2017 on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0746-20250110",
+            "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746",
+            "version": "02017R0746-20250110; consolidated 2025-01-10",
+            "checked_on": "2026-11-24",
+            "verification": "verified",
+            "verified_scope": "법령 번호·제목 대조, Annex II 제품 설명·사용 목적·기술문서, Annex I 20.2 표시사항, Article 47 및 Annex VIII 참조 확인. 제품별 적용·등급·경로는 미확정",
+            "unverified": [
+              "제품별 분류 및 제출 경로",
+              "HIV/COVID 제품별 개별 적용성",
+              "원문 조회 이후 추가 개정·특별규정의 포괄적 조사"
+            ]
+          }
+        ],
+        "decided_at": "2026-11-24T04:25:33.274201+00:00",
+        "regulatory_status": "규제 검토 필요 · 가상 판단만 기록"
+      },
+      "created_at": "2026-11-24T04:25:33.274201+00:00"
+    },
+    {
+      "id": 7,
+      "actor": "최종 검토자",
+      "action": "approved",
+      "payload": {
+        "product_revision_id": "2525c9d9-d394-480e-9eaf-810b2066b8a5",
+        "packages": {
+          "EU": "7f01aac6-bec5-4e22-afb4-210666025a72"
+        }
+      },
+      "created_at": "2026-11-24T04:25:33.389813+00:00"
+    }
+  ],
+  "exported_at": "2026-11-24T04:25:33.478551+00:00"
+}
